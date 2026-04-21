@@ -1,0 +1,122 @@
+# =========================
+# Dependencies
+# =========================
+node_modules/
+jspm_packages/
+bower_components/
+
+# =========================
+# Build / Output
+# =========================
+dist/
+build/
+.out/
+.next/
+.nuxt/
+.svelte-kit/
+.vuepress/dist
+**/.vitepress/dist
+
+# =========================
+# Cache / Temp
+# =========================
+.cache/
+.parcel-cache
+.temp
+.nyc_output
+.eslintcache
+.stylelintcache
+.fusebox/
+.docusaurus
+
+# =========================
+# Coverage
+# =========================
+coverage/
+*.lcov
+
+# =========================
+# Logs
+# =========================
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# OS / System
+# =========================
+.DS_Store
+
+# =========================
+# Editor / IDE
+# =========================
+.vscode/
+.idea/
+.vscode-test
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+next-env.d.ts
+
+# =========================
+# Runtime / Misc
+# =========================
+pids
+*.pid
+*.seed
+*.pid.lock
+lib-cov
+.lock-wscript
+*.tgz
+.node_repl_history
+.tern-port
+
+# =========================
+# Package managers
+# =========================
+.pnp
+.pnp.js
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# =========================
+# Framework / Platform
+# =========================
+.vercel
+.serverless/
+.firebase/
+.dynamodb/
+
+# =========================
+# Vite
+# =========================
+.vite/
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# =========================
+# Misc binaries / outputs
+# =========================
+build/Release
+
+# =========================
+# Sensitive files
+# =========================
+*.pem
