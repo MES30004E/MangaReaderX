@@ -49,15 +49,20 @@ export interface ProgressRow {
   updated_at: string;
 }
 
-async function blobToImageDims(blob: Blob): Promise<{ width: number; height: number } | null> {
+async function blobToImageDims(
+  blob: Blob,
+): Promise<{ width: number; height: number } | null> {
   try {
     const url = URL.createObjectURL(blob);
     const img = new Image();
-    const dims = await new Promise<{ width: number; height: number }>((resolve, reject) => {
-      img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
-      img.onerror = reject;
-      img.src = url;
-    });
+    const dims = await new Promise<{ width: number; height: number }>(
+      (resolve, reject) => {
+        img.onload = () =>
+          resolve({ width: img.naturalWidth, height: img.naturalHeight });
+        img.onerror = reject;
+        img.src = url;
+      },
+    );
     URL.revokeObjectURL(url);
     return dims;
   } catch {
@@ -86,7 +91,11 @@ export async function listTrashed(): Promise<MangaRow[]> {
 }
 
 export async function getManga(id: string): Promise<MangaRow | null> {
-  const { data, error } = await supabase.from("manga").select("*").eq("id", id).maybeSingle();
+  const { data, error } = await supabase
+    .from("manga")
+    .select("*")
+    .eq("id", id)
+    .maybeSingle();
   if (error) throw error;
   return (data as MangaRow) ?? null;
 }
@@ -111,7 +120,9 @@ export async function listPages(chapterId: string): Promise<PageRow[]> {
   return (data ?? []) as PageRow[];
 }
 
-export async function getProgress(mangaId: string): Promise<ProgressRow | null> {
+export async function getProgress(
+  mangaId: string,
+): Promise<ProgressRow | null> {
   const { data, error } = await supabase
     .from("reading_progress")
     .select("manga_id, chapter_id, page_index, updated_at")
@@ -129,17 +140,26 @@ export async function upsertProgress(
   const { data: u } = await supabase.auth.getUser();
   const userId = u.user?.id;
   if (!userId) return;
+  await supabase.from("reading_progress").upsert(
+    {
+      user_id: userId,
+      manga_id: mangaId,
+      chapter_id: chapterId,
+      page_index: pageIndex,
+    },
+    { onConflict: "user_id,manga_id" },
+  );
   await supabase
-    .from("reading_progress")
-    .upsert(
-      { user_id: userId, manga_id: mangaId, chapter_id: chapterId, page_index: pageIndex },
-      { onConflict: "user_id,manga_id" },
-    );
-  await supabase.from("manga").update({ last_read_at: new Date().toISOString() }).eq("id", mangaId);
+    .from("manga")
+    .update({ last_read_at: new Date().toISOString() })
+    .eq("id", mangaId);
 }
 
 export async function softDeleteManga(id: string): Promise<void> {
-  await supabase.from("manga").update({ deleted_at: new Date().toISOString() }).eq("id", id);
+  await supabase
+    .from("manga")
+    .update({ deleted_at: new Date().toISOString() })
+    .eq("id", id);
 }
 
 export async function restoreManga(id: string): Promise<void> {
@@ -169,63 +189,62 @@ export interface CommitOptions {
   publishAsGlobal?: boolean;
 }
 
+async function getRequiredUserId(): Promise<string> {
+  const { data, error } = await supabase.auth.getUser();
+  if (error)
+    throw new Error(`Could not verify signed-in user: ${error.message}`);
+  const userId = data.user?.id;
+  if (!userId) throw new Error("You must be signed in to save imported manga.");
+  return userId;
+}
+
 /** Commit a preview: write blobs locally + insert manga/chapters/pages rows. */
 export async function commitImport(
   preview: ImportPreview,
   onProgress?: (p: CommitProgress) => void,
   options: CommitOptions = {},
 ): Promise<string> {
-  const { data: u } = await supabase.auth.getUser();
-  const userId = u.user?.id;
-  if (!userId) throw new Error("Must be signed in to import");
+  const userId = await getRequiredUserId();
+  const mangaId = crypto.randomUUID();
 
   // Use first page as cover (data URL of small thumbnail would be ideal,
   // but for v1 we store a blob:// later — UI falls back to first page render).
-  const { data: mangaRow, error: mErr } = await supabase
-    .from("manga")
-    .insert({
-      user_id: userId,
-      title: preview.title,
-      storage_provider: "local",
-    })
-    .select()
-    .single();
-  if (mErr || !mangaRow) throw mErr ?? new Error("Failed to create manga");
-  const mangaId = mangaRow.id as string;
+  const { error: mErr } = await supabase.from("manga").insert({
+    id: mangaId,
+    user_id: userId,
+    title: preview.title,
+    storage_provider: "local",
+  });
+  if (mErr) throw mErr;
 
   let done = 0;
   const total = preview.totalPages;
 
   for (let ci = 0; ci < preview.chapters.length; ci++) {
     const ch = preview.chapters[ci];
-    const { data: chapterRow, error: cErr } = await supabase
-      .from("chapters")
-      .insert({
-        manga_id: mangaId,
-        user_id: userId,
-        title: ch.title,
-        index: ci,
-        page_count: ch.pages.length,
-      })
-      .select()
-      .single();
-    if (cErr || !chapterRow) throw cErr ?? new Error("Failed to create chapter");
-    const chapterId = chapterRow.id as string;
+    const chapterId = crypto.randomUUID();
+    const { error: cErr } = await supabase.from("chapters").insert({
+      id: chapterId,
+      manga_id: mangaId,
+      user_id: userId,
+      title: ch.title,
+      index: ci,
+      page_count: ch.pages.length,
+    });
+    if (cErr) throw cErr;
 
     // Insert pages first (need ids), then write blobs under those ids.
     const pageRows = ch.pages.map((_p, i) => ({
+      id: crypto.randomUUID(),
       chapter_id: chapterId,
       user_id: userId,
       index: i,
     }));
-    const { data: insertedPages, error: pErr } = await supabase
-      .from("pages")
-      .insert(pageRows)
-      .select("id, index");
-    if (pErr || !insertedPages) throw pErr ?? new Error("Failed to create pages");
+    const { error: pErr } = await supabase.from("pages").insert(pageRows);
+    if (pErr) throw pErr;
 
     // Sort to match insert order
-    const sorted = [...insertedPages].sort((a, b) => a.index - b.index);
+    const sorted = [...pageRows].sort((a, b) => a.index - b.index);
 
     for (let i = 0; i < ch.pages.length; i++) {
       const page = ch.pages[i];
@@ -243,13 +262,26 @@ export async function commitImport(
             width: dims?.width ?? null,
             height: dims?.height ?? null,
           })
-          .eq("id", dbPage.id);
-        await supabase.from("manga").update({ cover_image: key }).eq("id", mangaId);
+          .eq("id", dbPage.id)
+          .eq("user_id", userId);
+        await supabase
+          .from("manga")
+          .update({ cover_image: key })
+          .eq("id", mangaId)
+          .eq("user_id", userId);
       } else {
-        await supabase.from("pages").update({ blob_key: key }).eq("id", dbPage.id);
+        await supabase
+          .from("pages")
+          .update({ blob_key: key })
+          .eq("id", dbPage.id)
+          .eq("user_id", userId);
       }
       done++;
-      onProgress?.({ done, total, label: `${ch.title} — page ${i + 1}/${ch.pages.length}` });
+      onProgress?.({
+        done,
+        total,
+        label: `${ch.title} — page ${i + 1}/${ch.pages.length}`,
+      });
     }
   }
 
@@ -277,7 +309,11 @@ export async function commitImport(
           await supabase.from("global_chapters").insert(chapterRows);
         }
         // Link the personal row to the new global entry.
-        await supabase.from("manga").update({ global_manga_id: globalId }).eq("id", mangaId);
+        await supabase
+          .from("manga")
+          .update({ global_manga_id: globalId })
+          .eq("id", mangaId)
+          .eq("user_id", userId);
       }
     } catch {
       // Non-fatal: personal import already succeeded.

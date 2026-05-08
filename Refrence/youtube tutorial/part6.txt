@@ -1,0 +1,316 @@
+0:044 secondshey guys this is Lucas from Vedic coding Academy I'm here with Patrick again to continue our long awaited manga reader series and today we are finally studying
+0:1313 secondsthe front end so let's jump into it let's get going I thought its service is already running I'm super eager to just
+0:2020 secondsget it started get it going um what to even have like I literally just we have
+0:2727 secondsreact a first thing already man let's use JSX instead is hmm let's use JSX
+0:3535 secondswe'll be in for the extension yeah okay let's go why do you like using jss what
+0:4444 secondswas your icon dude you meant to get a little reactor icon when you use JSX oh really yeah your various code is broken doesn't matter doesn't matter so
+0:5353 secondswhy do you like to use JSX other than the icon it's just what it is right because then you have JS files
+1:021 minute, 2 secondswhich is maybe just your utils and maybe your pure JavaScript star and then you have your components which is in JSX so
+1:101 minute, 10 secondsyou know that the intention is that's file renders start yeah okay like you just it is the an extra way to split I
+1:181 minute, 18 secondsthink with the icons it makes me more sense and also even like filtering like you can just filter by JSX if you know you're looking for certain things like
+1:251 minute, 25 secondsyou find any place you like if you import a JSX file just like say if i have a component beautifully like import
+1:321 minute, 32 secondslike oh no I just I don't know ignore the indexes we'll just do this yeah yeah and there's not dodge ASX know I met
+1:411 minute, 41 secondscalled mini the fun is clarified alright okay so now that we call it JSX let's get a running Mitchell it works
+1:471 minute, 47 secondsyeah one we're keen local 3001 okay
+1:591 minute, 59 secondswe're working great so now next step what do we do well we have no design we have absolutely none so we're gonna
+2:072 minutes, 7 secondsplagiarize well inspire inspire get inspired inspired yeah cut so where
+2:152 minutes, 15 secondsshould we get inspired from I know let's just look for I know there's a cycloid webtoons where that is
+2:232 minutes, 23 secondsdecent UI but is this is like app on the phone yeah so I don't know how old a web version you might want to look how do
+2:302 minutes, 30 secondsyou know about four because I think the intention of that is I think you need a
+2:412 minutes, 41 secondsreload for it to like okay really sometimes sometimes not just do you know
+2:512 minutes, 51 secondsokay yeah want to show you actually I want to show you a few things so maybe this video won't be as technical it'll be boilerplate and then take off like
+3:003 minutessome other stuff yeah so one of the things I like about this is obviously we wouldn't have pictures as good as this
+3:083 minutes, 8 secondsso we can't get like a banner going some of the content stuff like new to webtoon but we can have like latest updated
+3:143 minutes, 14 secondsI don't feel be hard to get like like this we can do yeah yeah we had to get high quality pictures so we might have
+3:223 minutes, 22 secondsthe kind of losses on how you know how how pretty it is we might just have to be like agreed yeah like this is purely
+3:313 minutes, 31 secondsa Content issue it's not a limitation of our technical abilities yeah yeah but
+3:393 minutes, 39 secondswhat's more interesting is when you actually start reading episode of mango line that looks g-rated okay this seems
+3:463 minutes, 46 secondsvery cheery rated hopefully yeah let's go for it and then just click on episode
+3:533 minutes, 53 seconds1 on whatever yeah sure okay maybe they stopped yes sir what do you think about this view I actually like this view so
+4:004 minutesyou have a big picture of the table which we probably won't have yeah but we can hack it no but we can hack it I
+4:074 minutes, 7 secondsthink the first that usually the like first or second page of the manga would be like a cobbler right so yeah you
+4:154 minutes, 15 secondswon't spoil anything by showing the first page yeah very much every mangola or the korean manhwa one I've read all
+4:234 minutes, 23 secondsof you have the first pages as a cover oh yeah yeah exactly so we can try and just show you the first page or two
+4:314 minutes, 31 secondsjust get a little bit of a preview because I think the preview is good like you can see the first page without having to click anything that's not bad
+4:384 minutes, 38 secondsyeah honestly anyway so I like this scrolling thing the first thing I know is it has to be virtualized otherwise it
+4:464 minutes, 46 secondswill lag like hell with like 700 grid items list iron with an image so definitely virtualize I don't know if
+4:544 minutes, 54 secondsit's your computer lagging though it's just the size is fine seems okay yeah hanging on smooth so anyway I would like the episode 1 so I
+5:045 minutes, 4 secondswould like that to be I'm just putting on the designer here yeah so I like that to be there and also remember where you
+5:135 minutes, 13 secondswere from last so if you come back to this after reading episode like 5 it should say resume hashtag 5 or 6 yeah
+5:235 minutes, 23 secondsthat make sense yep I think this is good I want the seamlessness or like the
+5:315 minutes, 31 secondsseamlessness of this like the pages just scroll indefinitely yeah so there's no like crappy Next button like I don't
+5:395 minutes, 39 secondsunderstand him it's 20 20 right like why do you still have websites that you have to press next to see the next well this
+5:465 minutes, 46 secondsone seems like that actually you can't I think this is kind of like a bat because purely based on what you said
+5:535 minutes, 53 secondsinstead of having it just stop here we can just say you know continue on and then if you like scroll a little bit more and like some I do there yeah yeah
+6:026 minutes, 2 secondsI would I would even go as far as you don't even bother having the like the little thing like the extra bounce to go
+6:106 minutes, 10 secondsto the next one just continue yeah another you know what I meant was like have like just something in the middle saying this is the next one yeah yeah we
+6:176 minutes, 17 secondscan have like a fake page that is like half the screen or something right half the screen height and just it just has the chapter title yeah so it's so
+6:256 minutes, 25 secondsobvious days the next chapter and you just give you a much more seamless experience mmm and so I have this one here they've got one great out now so it
+6:346 minutes, 34 secondsseems to be remembering yeah I mean them it makes sense right it's ridiculous to not have it remember and now if I do continue reading it will
+6:426 minutes, 42 secondstake me Oh so still episode one yeah cause you've maybe haven't finished well I mean like the thing is it wasn't
+6:496 minutes, 49 secondsobvious to me how I could finish true yeah yeah I've scrolled down and now do I
+6:566 minutes, 56 secondsyou have to go to tread some now there's no action to go to - interesting yeah alright so well they probably let me try
+7:057 minutes, 5 secondsto disable a block so I highly doubt adblock would block the next button and I'll see maybe that's like their
+7:147 minutes, 14 secondsdowngrade for people who don't want to view ads if we take away the next
+7:177 minutes, 17 secondsquestion okay that's it yep anyway
+7:317 minutes, 31 secondsthat's the share button I see yeah I mean I think you can you can change the chapter we're going to the top menu you ain't just gonna - and that'll get
+7:407 minutes, 40 secondsobably resume you too - no no one how do you get to do it you have to press ooh
+7:487 minutes, 48 secondsthat's ridiculous I'm highly doubt that is how you get to - cuz you have to
+7:567 minutes, 56 secondsscroll past 700 and like 45 mangoes to get to two chapters anyway yeah now the
+8:058 minutes, 5 secondsresume should be - it also wasn't obvious where we tube goes - because like it doesn't say I continue reading
+8:128 minutes, 12 secondsyeah yeah like clearly this is in local storage right so yeah so that they can show that information so I don't know
+8:208 minutes, 20 secondswhy that would annoy especially when they start with episode 1 wind saturation well I guess it doesn't matter where it's stored as much as it
+8:288 minutes, 28 secondsis like if if they can show it on the page and obviously you know if they can have a link to it then they can make that lien what specific it might be
+8:368 minutes, 36 secondssession storage for you recent webtoon oh yeah yeah I believe this one can say no more yeah I'm all that kind of stuff
+8:448 minutes, 44 secondsyeah yeah scroll position as well scroll positions kind of nice I mean overall I think this is pretty good
+8:518 minutes, 51 secondsyeah yeah I think we don't want to store the reading info on arm
+8:588 minutes, 58 secondslocal storage hopefully we can figure something out on this like server side
+9:059 minutes, 5 secondssession storage because we have a polar the only problem is how do we keep them
+9:139 minutes, 13 secondson a unique key just set a indefinite cookie but then if they clear the history there that's good but then why would you do that and not do local
+9:219 minutes, 21 secondsstorage size because that could read a lot of mango and you could just blow up I think you can store certain things in
+9:319 minutes, 31 secondslocal storage as long as you don't think you get to so if we store it all on the server side then won't we have a server side like size issue as much or you
+9:399 minutes, 39 secondsreckon that's less of an issue no because you have a data base you mean MongoDB yeah yeah you just whack the session in DB so it's massive right it's
+9:489 minutes, 48 secondsfine but then at this point why don't we just let them register cause it's annoying I don't want to register unless
+9:579 minutes, 57 secondsif this one click I don't even want to give my email out to a random pwan like just I don't want to blow up the project
+10:0510 minutes, 5 secondsas well so it's just annoying and credential security etc I just don't deal with any of that stuff yeah like
+10:1310 minutes, 13 secondsI'm I'm not saying we really want to do it in server-side session storage just
+10:1910 minutes, 19 secondsum because if we can't find a unique way to identify the device you can't do it
+10:2610 minutes, 26 secondslike in an app say like a proper iOS app you can identify the device by like the device ID so it's unique to the device
+10:3410 minutes, 34 secondsyeah so you're actually in to login and it's also very easy to log in on phones because there's already like you know Apple sign-in and crap like that mm-hmm
+10:4310 minutes, 43 secondsbut can we utilize that if we're a PWA yeah um maybe not as a bwa maybe you can
+10:5010 minutes, 50 secondsdo like face book signing Google sign yeah but it's just kind of annoying because like we we have to adopt
+10:5710 minutes, 57 secondspatterns of whatever you know we use mmm yeah it's just annoying so I think there is like a obvious drawback here which is that if you do the registration then you
+11:0611 minutes, 6 secondskind of you know users are giving information and feeling almost my suggestion would
+11:1411 minutes, 14 secondsprobably be give them the option to register because like for example myself if you can allow me to remember where I am
+11:2111 minutes, 21 secondson any given manga across devices then that would be beneficial to me and I'll be willing to register for that benefit
+11:2811 minutes, 28 secondsyou know it would blow out the project with like twice the size at least oh you mean in terms of registering yeah
+11:3611 minutes, 36 secondsbecause you have to because think about it right you can't just store a password as text so you have to deal with hashing
+11:4311 minutes, 43 secondssalting and then we don't deal with any of that like we only allow single sign-on
+11:5111 minutes, 51 secondswhat do you mean single sign-on like Facebook and yeah yeah like Facebook Google yeah yeah sure enough yes that
+11:5811 minutes, 58 secondsway we don't have to store anything and it also means that they have the benefit of being able to yeah yeah sure yeah I mean that that's fine I mean it's not
+12:0712 minutes, 7 secondsthat hard to integrate but it also makes a lot of assumptions it's like you generally don't lock them out because they don't have facebook in Google it's
+12:1512 minutes, 15 secondsmore of a convenience option of course and that's kind of the thing is like if they don't have it then in we do some sort of solution using local storage
+12:2312 minutes, 23 secondswhere we can store the location that they are on X mega and we do that in a way which is reasonably compact right so
+12:3012 minutes, 30 secondsthat occasion location if I like scroll location and there are two in the series so all of that information we store
+12:3812 minutes, 38 secondslocally then what's there yeah yeah what's the maximum local storage size anyway like you might not be an issue
+12:4712 minutes, 47 secondsmy head is just like 40 kilobytes or something local storage is 2 to 10 Meg's yeah that's actually pretty much fine
+12:5512 minutes, 55 secondsthat's pretty good that's actually fine yeah 10 megabytes per origin in Google
+13:0313 minutes, 3 secondsyeah ok maybe we just do liquid storage then 2 kids yeah Tim eggs is like we're not doing
+13:1113 minutes, 11 secondsany finance ex-pro excel sheets here yeah okay hey let's use it looks like yeah that's just a local storage yeah okay
+13:1913 minutes, 19 secondsso local storage for that and surfing in terms of webtoons like what's really great is a picture focus
+13:2713 minutes, 27 secondslay up so that would involve getting the first few pages of the of the manga and then putting them onto onto the page
+13:3413 minutes, 34 secondslike that my opinion yeah yeah how can be our study not honestly not necessarily sometimes okay from foremost
+13:4313 minutes, 43 secondsmanga it's dr. white but like for like some of them they have color yeah but we have no control that's true yeah it's
+13:5313 minutes, 53 secondsnot too much we can do that yeah okay well we could do like that we could do like the CSS filter where like you take the image and you like overlay it with
+14:0214 minutes, 2 secondslike color yeah it's ugly you don't know what color suits the manga it's black
+14:0914 minutes, 9 secondsand white so you can put whatever try that whatever it doesn't make sense like if if the manga is like a romance manga
+14:1514 minutes, 15 secondsare you gonna put like blue blue yeah you kind of want like a pinkish color right or like it's just a perception I
+14:2314 minutes, 23 secondsmight be on the cover of the manga Naruto's hair is yellow in the overlay the image of like green it's just I don't know I don't think you looked I
+14:3114 minutes, 31 secondsdon't think there's any more pleasant because it's monochromatic anyway I think you're right yeah but in terms of the images actually let's have a look and see what webtoons gets it from cuz
+14:4014 minutes, 40 secondsmaybe they get a phone sunlight no this is like you upload it to them oh really yeah webtoons it's not a manga site it's actually a closed community oh yeah yeah
+14:4914 minutes, 49 secondsyeah so that's why they have such beautiful sources yeah yes make sense I
+14:5714 minutes, 57 secondssee so this is obviously designed for webtoons the CEO is just designed for toons people are plated yep is there any
+15:0715 minutes, 7 secondsway we can get like an image form yeah yeah we can we can um scrape Google Images or something like that yeah yeah
+15:1515 minutes, 15 secondsbut there's also it's just like it's just not worth it right let's just get the MVP yeah cool all right so we have the
+15:2415 minutes, 24 secondsdescription title is fine we just have something very similar yes okay I like the sorry I like when you scroll up
+15:3115 minutes, 31 secondsI like the shrinking header yes so maybe we can do something oh we can do that is that a problem so the way they do it this one's actually
+15:3915 minutes, 39 secondsreally genius as to how they do it yeah literally the head is in the background yeah it's just in them and like so so they have the background and then the
+15:4615 minutes, 46 secondsimage is also in the background yeah some way and then on top of that like this actually has a transparent so this
+15:5415 minutes, 54 secondssection here is transparent yeah so that shows the image behind it that's pretty cool I can do so this is all flying I think look honestly biggest downside for
+16:0216 minutes, 2 secondsme is that um I don't know I think if I were to do it I'd probably reverse the order support episode 1 on top
+16:1016 minutes, 10 secondsno no hundred-percent no I think you can do like continue reading is like the next one you're onto so like if you do 1
+16:1816 minutes, 18 seconds2 5 7 7 and you've never read a menu everyone know what's that what's thought of it what yeah okay she's gonna put it
+16:2716 minutes, 27 secondsout there man you should not be a UX designer whatever they what sort of streaming service like Netflix or
+16:3416 minutes, 34 secondsanything has it in like it's always reverse order when it's updating yeah I'm just saying like reddit is different
+16:4316 minutes, 43 secondsokay but if you go here and I want to read I'm not going to start reading from 5 7 7 like this button is almost impossible to see and now it's a
+16:5116 minutes, 51 secondscontinued reading I don't know where it's gonna take me no man definitely reverse order I don't know definitely
+17:0017 minutesreverse order cause like people often go to the same anger as well I think if you do reverse order you should have I think
+17:0817 minutes, 8 secondsokay in that case if you do reverse order that's fine like I get the point of reverse order um but I think this should be more prominent yeah like this
+17:1617 minutes, 16 secondsis seriously I feel like it's just an artifact of the color that the also chose so they gave a blue background
+17:2317 minutes, 23 secondslike if you pick any other mango you'll be white as well okay color would be you'll make sense yeah and I don't like
+17:3017 minutes, 30 secondshow it reloads the page though I don't like you know I can't read those the page yeah we're going to do a single
+17:3817 minutes, 38 secondspage app which we yeah okay anyway I think they got it and the other thing I want to show you is on go to youtube
+17:4517 minutes, 45 secondsmusic you please yeah yeah
+17:5717 minutes, 57 secondsyep and then install that so it should
+18:0718 minutes, 7 secondsbe taught in a dress bar so in the address bar on the right hand side
+18:1218 minutes, 12 secondsthere's a plus icon yeah yeah so this is a this is a pw a done well
+18:2218 minutes, 22 secondslet me go oh it just goes into yeah there you go so this is a pw a so if you like check and stuff you have like
+18:3118 minutes, 31 secondsextensions and stuff this is purely a Wow okay yep sorta yes it's not as a pro map I see ya in soy as a creme it's like a
+18:3918 minutes, 39 secondsChrome extension yeah so this is like just to show what it can do and then even if you like so open a random music
+18:4718 minutes, 47 secondsright like it's not by any means a unrefined experience it's just very lightly on your screen for some reason but it's not like yeah yeah they have a
+18:5518 minutes, 55 secondsloading bar somehow yep they have a playlist everything and when you're
+19:0319 minutes, 3 secondsplays they have the album art they have a nice split view they have the bar at the bottom like Spotify mmm yeah it's
+19:1119 minutes, 11 secondsjust it's just a good experience that's pretty so yeah so by no means is it inferior I think for what we're doing cuz whatever we're doing is like more
+19:1919 minutes, 19 secondsteacher it's simpler than this mmm yeah I agree YUM okay yeah school I think something
+19:2519 minutes, 25 secondslike this would be great yeah keep showing so how do you wanna do it do you wanna start it off cause it PWA oh just
+19:3319 minutes, 33 secondsconvert it to a PWI when you're done hmm it's just a manifest file I think I wasn't it called how was it at the
+19:4119 minutes, 41 secondsmanifest or something a manifesto JSON yeah yeah yeah I mean we can try doing that right like start off cuz I've I've
+19:4919 minutes, 49 secondsnever tried that before yeah using stole it yeah the thing is like there's like the you're meant to have like service workers and
+19:5719 minutes, 57 secondslike that so you have to be supposed to at least be loadable when the internet is down so you want to serviceworker cache like
+20:0520 minutes, 5 secondssome of the data basically mmm but I think we let's just not do that it's kind of useless to open a minger
+20:1520 minutes, 15 secondsout yeah you're not gonna be able to load anything so so good yeah and we don't want to download anything either
+20:2120 minutes, 21 secondsokay so let me see we need to have a web manifest with the correct fields filled in served from a secure HTTP domain an
+20:2920 minutes, 29 secondsicon and a serviceworker is this correct or is this for like a different no this is correct yeah okay this is correct
+20:3820 minutes, 38 secondsno service work will be empty though basically mmm manifest file stuff like
+20:4520 minutes, 45 secondsthis yeah we can just clone 1 dot web manifest ok and then what we need for
+20:5420 minutes, 54 secondswhat's a 2 HS I'm nerdy Add to Home screen
+21:0021 minutesoh ok place the icon on the home screen this is different to the one in Google Chrome right nice the same if you're
+21:0821 minutes, 8 secondsloaded on yeah evil it on the phone you can install it as a PWA oh ok yeah ok it's just how phones handle it
+21:1621 minutes, 16 secondsversus desktop all right grab this thing actually in desktop is fine as well like if you go if you go to spotlight it
+21:2321 minutes, 23 secondsbecomes an app yeah I know yeah so now I thought like that was I thought that they had to create a custom chrome extension to do that but doesn't Rama
+21:3221 minutes, 32 secondsgood okay sweet so what do we normally name the file probably like something's on many things
+21:3921 minutes, 39 secondsall right - initial sure what would you do just new - one way yeah yeah yeah
+21:5221 minutes, 52 secondsso okay this is what's keep all of that we need an icon as well we do but we
+22:0022 minutesalso don't we can just find a placeholder for now yeah just need to
+22:0522 minutes, 5 secondsget a picture right place com1 91 91 90
+22:1222 minutes, 12 secondsoh yeah well that's the whatever they had we can get younger yeah we don't it like cost stupid ever is there so we're just keep it straight yeah yeah you don't sometimes you don't
+22:1922 minutes, 19 secondsknow there's a um there's the morgue theorem of them something wrong it's
+22:2922 minutes, 29 secondslike where you the three the wrong with three doors where you see one door you always like switch if there's three doors the bottom one
+22:3722 minutes, 37 secondsyeah here that one Montez law so I feel like it's Monty Hall it's the Monty Hall theorem or whatever anyway so I feel
+22:4622 minutes, 46 secondslike um we should have looked at three killings before we picked one what we should have looked at more killings
+22:5422 minutes, 54 secondsbefore you picked one cause like how do you know you're kidding is even above average do you even understand what the
+23:0323 minutes, 3 secondsproblem means yeah understand completely split so the easiest way to explain is if you have a deck of cards and I totally pick like
+23:1123 minutes, 11 secondsIsis spades blind you pick one and I tell you like the other fifty in my hand is not the ace of spades so now I have
+23:1923 minutes, 19 secondsone you have one will you switch so clearly yes right because you had a one in 52 chance and now I'm eliminated like
+23:2623 minutes, 26 seconds49 of them or 50 of them so now you have a 50/50 chance yeah so that's that's the easiest way to
+23:3323 minutes, 33 secondsexplain it so the actual problem itself pure attention caused by you is there are three doors behind one of them is a
+23:4223 minutes, 42 secondsmillion dollars hmm you pick a door and then the gameshow guy opens one of the other two doors that you didn't pick
+23:5023 minutes, 50 secondsshows that it's empty yep and he asks you the question should you switch you and the answer is statistically yes yes and the reason for
+23:5923 minutes, 59 secondsthat is because he out of those two doors he specifically picked one that was that have the million dollars yep so he
+24:0824 minutes, 8 secondseliminated like 33% for you yes so say out of the three possibilities for him there are three possibilities right one possibility is that both of
+24:1624 minutes, 16 secondsthem I empty and in that case you don't get the million dollars the other case is that let's just say you pick door number one the other case is that door number two is empty and door number
+24:2524 minutes, 25 secondsthree hundred million dollars and then he will open door number two he's not going to open three so then you pick number three you get a million dollars Katie on the three is the same thing but
+24:3324 minutes, 33 secondsthe other way around so he opens number three you open number two you get million dollars yep yeah what do you that have to do with kittens because you just picked one
+24:4124 minutes, 41 secondskitten it's the same picture for one line -
+24:4424 minutes, 44 secondsit's not you can look at three kittens and then you can see like it's like a different kid in his bed ah
+24:4924 minutes, 49 secondsand then you can swap back it's not it's really it's not it's different but it's
+24:5724 minutes, 57 secondsrelated so you can pick it say yeah so you get one right and then you have a second one second I think a second one
+25:0325 minutes, 3 secondsand I ask you do you swap do you do you random a third one okay so okay so I
+25:1125 minutes, 11 secondspick a first one and you pick the second one yeah and then you ask me do I switch to a third one which I have no idea what
+25:1925 minutes, 19 secondswhat it is or do I save my current one yeah yeah problem statistically speaking could be either way like your pick
+25:2725 minutes, 27 secondsdoesn't influence me because I have no reference point as to how how like the maximum or minimum acuteness yeah
+25:3525 minutes, 35 secondsneither do i but now at least you know if you're on is cuter or worse than my one so now you know it so now you know
+25:4325 minutes, 43 secondswhether or not to re-roll cuz you won't be satisfied if my winnings better alright let's just do this okay
+25:5025 minutes, 50 secondswhat's the start URL right part of the officially later when the editor okay
+25:5725 minutes, 57 secondshmm okay just index.html right mmm
+26:0526 minutes, 5 secondsprovides a path to the asset that should be loaded when the added to homescreen app is launched so just the index ayesha
+26:1226 minutes, 12 secondsnot just um this yeah I'm not sure if it works with
+26:2026 minutes, 20 secondsrelative paths so in my two cents that has to be a relative euro okay yeah okay all right um I'm gonna do is rerun this
+26:2726 minutes, 27 secondsI have a feeling this okay wait what we like oh you have to dis this thing now Oh capacitor field yeah yeah and this
+26:3526 minutes, 35 secondsone here will do here and we'll pull it manga reader got web manifest you
+26:4426 minutes, 44 secondsinclude that - is just so chiral but yeah hey are you happy yes I'm happy
+26:5826 minutes, 58 secondsone guy commented on the previous video as well as like why do we argue so much this can be ugly because Patrick's wrong
+27:0727 minutes, 7 secondsit's obvious yeah what's the point of a green is like you can do it yourself yeah that's right yeah fine the whole
+27:1427 minutes, 14 secondspoint of arguing if you don't know software devs argue because arguments are fun yeah yeah and also they help
+27:2327 minutes, 23 secondsspend your day so you don't have to do that much work you're working either you know yeah it's like it's like when we say we're waiting for code to compile that's why people love to use Java
+27:3127 minutes, 31 secondsbecause they spend half their day compiling and the other half you know that's actually legit like I'm not joking in so um in my place like
+27:4027 minutes, 40 secondsbasically okay to story so one the backend job is set like suite of tests
+27:4627 minutes, 46 secondstakes like 40 minutes to run yep yep so if they do a push in the test failure they just pretty much wasted 40 minutes
+27:5427 minutes, 54 secondsof their life of course you see I think into other stuff that a lot of people just like you know go off come back in
+28:0128 minutes, 1 secondand sometimes you're blocked as well so you can't just like go off come back and there's something even worse so like a customer of ours has a problem kind of
+28:1128 minutes, 11 secondsstuff and to reproduce we can't reproduce locally so we had to basically clone the instance in order to try and
+28:1928 minutes, 19 secondsreproduce it and I think like their data set is like in the you know nines and tens of gigabytes so it takes like five
+28:2728 minutes, 27 secondshours to just restore the instance unlike a look you know crazy anyways but that's funny
+28:3528 minutes, 35 secondsthat's the pilot yeah it's it's it's legit that's what you know you've made it so alright so what we're gonna do now
+28:4228 minutes, 42 secondsis we have all of this I'm going to young build it upload it to probably
+28:4928 minutes, 49 secondssearch just like just so we can have an HTTP yeah and then we can go yeah you
+28:5728 minutes, 57 secondscome there should be gonna install it yeah I want to see if I can install it it was at this stage I'm not even sure if I can
+29:0429 minutes, 4 secondsso I still feel the SRC in XHTML um I like to do this starting to remove the disk folder doesn't duplicate files
+29:1329 minutes, 13 secondswhat's your opinion on that yeah that's what I'm a lot of people do as well yeah fair enough
+29:2029 minutes, 20 secondsso when you build that real quick it's it's more of the residue like sometimes
+29:2729 minutes, 27 secondssay like your hashes files sometimes they'll you might stantly leave some actually you know something exactly it's like with possible it actually leaves
+29:3529 minutes, 35 secondsthe original files oh really yeah I just keeps growing your beat or whatever and you get another one like a whatever so let's test roll let's search
+29:4529 minutes, 45 secondsthis okay to me again nice fun it's
+29:5429 minutes, 54 secondsfinally murals it's fine on euros dude I'm not complaining for once what is that kind of a case chord cuz -
+30:0330 minutes, 3 secondsmean to bed - it's about case but like when you do like mega Reno or lower case no kebab
+30:1030 minutes, 10 secondswhat is that chord it's like if is quite English is poor down it's a camel case
+30:1930 minutes, 19 secondsthen if it's completely flat it's like what cow case English English
+30:2730 minutes, 27 secondsthere's name still button yours yeah cause it's not HTTP still nice all button is the network tab
+30:4230 minutes, 42 secondswhy what it actually changed the name dude parcels so good yeah hash is your
+30:4930 minutes, 49 secondsstatic content I think um it must be May because we have no service worker cause
+30:5730 minutes, 57 secondsit says is required oh I totally forgot we need to have the right manner oh my bad okay so if I will actually it's right here
+31:0531 minutes, 5 secondsduplicate this will go back to that page okay so we need to have that and then we need to have HTTPS when you have the icon we have the icon right the service
+31:1431 minutes, 14 secondsworker but this is only required by Chrome for Android but you're in Chrome for Android
+31:1931 minutes, 19 secondsoh yeah JSON I saw a manifest.json no
+31:3031 minutes, 30 secondsthere are few combinations that we use me know yeah let me try testing on my
+31:3731 minutes, 37 secondsandroid phone yeah I've done this before when you remember was pretty straightforward wait but if I do it on
+31:4531 minutes, 45 secondsmy Android phone that I need to have a serviceworker yes so you have to do it
+31:5231 minutes, 52 secondson an Apple phone but does Apple even let you do it yeah yeah it does oh my
+31:5931 minutes, 59 secondsgosh I'm not gonna try there don't want to install your virus on my device what virus I didn't know you might be have
+32:0632 minutes, 6 secondsKiwis and stuff I'm gonna I'm gonna install a Bitcoin miner by a PWA I don't
+32:1432 minutes, 14 secondseven know my channel I didn't even know what I'm looking for like add to homescreen oh you bought it yeah no I don't know I don't even know what to see
+32:2232 minutes, 22 secondsyou I'm looking on my Chinese menu like on my phone once you're broken I don't know oh yeah the home screen is correct you
+32:3132 minutes, 31 secondsknow I can't even see it I'll have to being on a safari oh gosh okay manga reader got search that Sh
+32:4232 minutes, 42 secondsKenyatta to chemo all right it says foxes that's promising ad okay now have a white icon on my home
+32:5232 minutes, 52 secondsscreen yeah it's not a kitten no it's not does it work I mean it shows the webpage
+33:0133 minutes, 1 secondbut I can do this for any website right you can literally go to Google right now and do the same thing that's true so
+33:0833 minutes, 8 secondswhat is it no you broke something wrong with your manifest how about let's just ready music don't YouTube :
+33:1633 minutes, 16 secondswe're entering amenities yeah alright manifest haha yeah they're cool I had a
+33:2433 minutes, 24 secondscold at sea yeah they don't want this crappy YouTube - music oh alright let me
+33:3133 minutes, 31 secondsmove our faces over here oh yeah the dimensions actually do make are they are fixed yeah that's why they
+33:3933 minutes, 39 secondshave like 48 so this is I think iOS n okay if I if I just grab literally their icons will that be okay
+33:4633 minutes, 46 secondsI guess let me describe the whole thing
+33:5533 minutes, 55 secondsokay and I can get rid of this right yeah that's fine we'll call us make a
+34:0634 minutes, 6 secondsreal anyway and I'll mate might be this I don't know honestly
+34:1434 minutes, 14 secondslet's just let's try this yeah yeah you could beat you actually just I'm building faces over this man okay so now
+34:2334 minutes, 23 secondswe thought we built it let's go to dist and surge again sweet okay now we go
+34:2934 minutes, 29 secondsback here and we refresh what it's a
+34:3834 minutes, 38 secondsline oh wow nothing we're back yeah I think it might be the
+34:4634 minutes, 46 secondsserviceworker there's no other explanation
+34:4934 minutes, 49 secondsall right what else could be yes see PWA
+35:0435 minutes, 4 secondsis on desktop there's something it's different it's not the same oh is it not the same no it's not the
+35:1435 minutes, 14 secondsapp window okay so how do we do it getting started service workers progressive web apps
+35:2235 minutes, 22 secondswhy build how do I do it pump ting uses
+35:2735 minutes, 27 secondsinstall TWA install criteria okay so
+35:3635 minutes, 36 secondsit's just a means to not being taught me to using engagement heuristic what okay
+35:4735 minutes, 47 secondsso we need to have a service worker this is not required anymore what mister using gauge min heuristic it's not
+35:5435 minutes, 54 secondsrequired any yeah no I mean okay yeah yeah yeah we need yeah yeah yeah yeah yeah that's why I said before let's go
+36:0336 minutes, 3 secondshow do we build a service weapon there you go there's a sample code right don't
+36:1536 minutes, 15 secondsknow just take the criteria at one oh yeah
+36:2136 minutes, 21 secondsCRM and how do we see that code do you
+36:2936 minutes, 29 secondshave one locally no I never you sorry I also never use it yeah or like sample service worker
+36:4136 minutes, 41 secondsoh we can copy the one from YouTube easy genius the one might have a lot of shaft or searcher trip or a service worker
+36:5036 minutes, 50 secondssample github pages yeah yeah just go for that one it looks pretty simple
+36:5536 minutes, 55 secondshey what ah I need the show yeah yep yep
+37:0437 minutes, 4 secondsthis looks good to me um so we want us another file course we
+37:2137 minutes, 21 secondsdo - oh no all right this one is clarified now we grab this territory yep
+37:2937 minutes, 29 secondscome here right yes yeah we well we want to fix up some of the stuff so we don't
+37:3837 minutes, 38 secondshave any day oh yeah this alias might need to keep the alias hmm everything else is fine right I don't
+37:4737 minutes, 47 secondsknow dude there's a fetch listener so that's good what is the fetch listen to do precache it fetches can we like cuz obviously we
+37:5737 minutes, 57 secondsdon't do any of this stuff right yes all right
+38:0138 minutes, 1 secondokay um yeah now this makes sense so
+38:0938 minutes, 9 secondsbasically if it starts with the same art you have to read do we have to register the service often and many fish suppose it is used automatic thanks automatic
+38:1638 minutes, 16 secondsokay but we shall find out all right
+38:2738 minutes, 27 secondsreally disappointed I'm already disappointed all right ooh oh we're done
+38:3838 minutes, 38 secondswe're done all right next video see ya Oh see ya
+38:4538 minutes, 45 secondsthat's it I mean alright guys this is the quality content that you should
+38:5438 minutes, 54 secondssubscribe for because I'm actually done yeah there's actually an hour yeah actually I expected like something looking like
+39:0239 minutes, 2 secondsthis by the end of the video I'm not gonna lie I expected well we had design design cannot be
+39:0939 minutes, 9 secondsskipped that's Rita yeah I think for now of talking about design is not even long enough it's just yeah I mean people
+39:1739 minutes, 17 secondsliterally spent like hours and days in like sketch you know putting yellow yeah literally Harper you half a year before the engineers even see the spec yeah
+39:2439 minutes, 24 secondsyeah pretty much so it's valuable yeah but we can now click bait this like you won't believe what we do this episode yeah yeah no I
+39:3339 minutes, 33 secondsthink it's good I think we have some have a single react on a react code but
+39:4039 minutes, 40 secondsin stores before we end that we have to how to delete mega Rita and we haven't
+39:4839 minutes, 48 secondseven place it within this is definitely like one story you know one story at a time yeah agile so you reckon this will
+39:5839 minutes, 58 secondsbe like the work for one sprint or like half as big no probably be like a one pointer but it'll be considered like a
+40:0740 minutes, 7 secondsstory cuz you can't you can't bundle this with anything else like make the app installable like it's it's a
+40:1440 minutes, 14 secondsstandalone task yeah how do I create multiple icons in one go I can't you can
+40:2440 minutes, 24 secondsactually just hack in link the URL can you yeah I think so everyone we just
+40:3040 minutes, 30 secondscarried different icon it's like does it do a image size check although it
+40:3840 minutes, 38 secondsprobably does but you can do them because you can just link it to the gym yeah that's your kid in placeholder yeah all right oh you just generated for them
+40:4740 minutes, 47 secondsdon't even raise daughter yeah that's big brain dude I don't know that word um yeah just check this jar on my clothes
+40:5640 minutes, 56 secondsright yeah all right we'll check this and then we'll win the video now we have to we have to deploy it okay people like
+41:0641 minutes, 6 secondsthis yeah you might want to do for all cause I think depending on a device you only
+41:1141 minutes, 11 secondsuse one of them by 12 5-12 72 all right
+41:2841 minutes, 28 secondsit's okay yes I this would sweet let's go it may be the extension is troll or
+41:3741 minutes, 37 secondsmaybe they do something really bad like redirect you to something no how about uninstalled it yeah okay cool all right
+41:4741 minutes, 47 secondsum where are we ah closer manga research is H you know what this is actually good if it's actually good enough I'll use it
+41:5541 minutes, 55 secondsbecause I literally want a there's no more manga reader that's good and you we're going this so you can use it you better use it oh really I figured you
+42:0342 minutes, 3 secondsmessage me you were like dude he's idea billion dollar business idea we have to
+42:0842 minutes, 8 secondsbe obvious or smart the best part is the icon here is different to the icon here
+42:1842 minutes, 18 secondsoh this is the same icon yeah if you do like spotlight does it show the icon Oh
+42:2542 minutes, 25 secondswhat like if you search for the app in spotlight oh yeah - man's face yeah it's
+42:3742 minutes, 37 secondsgood enough it's fine we just leave we just publish it like this it's fine everyone can have a different icon guys we said we build the front end and we delivered we did it yeah we're
+42:4542 minutes, 45 secondsthank you guys for watching this video I hope you guys have enjoyed and see you guys back here next time then Lucas I'm Patrick good buddy fighting ahead of me
+42:5242 minutes, 52 secondssee ya leave comments man so we can so you know how it going yeah roast us please that right - HUD I can take it
+42:5942 minutes, 59 secondsyeah touch my I take it that was me I can take it just not little kids

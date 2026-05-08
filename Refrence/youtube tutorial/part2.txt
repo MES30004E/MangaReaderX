@@ -1,0 +1,327 @@
+0:044 secondshey guys this is Lucas from better coding Academy I'm sitting down with Patrick again today and we are going to be continuing the manga reader okay
+0:1111 secondsyeah and finally is aspire to be part 2 we're going back in okay so well I mean Patrick how do you want to start us off how do you want to keep going from here
+0:1919 secondswell a lot of boilerplate now so we can find me finally get in to do something interesting do we have a solution yeah like I remember do we do we have a solution so
+0:2828 secondswe have graph QL setup and also the reader apps so maybe we can just have a look at what we've got so far it's definitely less so if my computer
+0:3737 secondsdoesn't lag too much and apologies for the green border it is zoom I don't know how to turn it off if you know please tell me in the comments below
+0:4545 secondsmr. Brendan well whatever you're going with it so we've got graph Q basic graph cure set up and also the manga reader
+0:5252 secondsover here that's it okay cool all right so I think from memory the solution we had was like we wanted to look at manga
+1:001 minuteEden I think we found that yes yeah thank you Eden right and we want to kind
+1:071 minute, 7 secondsof have a basically a cage basically a cage right so the idea is when people come through the PWA
+1:151 minute, 15 secondsthe load a manga it'll look in the cage first for optimization if not our node service
+1:231 minute, 23 secondswould fetch it from manga Eden and then cage it and then serve it so fetch the image URL is that what you are looking
+1:311 minute, 31 secondsfor probably not the image I had a quick look at the main gate you didn't API list I think we only need to catch the actual metadata of the manga if you know
+1:391 minute, 39 secondswhat I mean yep so what about cuz I mean we were talking about getting the image yes like for the image itself well we
+1:491 minute, 49 secondscan cache the image URLs but like you said on there's a potential it can be out of sync like if they say refreshed
+1:571 minute, 57 secondsrandom like say the URL has a random token string right and they just keep changing every now and then to stop people like us from doing this
+2:052 minutes, 5 secondsthen we'll have to redirect them so the idea is you load the manga chapter right and then you just redirect them like
+2:132 minutes, 13 secondsthey can do the direct call to make me eat and there's probably going to be caused issues so we might have to proxy it through our node service if that's the case we'll just case you all so what
+2:212 minutes, 21 secondsyou're saying is basically all we do is get almost the the the manga ID itself and then every time we load a chapter
+2:292 minutes, 29 secondsthen we get the method like then we get the image data from mega Adan and then we fetch the image from there yeah I
+2:372 minutes, 37 secondsthink the first step is just so the chapter I like we will start off simple all we need right now is a list of manga
+2:452 minutes, 45 secondsmaybe like salt by latest oh yeah that's all we need so maybe let's go from there and um so if manga Eden it does have
+2:522 minutes, 52 secondssupport for pages so pages have also had variable page sizes okay so what we can
+2:592 minutes, 59 secondsdo is find for our graph QL API do you want to set up a way to split it up into
+3:063 minutes, 6 secondsmultiple pages no I don't think we need it like I think we let's just start off simple cuz like before we get to the
+3:133 minutes, 13 secondspages and stuff right we just need a way to search and browse for manga like before we even drill down to chapter
+3:213 minutes, 21 secondslevel yeah so so I think we can use the first URL the API list language and
+3:293 minutes, 29 secondswe're just gonna support English now I guess yep and all you need to be able to do is to load that URL
+3:363 minutes, 36 secondsprobably yeah like mu yes yep yeah so this is the entire thing well I didn't
+3:453 minutes, 45 secondspaid zero so I didn't want to get too many this is only 500 yes yeah so like I
+3:533 minutes, 53 secondsdon't like the keys here the keys are kinda ridiculous but some of them is like timestamp which I think LD yeah last state is timestamp for last updated
+4:014 minutes, 1 secondso then if we can cash this thing right last time today LD will be the last time a new chapter them yep yep so if we can
+4:094 minutes, 9 secondscatch the entire request right don't even need to pay just occasionally entire request into a MongoDB or something
+4:164 minutes, 16 secondsthen we can query our DB and ask for what is the latest top 10 make like the latest updated mango right because then
+4:234 minutes, 23 secondswe just do a query on LD you know yeah yeah so so I think we can start off with
+4:324 minutes, 32 secondsand then we can have a little bit of query power so we can make her Apple you know for browsing experience to be nice otherwise it's going to be too hard with
+4:404 minutes, 40 secondsjust this API okay so step one would be to store this in MongoDB step two would then maybe consider paginating it or something like that once you get the
+4:484 minutes, 48 secondswhole data set yeah yeah yeah exactly yeah yeah um okay so then maybe let's talk about how we're gonna do the
+4:554 minutes, 55 secondscaching so you said use MongoDB is that going to be running as like like like her kind of like a cron job every now
+5:025 minutes, 2 secondsand then all that sort of thing yeah I think for simplicity sake on job is fine like ideally we want the cron job to be
+5:105 minutes, 10 secondsseparate from our main service so you can deploy a separately because if you you like you're visiting scales right like you have X number of nodes you
+5:185 minutes, 18 secondsdon't want to run the con job on every nose yeah at the same at the same time yeah it makes no sense but for simplicity sake you know we already mono
+5:255 minutes, 25 secondsrepo let's just do monolith you know one means yes yeah it's not very heavy okay so we can we can run a yeah we can run it looking credit-card job now but
+5:345 minutes, 34 secondsprobably we need a DB yeah okay so I just wanted to clarify how you wanted to go with that so then in that case um what so I'd never use MongoDB before
+5:435 minutes, 43 secondslike so okay nice that's never start all right I knew that graph QL and you'll never leave that this is this is
+5:515 minutes, 51 secondsmy name in the blind man yeah this is why we need it there all right um I don't know man what do we do just let's
+6:006 minutesjust go to - yeah let's just go to the website yeah let me let me put some
+6:096 minutes, 9 secondswebsites up so I have stuff to recommend and so what I've heard of was Mongoose wasn't it Mongoose is the feature RM or
+6:176 minutes, 17 secondslike the biggest one is erm okay yes I am or you can just use MongoDB directly
+6:246 minutes, 24 secondsI think okay do you reckon we should use the ORM I think the
+6:316 minutes, 31 secondsnot Mongoose I think yeah we can't even want to but I think you can also just use own MongoDB like literally monkey
+6:376 minutes, 37 secondsokay well to you yeah of setting up I'm gonna go inside the services and I'm gonna set up a readme
+6:446 minutes, 44 secondshere and then let's create like a docker container that we use or the full
+6:526 minutes, 52 secondshideout okay okay I'll usually it's just really quick search the docker I have a similar script for my sequel but
+7:007 minuteshaven't done this long ago sir but it should be similar just find it here yep and could you like explain your reasoning as to why you want to choose
+7:087 minutes, 8 secondslong go over like say for example my sequel or something yeah yeah sure because I'm like well relational stuff
+7:157 minutes, 15 secondsis when you're really building like an erm kind of thing like entity relational
+7:227 minutes, 22 secondsmodels with us we're just occasion service man we don't need to care about any of the relation right like the actual the actual where all the actual
+7:317 minutes, 31 secondsdata in the relationship is in Manga either and is also true we just need a pool of down dump the thing in a cage and go with it so it doesn't really make
+7:407 minutes, 40 secondssense for us to use whatever's like we use like none of the power right and then is probably like sin it's probably a little bit quicker in like
+7:487 minutes, 48 secondsquick access and quick writes since there's no like you know database safety checks and stuff like that yeah it just
+7:567 minutes, 56 secondsmakes sense to me it's very like loose data yeah I think that's just like dump severe you know essentially it's just a good place where you can just dump the information in but also yeah it's just
+8:058 minutes, 5 secondsdone daily Earth read it in some sense yeah and also like if say manga either and changes their object model right we
+8:138 minutes, 13 secondsjust were just a cage so we can just blow everything away and just shove it back you don't need to migrate the database yeah creating you column and
+8:208 minutes, 20 secondsrow and for the tag we are going to use is there a difference between three and four I don't know man just
+8:298 minutes, 29 secondsjust fastest useful them yeah who would watch this video I use Assyrian Church review for point two point oh I guess is
+8:378 minutes, 37 secondsthe latest one so we take this and we control see that and we're tasting here
+8:458 minutes, 45 secondsand we press ENTER and it downloads okay so now that we've got the thing running how do we even
+8:538 minutes, 53 secondsconnect to this I have no idea if we use Mongoose do we still need this like like an IE dependency or no hmm no no
+9:009 minutesthis I think this is um this this is like two of the same things or maybe Mongoose builds on top of it basically they're just two interfaces yeah let's
+9:099 minutes, 9 secondstry - I'll get it - this is pretty digger it's trying it's the same thing yeah we're not doing we're not doing too much doesn't and then dot env we
+9:179 minutes, 17 secondswouldn't need to include like what the URL env okay yeah so whatever the docker
+9:279 minutes, 27 secondsspits out so that one was oh I forgot to do the port oh gosh what port is it on
+9:349 minutes, 34 secondslonger URL oh yeah yeah what's your opinion on calling a monger URL oh just
+9:429 minutes, 42 secondslike DB URL or something ODB Chris you're you're denying technology already
+9:509 minutes, 50 secondsyou're right but um yeah with DB like to me personally DB is almost like it can
+9:599 minutes, 59 secondsbe easily confused with relational DV so I don't want to have like all of it because because we're using Mongoose anyways so like my opinion I use like just longer URL like that's what yeah
+10:0810 minutes, 8 secondsyeah I mean we can keep it like this for now but I'm I don't think that's right because like like let's let's just say
+10:1610 minutes, 16 secondsyou're using Mongoose but but then you can let's just say that the API for Mongoose and like bookshelf is so much assume a lot that you can just switch
+10:2410 minutes, 24 secondsout to relational any time with like almost no change yeah right then that M doesn't make sense all right okay you know I think
+10:3310 minutes, 33 secondsthat's fair either way I'm going to fuss ah that's how you do it yeah I remember now okay so the way you do it is docker run
+10:4110 minutes, 41 seconds- P 0.000 and then what was our board again the one that we when you said 29
+10:4910 minutes, 49 secondswasn't we want to use 3000 again the three thousands of the services oh but no yeah I keep yeah yeah what yeah so 27
+10:5710 minutes, 57 seconds0 1 7 is that yeah what do you want to use a different port can't you just do it on the same yeah I don't like talking about that I like having all of my ports like in one like for example if I have
+11:0711 minutes, 7 secondsit like manga Rita then it might be on like port 3 and like say the reader app might be on 3001 and my daughter Bates might be like
+11:1411 minutes, 14 secondsthree nine nine nine or something okay yeah whatever doesn't matter I like to keep it default well then how do you run to TV's at the same time you
+11:2311 minutes, 23 secondschanged a segment I'm gonna change this one as well for possible how'd you connect it sweetie beat not so if you're
+11:3211 minutes, 32 secondsworking on it yeah three nine nine nine oh my god just make a fort out for thousands of different one the whole idea is that it's to then it's like it
+11:4211 minutes, 42 secondstakes over an app you know yeah yeah that's why I do sports now it takes over a different app all right okay whatever
+11:5211 minutes, 52 secondsokay so what would you what do you think we should call this one here DB URL yeah
+11:5811 minutes, 58 secondsI think it's and Google Chrome I've been Mongoose is Mongoose and you
+12:0712 minutes, 7 secondsclose it I hear it is it doesn't have a favicon okay MongoDB localhost all right johnie's
+12:1612 minutes, 16 secondsthis all use localhost doesn't matter doesn't matter dump it on yeah um localhost colon three 909 forward slash
+12:2612 minutes, 26 secondsdo we get a default database how does that work no you don't let's get viewer yeah
+12:3312 minutes, 33 secondsit's cables less nothing for for man on my computer I I also don't have
+12:4112 minutes, 41 secondsanything yeah I think I had one at some point I removed it yeah right I think I use Robo is it this one this second
+12:4812 minutes, 48 secondsmeteor the first one is the ad okay yeah I can solve this using brew Oh hopefully
+13:0113 minutes, 1 secondwe are like really ground on man we have nothing installed that's good as like as people can see we don't prepare for it
+13:0813 minutes, 8 secondsis it truly a life care programmer in session but that's the thing like to be completely honest there like in reality
+13:1513 minutes, 15 secondsyou're not going to go into a company and like everything's there waiting for you all installed or perfect like yeah I'm at I'm like bluetooth isn't evil
+13:2413 minutes, 24 secondsworking properly you know and like it is yeah it's not like a shop the see shopping one can Paul on the computer
+13:3313 minutes, 33 secondshow to use the other computer you remember this and then blue - yeah that's work and then yeah come on man it's bad you know that's cause they they
+13:4013 minutes, 40 secondsgot us front in devs to be doing like c-sharp blue - no but it wasn't our fault yes but if we were C sharp devs like we didn't have the correct bluetooth dongle
+13:4913 minutes, 49 secondsoh oh yeah good bye to do you can't do anything you walk out by one and then you learn
+13:5713 minutes, 57 secondsthe expense system to expense the blue crazy man yeah but funny thing is I ordered a on Bluetooth link from eBay
+14:0514 minutes, 5 secondsand he never arrived never but never but the company paid for it and then owing question is like well it's like where's the thing yeah oh maybe I don't know
+14:1314 minutes, 13 secondsyeah it's weird hey mine always does this how do you fix that I tried searching it out by client I don't know how to search this up
+14:2114 minutes, 21 secondslightly your computer just mass is the official term item yes the problem you see that's
+14:3014 minutes, 30 secondsstill terminal this is how no but it's using zishe not bash let's see it just has like cool stuff you know like like the one I use I use dead so it
+14:3914 minutes, 39 secondssaid if you just saw typing or press tab it gives you the whole thing for like flight CD no I just used the vanilla I
+14:4714 minutes, 47 secondslike to get on all right fair enough yeah that's probably why your thing is broken excess all right okay um right by
+14:5414 minutes, 54 seconds3d was installed yeah amazing Wow you have to open its roof yeah I had the
+15:0215 minutes, 2 secondsright click it so yeah Robo dirty and it was you know max for power users that's it man
+15:1015 minutes, 10 secondsyeah okay here we go I agree read through the whole thing next if you read this for such a time I
+15:1915 minutes, 19 secondsdo man I read so fast you know alright how do I move this you're here this one connect right no I meant to
+15:2915 minutes, 29 secondsplay create okay oh my gosh stop popping up local host 399 see this is why do
+15:3815 minutes, 38 secondsdefault tonight yeah then you have to with the same defaults bad man it's terrible you might that's bad yeah one out to a computer on so bad
+15:4615 minutes, 46 secondswait might might connect don't try get connect Wow the moment of truth network
+15:5215 minutes, 52 secondsis unreachable why let me see good cause you're not your doctor thing it's not
+16:0116 minutes, 1 secondworking man is it really you are you sure stream oh I do actually type this
+16:0816 minutes, 8 secondsor not I don't think I even did that oh god I didn't even joy Oh sir now I
+16:1716 minutes, 17 secondsshould be able to click here there boom we're in the truth okay hey pretty great
+16:2516 minutes, 25 secondsdatabase yeah okay can you pull up like mspaint let's do something like the baby's like yeah it
+16:3516 minutes, 35 secondsdoes my mouth oh wait my mouth okay cool boys is so laggy oh this is tough
+16:4316 minutes, 43 secondsso anyway maybe our talking you can joke with my mouse thanks umm so we we want
+16:5116 minutes, 51 secondsone table right like one whatever they call it in what collection so we
+17:0117 minutes, 1 secondwant one collection which is just my manga my god yep and then yeah and then
+17:1117 minutes, 11 secondsthat would be literally the list of URLs like that end point we beat their massive implant it gives you back like a
+17:1817 minutes, 18 secondsmassive list and then we probably battery if you use this but whatever and then we probably want another one called
+17:2617 minutes, 26 secondschapters so chapters is essentially wait
+17:3617 minutes, 36 secondschapters is related to manga so chapters to mangas like sorry mine gets of chapters is like a one-to-many relationship correct then why are we
+17:4517 minutes, 45 secondshaving a separate collection for chapters versus storing it inside of manga because the URL doesn't give you back
+17:5317 minutes, 53 secondschapters okay so basically mine is just going to be the one that we dumped information into and chapters is separate to that in a way yeah yeah the
+18:0218 minutes, 2 secondsreason oh yeah sorry so the reason is like you know the URL we hit right okay let's go have a look yeah that's got yes just go find the tab
+18:1018 minutes, 10 secondsyep like it doesn't come we've charged it right okay it just comes with the meta info for check yeah this oh no doesn't that's just categories so we
+18:1818 minutes, 18 secondshave to like fetch the cap this chapter separately which means we can't get both the manga and the chapter at the same time unless we make you know nine
+18:2618 minutes, 26 secondsthousand or whatever time I face number so there's your chair but basically like almost like these are filled in just in
+18:3318 minutes, 33 secondstime yes well we still use cash but you're just in time so as the first time
+18:3918 minutes, 39 secondssomeone hits sir we will priming we don't have to do that we'll see but
+18:4618 minutes, 46 secondsanyway that's probably it so far like we're probably just gonna start off with main guy and not even bother with the chapters until later yeah I think that's
+18:5618 minutes, 56 secondsfair so Wow but what a useful diagram so now let me see so we've got Robo 3t so do we create a
+19:0519 minutes, 5 secondsnew database yes yes Wangari doc yeah
+19:1219 minutes, 12 secondsand then do we need to create a new collection oh oh yeah we do do we
+19:1919 minutes, 19 secondsMichelle yeah we I mean let's see we can do this properly right there must be
+19:2619 minutes, 26 secondssome kind of um migration create collection migration way of doing it right
+19:3519 minutes, 35 secondsmanga nothing insert document also document here we go so the document is like the the row
+19:4419 minutes, 44 secondsbasically right so this is like a document so then if you were to get manga oh yeah doc you monster own you do
+19:5119 minutes, 51 secondsyes let's describe the first one so say say this one here then you do something like copy hey
+19:5919 minutes, 59 secondsyeah just copying Kristin do you see that yeah yeah yeah yeah we let's we were I swear we want to
+20:0820 minutes, 8 secondslike make the keys better mail I can't read these keys can we just like map the keys you wanna matter something yeah okay yeah it's just about um okay what's
+20:1720 minutes, 17 secondsa phase alias we need it I don't know which might as well just get it anyway
+20:2520 minutes, 25 secondsthere's no harm story yeah he's a categories it's not right over there H
+20:3220 minutes, 32 secondsis hits whatever that is okay I think that's probably how many times has been
+20:3820 minutes, 38 secondsseen do we need all of this though we probably don't but there's no I mean just taking because we do they request
+20:4720 minutes, 47 secondsanywhere right it's not expensive to you dump it in Idol so then Alec aliens categories hits ID image that is title
+20:5420 minutes, 54 secondsokay looks good all right yeah let's say so now now you should be able to view it
+21:0321 minutes, 3 secondsyou know you see the code yeah yeah there you go okay so the object ID is different to the ID so is that my fault
+21:1221 minutes, 12 secondswas I meant to call it under new ID daddy's your fault yes okay so let's try try that one again how do I export this is like an object i
+21:2021 minutes, 20 secondshow do i document okay so right so instead of doing this I was meant to call this one underscore ID I put it
+21:2921 minutes, 29 secondshere yeah that let's give that a go yeah see what happens do you need objects why
+21:3721 minutes, 37 secondsdo you need object I don't know you see what happens if we get rid of the object I swear you don't need I have
+21:4621 minutes, 46 secondsto yeah just right so this one is unnecessary
+21:5221 minutes, 52 secondsyes okay it's not one and I'm not convinced about object I don't why do we
+22:0122 minutes, 1 secondneed object yeah so you're saying just do this yeah
+22:0622 minutes, 6 secondswhatever it works yeah there you go
+22:1422 minutes, 14 secondsit's fine okay set it up because I want to find out what exactly that does okay sure yeah
+22:2222 minutes, 22 secondsobject ID oh is it because it returns a
+22:3122 minutes, 31 secondsnew object ID value consists of a full byte value but that's different right
+22:3922 minutes, 39 secondsbecause you're using the strong idea I like you asked for generating an object ID and we already have so we can just do this by gamma stream yeah it's ready
+22:4722 minutes, 47 secondsokay do we want to try running a query on it no if we can how about we do it straight from the so how about we do
+22:5422 minutes, 54 secondsyeah Mongoose and we'll just try set that up yeah we do it so now this one's mango read our database name and
+23:0323 minutes, 3 secondsyes Mongoose we do that and you should end with a slash I'll shut okay I think
+23:1523 minutes, 15 secondsso I guess we just do it here I smell good and then we just do like
+23:2423 minutes, 24 secondsprocessed em pull up mongoose dogs loose
+23:3123 minutes, 31 secondsright it's an actual mint good Mongoose and then MongoDB our model so what one
+23:4023 minutes, 40 secondsof them okay I'll have to check the dogs yeah we run a model so so model just describes your collection it's like object-oriented you just
+23:4823 minutes, 48 secondsdescribes your collection okay so yeah but how does that map to the actual name
+23:5623 minutes, 56 secondsof the victim doesn't just just call it oh it's like animal now you need to use
+24:0224 minutes, 2 secondsum I think title case I think I think if you just call it hey cuz like manga so
+24:1024 minutes, 10 secondsif you write manga here like this all turn into mangas right I think yeah yes so we need like yes this specifically specify the actual
+24:2024 minutes, 20 secondscollection yeah yeah I think I mentioned should be uppercase because it's an object so maybe he can we change it the
+24:2924 minutes, 29 secondsMongoDB yeah give me a second or you see mondal does was it doc create yeah mongoose top model know what quick start
+24:3824 minutes, 38 secondsmongoose doc connect mongoose stock schema why just just do a normal one
+24:4724 minutes, 47 secondsyeah but where do we get how to get that is that the constructor so mistakes and
+24:5324 minutes, 53 secondslook let me see so what kind of having us compiling your first model so you
+25:0225 minutes, 2 secondsneed a schema and then you create the model from the schema yeah make sense what's wrong with it so what's the
+25:0925 minutes, 9 secondsschema the schema it describes what's in your connection like your individual field okay agree yeah cuz it doesn't why
+25:1825 minutes, 18 secondsisn't that on the model it is on the model then why they separate it's not separate that you put the schema to create the model like to create a model
+25:2725 minutes, 27 secondsyou need both the name and the schema yeah but why can't like yeah that's a bit way to me because I'd expect it to be like Mongoose top model and then
+25:3425 minutes, 34 secondsyeah okay like that yeah probably yeah like I think schema is a separate object right so if you can probably do the other stuff for schema okay so also
+25:4325 minutes, 43 secondstoday this here but you can actually do is Mongoose not schema so long do start
+25:4925 minutes, 49 secondsImam and no no don't do that but yeah I think it's bad I think you should do it
+25:5725 minutes, 57 secondsonline because you're like in line trading objects it's just like I say if you want to reuse the schema right like you have to create a new schema
+26:0426 minutes, 4 secondsespecially the same time so like cuz yeah it's just a yeah the way of
+26:1126 minutes, 11 secondsprogramming is very different to react I'll show me this thing mongoose schema
+26:1926 minutes, 19 secondsyeah and we just need oh that aliases we've got does ID count no I guess not
+26:2726 minutes, 27 secondsyeah oh no no I think that's internal but it's on this might be so Dory's
+26:3126 minutes, 31 secondswhat'd I just say ray why is it actually
+26:4126 minutes, 41 secondsa raid it feels so weird like using
+26:4826 minutes, 48 secondsprimitive types like this yes actually how it works yeah or something like that because so you got like name name string
+26:5626 minutes, 56 secondshere so has to be something like that ah and then yeah I don't know if I like this man
+27:0327 minutes, 3 secondshonestly well you picked yeah I guess there's like it's node related right so like no it's like kind
+27:1127 minutes, 11 secondsof JavaScript to eat it's like I guess that makes sense yeah but then it's for array of n instead of doing array I would do square
+27:2027 minutes, 20 secondsbrackets all right why don't I square
+27:2527 minutes, 25 secondsbracket string yeah actually I should wait all right sorry yeah yes grab a constraint yeah
+27:3327 minutes, 33 secondsokay and what about if something can be null okay so iRacing special house no soliciting for
+27:4027 minutes, 40 secondsvalue of default huh okay so you can write okay so you
+27:4827 minutes, 48 secondscan put is it there's oh this required
+27:5527 minutes, 55 secondsso I guess it's a default it's not required is there required yeah I can tell so the
+28:0228 minutes, 2 secondsd4 is no quiet yeah realistically stuff like tiger should be required okay so then by default it's not required which means that should we
+28:1128 minutes, 11 secondsmake them all required or like how does that work no I just leave it yeah anytime I can require it yeah because yeah obviously you can actually get
+28:1828 minutes, 18 secondsreally like quiet yeah that's yeah that's that's why it's a simple object yeah we don't care about validators okay
+28:2628 minutes, 26 secondsyeah this is all fine so then now come here well I guess we rename the else we
+28:3328 minutes, 33 secondsjust delete this yeah you can rename collection also I just drop it why just remove it because if I drop it
+28:4228 minutes, 42 secondsthen Mongoose will create one for me I'll wheel it I think so why wouldn't it
+28:4828 minutes, 48 secondswhy would it go can I try and try I mean yeah it's like there's no things to make anyways alright cool so now that we've
+28:5628 minutes, 56 secondsgot this true create our DB directory here you know we stopped sticking to the
+29:0329 minutes, 3 secondsside oh this is so bad okay whatever yeah we need a DB directory for sure and
+29:1429 minutes, 14 secondsthen how do you want to structure the day be like normally you normally you definitely want a folder for modules so maybe like indexing a folder called mob
+29:2329 minutes, 23 secondsmodels yes yeah any other test yeah do
+29:3029 minutes, 30 secondsyou like to have like an index like is that expose all of them not really to be honest I don't like that you can put if
+29:3829 minutes, 38 secondsyou want but I think it's arbitrary like wow John it's just so I mean the creator of node or something
+29:4629 minutes, 46 secondsregretted index which is or something well he doesn't like it like automatically resolving to index
+29:5629 minutes, 56 secondsyeah but then in that case what's the point of having index yeah it's just another arbitrary I don't know I like it
+30:0330 minutes, 3 secondsI think it's cool but I don't really care too much you know I don't like index as well because you can start running into circular dependency issues
+30:1130 minutes, 11 secondsif you bunch of that's really but well I guess you kind of how exactly dependency issues either way in any case for this
+30:2030 minutes, 20 secondsone here not sure how do we get rid of these two because there may be um we need to wait can you just like literally
+30:2730 minutes, 27 secondscan you literally just do this about there and then do like import Mongoose from Mongoose and then connect in the other file like will that work or no
+30:3630 minutes, 36 secondsyeah yeah yeah that's the point yeah that's the point but you have to export it's constant so I think you want to play you like import Mongoose for
+30:4530 minutes, 45 secondsMongoose Mongoose don't connect like that is sixty like and then now what I've got the connection and I've got
+30:5230 minutes, 52 secondsmango here goods mean gone there oh you can you can do mango wait I wanna go yes
+31:0131 minutes, 1 secondmanga can you do you need it export default mango yeah and then it may be
+31:1031 minutes, 10 secondsexport Const for the monkey schema and just call it scheme that's a good yeah
+31:1631 minutes, 16 secondslike that uh up okay cool okay that looks good and then you have the
+31:2331 minutes, 23 secondsconnection right which connects that's fine that's fine yes fine I don't think you see I don't think it creates
+31:3131 minutes, 31 secondsanything for you man this is just a definition but you can try so what I'm thinking now is inside of index we do
+31:3931 minutes, 39 secondsimport DB connection like that and then now we can do something like important manga from hash Ruffini models mango
+31:4831 minutes, 48 secondsalright so like for example let's assume this was in another file and now we're trying to yeah so you know how do I
+31:5431 minutes, 54 secondscreate a new what he call it like a new document that being can you color now you want a collection no no the model
+32:0232 minutes, 2 secondsdoesn't the model represent the collection the motor representation but it doesn't create it iswe doesn't create alright ok so what I'm gonna do is let's
+32:1132 minutes, 11 secondsjust this you just Justin that's gonna create it and then when it doesn't create it will create it because it's like 2 seconds right so ok ok so we do new kitten right so something like this
+32:2032 minutes, 20 secondslet me zoom this in so yeah so then we can do something like clients another article like I guess I guess it's just
+32:2832 minutes, 28 secondsmanga hey you click new main bar and then we have a bunch of properties so um
+32:3532 minutes, 35 secondsyeah oh I believe it the properties can you yeah what the hell what do you want
+32:4532 minutes, 45 secondsyeah cuz now you're on watch so whenever anyone just continue so whenever you whenever you're watch reruns you're gonna see you're gonna have no I've got
+32:5332 minutes, 53 secondsit close yeah ok so it won't do that just yet speaking of that how do you make
+33:0233 minutes, 2 secondsbubble watch like only run once use babel node right is that how you do it what do you mean only run one cuz bubble
+33:0933 minutes, 9 secondswater says right but like what's the one time run equivalent oh yeah bubbly no
+33:1433 minutes, 14 secondsyeah yep so what we do is okay what do
+33:2333 minutes, 23 secondswe want to call it again okay so alias this one's a alias yeah this one's categories yep some of these kids hits
+33:3133 minutes, 31 secondsunderscore items I do I do that yep image status and title yeah great
+33:4033 minutes, 40 secondsso that way that way run anything where I like it definitely won't create oh no you won't run any ah where's my news again here we go okay so it does about
+33:4833 minutes, 48 secondsthat and dot that dot safe okay so now we we do this yeah but not with fluffy
+33:5533 minutes, 55 secondswith manga and then OH stop doing that yep and then we do
+34:0134 minutes, 1 secondcontrol the log safe right and we don't have your double node installer you do
+34:1034 minutes, 10 secondswhat we don't okay so is this a no that's a production right no yeah that's what yeah yeah because you compile it
+34:1934 minutes, 19 secondsbefore you deploy right so ya know you wanted this nobody ok node and then low
+34:2834 minutes, 28 secondsbut is that what my zoom version 0 0 1 what's the next peak is this because
+34:3634 minutes, 36 secondslike it broke or something Oh at Babel no my bad John Romero double nerdy on add ok cool alright so they put
+34:4734 minutes, 47 secondsthat on so they're just they grab the namespace so when people like huge how to install it's for secure yeah yeah yeah actually worked
+34:5534 minutes, 55 secondsyeah otherwise we would have been mining bitcoins right now okay so now we have our Creveling sort of here
+35:0235 minutes, 2 secondsBabel no it goes there down again cool you know so then we do well let me just check what it scored us think is just
+35:1035 minutes, 10 secondsbabble - no at Babel I started bin yeah that won't show okay so this one will call like start death because you know
+35:1835 minutes, 18 secondsbuddy use this on this on the server anyway yeah you know like you know yeah no yes I see in this j/s and then we can
+35:2635 minutes, 26 secondsdo like young star dev yep okay yep see this is this is what I like babble watch cuz like it looks the same
+35:3435 minutes, 34 secondsyou know there's no daman you have to do all these like crappy oh yeah - oh yeah it's freaking slow and it looks different and you need a node one confit
+35:4235 minutes, 42 secondsor something oh got undefined dot M is here oh sorry thought config was a pot
+35:4935 minutes, 49 secondsand then like total slash but yeah be know your defaults to it defaults to
+35:5535 minutes, 55 secondsDorian no I know but it's outside wait why is that there you should put it up cuz it's not inside I saw see right yeah
+36:0436 minutes, 4 secondsbut you should put the oh you put the dot end on the roof oh my little overweight like what yeah and I put put the require
+36:1236 minutes, 12 secondsend on the index index index like your main index not a here so I should have another index here no you already have a
+36:2036 minutes, 20 secondssource - slash index right isn't this one is this so / yes no it's fine Ashish
+36:3036 minutes, 30 secondsit's fine you don't need to do that there's something wrong okay so look oh
+36:3636 minutes, 36 secondswait wait what no wait let me console.log console.log process we DP
+36:4436 minutes, 44 secondsURL boom and we get nothing right sorry
+36:5336 minutes, 53 secondstry this yeah I normally put like a tap in front just so you can see the line what do you mean like in do console.log
+37:0237 minutes, 2 secondsstring comma and then you value all like I mean like that yeah yeah so it's also
+37:1337 minutes, 13 secondsa good debugging tip because I in Chrome you can just don't filter by double at seemed like it was that we knew okay yeah and then you can silence old all
+37:2237 minutes, 22 secondsthe other crap that it's unconscious sir this works should net
+37:2937 minutes, 29 secondswhat's the arrows giving me it's saying that the URI parameter to open your it must be a string call undefined but did
+37:3837 minutes, 38 secondsit print the string did a printer and it did there but let's right here so he's just doing this maybe like makes it off
+37:4837 minutes, 48 secondsto the phone so if that happens oh I did know
+37:5637 minutes, 56 secondsobviously because I'm goody index go like get rid of all your console logs yeah yeah in the import is static it runs before
+38:0538 minutes, 5 secondsrequired oh yeah because I wanted to uh I wanted to use um require because it's
+38:1238 minutes, 12 secondsa one-liner I guess I can't do that yeah and I think we do that right because no yeah no that won't work
+38:1938 minutes, 19 secondsso how do we do it before oh no because it worked for me when I used to make them cuz I should use Babel register and
+38:2738 minutes, 27 secondsnode no demon so then what would happen is like you require it like inside the root index file and everything was
+38:3538 minutes, 35 secondsactually using require like it's not actually yeah yeah so yeah yeah what do I do in this case
+38:4138 minutes, 41 secondslike do we have to use dot MCO line hmm
+38:5238 minutes, 52 secondswhere's your connection there's MC Li doesn't work with babble watch so it's not worth going gather up Hulk like yes
+39:0139 minutes, 1 secondyou should be using dot MC oh I but he won't work with Apple watch as far as I know you can try it's just I think is at
+39:0939 minutes, 9 secondsthe top okay how do you use the end with import before referencing any front-end
+39:2139 minutes, 21 secondsconfig oh okay so this is what you're talking about yeah yeah I mean you can
+39:3139 minutes, 31 secondstry it I do this right now nice that works oh okay okay fair enough
+39:3839 minutes, 38 secondsso do that fat yeah like that
+39:4339 minutes, 43 secondsand should work I mean he can't tell
+39:5239 minutes, 52 secondswhether it's working right because you have all this console save ae doesn't wear a different era cannot contain yeah
+39:5939 minutes, 59 secondssee you're wrong you can't have a full thought I'd be end tests on how's the doll
+40:0940 minutes, 9 secondsthat's so dumb alright um current sevit okay so this that's not an issue right
+40:1840 minutes, 18 secondsokay saved okay so now let's have a look I drove her through T and then we how do i refresh ah here we go
+40:2540 minutes, 25 secondscollections one mangoes why oh why is it lo que dice that's pretty cool okay so
+40:3340 minutes, 33 secondsit gave us the object ID again so it does use object ID like by default it doesn't to do that that's for the idea
+40:4140 minutes, 41 secondslet's just check to make sure that the whole thing matches cuz like sometimes you have like okay so it does match the whole thing because it goes up the seat you okay okay well that seems to be fine
+40:4940 minutes, 49 secondsyeah that's fine that's fine what's this alright we got to move out something we got some of that version ah
+40:5640 minutes, 56 secondsI was like you know version control yes Mongoose I think so it's like it just keeps updating some Mongoose crap
+41:0441 minutes, 4 secondsjust leave it cool we got something you say - L said 47 minutes man imagine like
+41:1441 minutes, 14 secondsdoing this 8 hours a day and getting paid like 200,000 a year that's the dream man that's that's what he's like
+41:1941 minutes, 19 secondsthat really is actually yeah and to be honest like your day's work is probably
+41:2841 minutes, 28 secondsjust about that like if you do this yo it's really enough you can cook at home I guess like you're a person is a bit a
+41:3541 minutes, 35 secondslittle bit more productive sort of not really like if you're in enterprise you can't move too fast like if you don't
+41:4341 minutes, 43 secondsstart up this is too slow the very enterprise this is fine for a day's work because there's a lot of meeting if you've got to communicate what you're doing and there's all design and
+41:5241 minutes, 52 secondsdocumentation ain't gonna do it for ya you're a startup you just don't care right just just like show me the employee
+41:5841 minutes, 58 secondsusually show me the app yeah okay mm oh
+42:0442 minutes, 4 secondsone full parcel and services added dependency so I actually like I don't
+42:1442 minutes, 14 secondsknow I've I've thought I went from like not caring about commit messages to going way to fiber border I think I think you - there's something good
+42:2242 minutes, 22 secondscommute ISM I really hate it that you can look at it if you're a commuter freak what is it it's like specific ways
+42:3142 minutes, 31 secondsand like how to commit it's really bad it's just the commit like clia tool ah
+42:3842 minutes, 38 secondsso you type in like commit and then you run a script and then you feel out like
+42:4642 minutes, 46 secondsa form on your terminal that's literally what it is it's really frickin hate it
+42:5342 minutes, 53 secondsand it does it for you you know it structures it into a weird message but the message is possible so you can
+43:0143 minutes, 1 secondprobably like use another application to you know start doing crap when you're commits yeah okay nah I don't know like
+43:0843 minutes, 8 secondsI have my own way of doing it that works for me yeah I think like if you kind of have like a team environment maybe just do
+43:1643 minutes, 16 secondswhat everyone else is doing like I think a little bit yeah he's good but like when you go over the book to the point where like you have to use the right tense in your words it's just oh yeah
+43:2543 minutes, 25 secondspeople would just go nuts over it like go hard it's a person it's a it's not a technical issue like it's just people
+43:3343 minutes, 33 secondscannot they won't better okay well guys I hope you've enjoyed this video we've setup Mongoose and um I've certainly learned a lot and I hope that you have -
+43:4043 minutes, 40 secondsthis has been Lucas and Patrick with better coding Academy and see you guys later yeah hopefully you have something to show next time yeah I mean we
+43:4943 minutes, 49 secondstechnically have a manga in a dollar yes right as one yeah it's it's something like yeah infinity times more than last time
+

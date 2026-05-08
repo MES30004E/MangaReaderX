@@ -1,0 +1,348 @@
+Chapter 1: Introduction
+0:044 secondshey guys this is Lucas from better coding Academy and in this video we're bringing back part three of the manga reader series in the last episode we had a look at MongoDB and we looked at
+0:1313 secondsgetting all of that set up so Patrick what do you say that we should get doing next it's been a while so I don't even
+0:1919 secondsremember where we're up to from memory we have a manga in MongoDB instance yes
+0:2626 secondsdo we have the MongoDB instance up in servers running at the moment so I'll get that up here so this one is the one we had before but we have it in so oh yeah right sir yarn mmm I think was dr.
+0:3838 secondsstocked I have that no I don't create that I think started there okay so I like to do is I just like to have like
+0:4646 secondsdocker start like what doctors start what is it whatever your mango reader
+0:5252 secondsmonger yeah sweet and then just I like to do this yeonbok and start you're gonna and that should run it and then in
+1:011 minute, 1 secondrobo three t connects so this one not working for some reason
+1:111 minute, 11 secondsokay there we go and then inside of mango reading here we've got mangoes and
+1:181 minute, 18 secondsthis one is managed by Mongoose if you remember yeah that's fine cool um so maybe that's like seed this
+1:261 minute, 26 secondsthing properly so we can like set up our work huh so to speak or a con job yeah yeah so we can actually somewhat see the
+1:351 minute, 35 secondsdamn thing so yeah let's go for cron I know there's like a package called no cron so maybe I can just do that just make it shutters
+1:431 minute, 43 secondsI'll I'll just get that up so I've got my primary Nova key and node cron let's have a look at that so you mean this one here I think so
+1:521 minute, 52 secondsyeah I think it was somewhat familiar this one cuz I remember yeah yeah if it works this one okay cool yeah just use
+2:002 minutesthis one okay start so uh vs code Jana add node
+2:072 minutes, 7 secondscron so I think we need to run the crown
+2:152 minutes, 15 secondsseparately so they can't run it together with the service because then when you do what you're just gonna keep seeing it over and over again
+2:232 minutes, 23 secondsoh you mean footnote cron yeah yeah so you know what you want to like you and an explicit commands around it basically
+2:302 minutes, 30 secondsso can we expand the source folder just to refresh my memory how we set up the DB because we need the prompt we need
+2:382 minutes, 38 secondscon needs access to Mongoose so you want to see flowers in such a way that the cron has access to the model well what
+2:472 minutes, 47 secondsif we just like kind of keep it all inside source like this and we have a separate file called like Rhonda KS and we just like expect from that but the
+2:552 minutes, 55 secondsproblem is you're gonna have to be um duplicate the DB folder cuz your con needs access to your like DB right so it
+3:053 minutes, 5 secondsalso needs access to your model the model you defined in Mongoose like it's a shared model between your service and your own yeah so it's fine the structure
+3:133 minutes, 13 secondsis fine right now right because you have a TMP folder and it's the model inside the teepee folder yeah so we have the the models and like the main guard now
+3:213 minutes, 21 secondswhat I'm saying is like what if we just keep these three like that and then we create a file called corn is that uses the same same model same yeah yeah yeah
+3:293 minutes, 29 secondsyeah yeah that's exactly what's getting in so if we have like holidays here then we can do like say for example just
+Chapter 2: Running MangaEden
+3:353 minutes, 35 secondsstart cron mm-hmm okay so wait so then for the watch command then we we don't want something like that for cron do we
+3:443 minutes, 44 secondsbecause no we do need yes yes so we can just do like star cron and then this one just like a brunch brunch is yeah we just run it so then we might do like say
+3:533 minutes, 53 secondsfor example up not enough space that's okay we might just do like X I can zoom out first and then create a new one and
+4:004 minutesthen zoom back in 400 IQ and then services here and then what I can do is inside of here I can do like yarn like
+4:084 minutes, 8 secondsstock pond mmm and then that will run like the corn one time or whatever yeah so then what we can do is if we go back
+4:164 minutes, 16 secondsto Chrome we have no cron and like let's just schedule something
+4:234 minutes, 23 secondsthat runs like every second so it's a young okay so just like see if it works
+4:294 minutes, 29 secondsyeah yeah and then yarn stock cron okay
+4:374 minutes, 37 secondsso that shows every single second yeah and that's working fine and we have our so this is something that needs to be severed yeah yeah um he was scheduled
+4:454 minutes, 45 secondsfor an hour does it run like immediately or run in the first hour I think it runs immediately and then one hour right like it doesn't initial run oh no it
+4:544 minutes, 54 secondsdoesn't I don't think it does let's do an initial run so a second minute hour let's find out yeah I don't think it does do initial
+5:005 minutesroom did I mess up something I think yes I think you still need to put a star
+5:065 minutes, 6 secondsthere but just put one on the hour or something like something like that yeah
+5:145 minutes, 14 secondsall right what all right okay oh no so ah I see I see okay so then the way on
+5:225 minutes, 22 secondswork is like it would one every hour so be like so what's the first one first one is second which is optional and then
+5:315 minutes, 31 secondsminutes so then I would do like a minute zero okay so minute zero would mean that it would run on the zero minute of every hour yes like relative to when we started I think so maybe like if we do
+5:395 minutes, 39 secondsit now it should run no I think it's it runs after one minute that's fine so we
+5:475 minutes, 47 secondsneed to do so we might need to do like in wait sure no no what if I do this like what if I do that because it does
+5:585 minutes, 58 secondsit depend upon the system clock right now - uh uh it's 40 so you maybe if we wait actually
+6:066 minutes, 6 secondsyeah maybe it's probably like something like that say so right now it is what's the time right now that's your system
+6:136 minutes, 13 secondsclock right yeah different 23152 three four five okay so should come up in like
+6:196 minutes, 19 secondsabout five seconds maybe yeah okay yeah all right so runs on the zero so what so
+6:266 minutes, 26 secondsthen this would actually run every minute right you know so then if I do like zero zero then it runs every yeah okay so so we need this one thing
+6:346 minutes, 34 secondsyeah okay so now we probably need like we can keep the keep the car as is but now the the command to seed probably
+6:416 minutes, 41 secondsneeds to be on a separate like a separate file right yeah like separate to the actual or like at least outside of this see that way we
+6:506 minutes, 50 secondscan kind of use it separately yeah or you can just have you can just do an argument that just runs like you can keep in the same file to have an
+6:586 minutes, 58 secondsargument that just runs an initial one yeah okay yeah that's probably clean you know to be honest I don't really want to create too many files at this point I
+7:067 minutes, 6 secondsthink maybe like this are what if we just feel like constant and we'll just write it here first because I mean
+7:147 minutes, 14 secondsbefore we even do this we should like look at the manga Aidan like the actual yeah yeah the actual API again and it's like you're from there so the one that
+7:227 minutes, 22 secondswe had before was manga Eden API specifically let's look at the one for English zero and then let's just look at
+7:307 minutes, 30 secondsthe first page so doesn't lag right so like this is the one that we had and we want to turn this into something which
+7:387 minutes, 38 secondswe can put into our database but then when we actually get it and we want to store it inside of our [ __ ] we do API
+7:467 minutes, 46 secondslist zero without the P right so you'll get all of them yeah okay alright so firstly should we store that URL
+7:527 minutes, 52 secondssomewhere yeah yeah what would you suggest for the name like mmm
+8:008 minutesjust do like source ain't got a P I know I actually just domain get Eden maybe cuz now cuz this is specifically manga
+8:068 minutes, 6 secondsEden right yeah yeah well just call the mega eating URL to keep it the same yeah yeah yeah cause like mega Eden to
+8:158 minutes, 15 secondswas technically to write I don't know it doesn't know who's like theoretically um if we have multiple sources it doesn't really matter
+8:238 minutes, 23 secondsyeah okay all right men get eating URL here oh we don't have an example which probably create one why do you play this
+8:348 minutes, 34 secondsbut MDOT example and then that's fine that's what yeah so this is fine as well and then don't em here
+8:418 minutes, 41 secondsand then what we would do is access to that know any lady in the bottom right
+8:498 minutes, 49 secondsyeah just need water poor Anita also do we have access don't know a bit probably
+8:568 minutes, 56 secondsno we don't include access as well yeah we import apps EOS from Axios like that
+9:049 minutes, 4 secondsand for our scene let's just let's just do this first like a sink
+9:119 minutes, 11 secondsAxios so oh wait actually all stuck yet process like MDOT and then guy even URL mmm yeah I mean where does look like yeah
+9:209 minutes, 20 secondswell this is fine but I think like we can continue like this but because we specified the manga even URL as a
+9:299 minutes, 29 secondsspecific manga Eden right like the intention is that you can have manga X manga Y so the seeds should be more generic and it should accept the URL as
+9:389 minutes, 38 secondsan Arg alternatively we should know I I see a point but like what if we in that case
+9:479 minutes, 47 secondsit will be better to rename the C function because it's hard for seed to be generic when it has to interpret the actual API right because like manga
+9:569 minutes, 56 secondsEden's API let's just say those are different one called manga mmm mango rock or whatever mmm and if we wanted to see from both then the API for
+10:0510 minutes, 5 secondsinterpreting manga Eden will be different to make a rock so then if you only have a single seed functions you have to have another so how you do it
+10:1310 minutes, 13 secondsproperly is you want to create instances of Axios with different transformations once you can do it
+10:2010 minutes, 20 secondsAxios not create set the base URL to the correct end and then there's the easiest ID for start like transform or something
+10:2810 minutes, 28 secondswhich is what transforms the payload so each basically each instance is per source yeah no I get that but what I'm saying
+10:3710 minutes, 37 secondsis like even if you do that then what what ends up happening is with like for example concede you you end up with like
+10:4510 minutes, 45 secondsan intermediate data format right because like this is before you store it into your MongoDB mmm so what you'd have to do is you'd end up having like you'd
+10:5310 minutes, 53 secondshave all of these different like your mango Rockman your Eid or whatever it might be and then all of those get transformed into an intermediate state and then that intermediate state then
+11:0111 minutes, 1 secondgets compared with your database is that what you're saying the there's the intermediate state should be done it
+11:1011 minutes, 10 secondsshould be the same as your [ __ ] State well you can translate it directly why are you not so like it should be like the same property names all that kind of stuff yeah whatever comes out of this function
+11:1911 minutes, 19 secondsshould be ready to just go in so basically the transformer is on the ACS instance and like we don't care about it
+11:2711 minutes, 27 secondsafter it's been pulled yeah but maybe like for now we can just keep it like this yeah yeah cuz I mean there's a lot of stuff with like different IDs and
+11:3611 minutes, 36 secondslike making sure the manga name is the same it's like even that kind of stuff like you know we don't have the capacity to care about that I mean you can just you can just prefix the ID with the
+11:4411 minutes, 44 secondssource and you're done right never been like what if you have two copies of the same main dog that's fine because it's if it's from the same source and that's
+11:5211 minutes, 52 secondsthe problem with the source no like different sources yeah that's why if you prefix the ID with just the source name they would never clash yeah but then
+12:0112 minutes, 1 secondwhen when you're like say your users browsing through it they get two copies like all right right like literally two of the same title yeah yeah I think
+12:0912 minutes, 9 secondsthat's I think that's like a separate issue that's got nothing to do with this issue right it also begs the question
+12:1812 minutes, 18 secondswhat are we trying to do here so like I get that we have a torrent of like we're trying to update and like maintain a store locally like internally and then
+12:2612 minutes, 26 secondswhat is the actual point of this whole thing because if the point is to get the latest like list of all the manga so that might be the reason we want this is
+12:3412 minutes, 34 secondsbecause like um we can't run queries against their API right so we have to
+12:4212 minutes, 42 secondssomehow get their list into our database so we can run queries on it otherwise there's no ability for us to like yeah
+12:4912 minutes, 49 secondsget the latest you know I get the most view then if that is the case then what then what's happening is basically we're saying that we want like our database
+12:5712 minutes, 57 secondsshould not contain any duplicates because if it does then after becomes more trouble on our because then we're not really like then what's the point of storing it like I think the whole point of storing it is like it
+13:0613 minutes, 6 secondsshould also feel to duplicates and like do all like all the other cleaning tips I mean ideally yes but that is a separate issue than what we're doing now
+13:1413 minutes, 14 secondsright like right now we're trying to create a seed function correctly um and idea I just don't think like this is the best way to do it like because we
+13:2213 minutes, 22 secondshave a sheís already so I may as well just use it properly it's the same number of so what I'm gonna do first firstly I'm just gonna I want to run this real quick so um and I'm just gonna
+13:3113 minutes, 31 secondssee make sure that like I actually get Donna back first and foremost and to find great
+13:3813 minutes, 38 secondsI'm getting one finder like it undefined I don't think so
+13:4713 minutes, 47 secondswait well this like my computer oh it's
+13:5613 minutes, 56 secondsan object it's not in our right eyes are really well since a res da da da da
+14:0314 minutes, 3 secondsmanga don't mental let's just see how much we're working with here so it seems like 6000 yeah something but um alright
+14:1114 minutes, 11 secondsseems to take like two three seconds to load yeah it's fine that's not that much yeah okay so then for actually us what would you suggest doing here um so there's an axial instance axial
+14:2014 minutes, 20 secondscreate yeah but like what do you think we just put it straight to this file for now yeah yeah yeah now this smells fine yeah just to make it even API or
+14:2914 minutes, 29 secondssomething service doesn't matter or even like yes what is that okay for you yes
+14:3914 minutes, 39 secondsmy name is fine and then yeah basically always then you can hard code right because it's specifically for one thing
+14:4814 minutes, 48 secondsyeah yeah yep and let's go back to feed actually yeah yeah and also transform
+14:5614 minutes, 56 secondsthis as well so maybe you should like get that up as well yeah all right so then let's just do like a white Axio stop me me not yet
+15:0415 minutes, 4 secondsand it's you even have to specify anything you know the yeah so the transform is literally transform request
+15:1215 minutes, 12 secondsinside the create oh yeah yeah okay all right and then we work on that see if this works for us
+15:2115 minutes, 21 secondsokay yeah that works fine yeah it's makes mine um so yeah so maybe we'll do the transform request right so then you can maybe fields routes
+15:2815 minutes, 28 secondsCatherine yep yep sure yep transform requests okay yeah transform response
+15:3815 minutes, 38 secondsright oh sorry response yeah yeah okay
+15:4215 minutes, 42 seconds[Music]
+15:4315 minutes, 43 secondsso rate like that and then we get the da saw yeah and so well what we probably
+15:5315 minutes, 53 secondswant to do here is specifically just like rename so we want to rename it so that we get the same names as the MongoDB yes
+16:0216 minutes, 2 secondsso oh it's like these ones here yeah we can probably I mean what's the metadata I don't think we need any right we can literally just do our data dot now they
+16:1116 minutes, 11 secondsdid that man good Mac yeah ah yeah yeah it was your own leader or the metadata ah there's like yeah it's literally just
+16:2016 minutes, 20 secondslike literals just pagination you don't yeah yeah and then we can get the Toto any way from Dorne thank map yep you
+16:3016 minutes, 30 secondsknow like that and uh well actually we could even just like directly destructor right it's like a yep you can be H I I
+16:3816 minutes, 38 secondsam and these things are so bad like what why would you do that I don't stand saving space on payload cause he's a bit
+16:4616 minutes, 46 secondsneeds a massive list right so you're yeah I named it properly we would be downloading maybe like two times I would
+16:5316 minutes, 53 secondssay the size so the very Chris would take twice as long a response yeah I don't know I don't know I don't know
+17:0217 minutes, 2 secondsyeah maybe done two times but it's purely for space-saving focuses on a show about that oh I've the idea right oh no I D
+17:1017 minutes, 10 secondsyeah I becomes underscore I do actually yeah sorry I am because the image and
+17:1917 minutes, 19 secondssi seaman status yo and he is title yep so then we just write them straight it
+17:2517 minutes, 25 secondsyeah it's go away on the scroll ID and
+17:3217 minutes, 32 secondsthen image status title okay then that does that so now if we do res dot dot
+17:4217 minutes, 42 secondslength mm-hmm sure quick can we print out the first one just to just so we can find a happy guy off the phone like that
+17:5217 minutes, 52 secondsyep should be that look so here we can talk about some problems right so we have a pull up break before you continue
+Chapter 3: Map of Undefined
+18:0018 minutesmap of undefined alright is this like Reds doctor oh yeah yes yeah yeah just deconstruct in that's
+18:0818 minutes, 8 secondsdumb then Weissach what da da no should be daughter actually you know I'm gonna should be daughter you shouldn't be
+18:1518 minutes, 15 secondsreading should be Donna okay well guess
+18:2218 minutes, 22 secondswe do this oh no no I understand go go down no no understand go back go back it's because um just just go back to
+18:3218 minutes, 32 secondsundo your return back to normal there's nothing wrong with the function um if you go down to yeah the seed so what's
+18:3918 minutes, 39 secondshappening is daddy's wrong all right no that should be correct right yeah actually I should be very house fine
+18:4718 minutes, 47 secondsyeah yeah let me just test that let me test it interesting
+18:5518 minutes, 55 secondslet's do this so doesn't like you know yeah completely annihilate everything
+19:0519 minutes, 5 secondsyou serious nothing and it takes time oh wait what oh wait wait what yes fine isn't it
+19:1319 minutes, 13 secondsraining all right yeah it's in the rain why is it in a right oh why isn't it
+19:2219 minutes, 22 secondsright good question and why does that 25 like million what is reckless oh it's the dot huh
+19:3019 minutes, 30 secondsit's the Dawson not a JSON I think it might be binary oh really I think so I mean why else would have would have got to like two million like
+19:3819 minutes, 38 secondsoh yeah you see maybe um you can make a JSON somehow I was like content-type on
+19:4719 minutes, 47 secondsthe net yeah just mixed up
+20:0120 minutes, 1 secondno way let me just let me just see what it is yeah maybe we should start off
+20:0820 minutes, 8 secondswith p0 just to speed things up oh my goodness it's a string I think but it's not pass
+20:1620 minutes, 16 secondsthat's JSON right yeah yeah I think you did put content type it should understand
+20:2120 minutes, 21 secondsI mean headers the response type there's
+20:2920 minutes, 29 secondsliterally a response type after there is yeah but the default is JSON yeah good
+20:3820 minutes, 38 secondspoint yeah leave those JSON yeah what are we bad I think we're bad do want to change the
+20:4820 minutes, 48 secondsrow to like p0 just so it doesn't doesn't take them oh you mean this I
+20:5920 minutes, 59 secondsstill take so long yeah that's that's not
+21:1121 minutes, 11 secondsmake sure what's the string it is a string okay yeah I've done a transform response response encoding that's not
+21:1921 minutes, 19 secondsyet utf-8 maybe out encoding is wrong I don't know yeah shoot I don't really want to do it
+21:2621 minutes, 26 secondsjson dot pause response type okay oh right okay so okay so when you do
+21:3521 minutes, 35 secondsresponse it looks right to me transform response okay this should be an issue I can't believe no one has I
+21:4421 minutes, 44 secondsdon't believe that no one has dealt with
+21:4621 minutes, 46 secondsthis before our selves yes okay so we'll
+22:0022 minuteswe're not raw it turns out to be given by xn ICP ah okay yeah I know I I don't
+22:0822 minutes, 8 secondsthink you know I don't think you're meant to use nah I don't think I meant to use transform response I think it's an interceptor no it's definitely transform response you sure
+22:1722 minutes, 17 secondswell you can read the comment on transform response okay so the Interceptor is before they handle by then or cash it is but if you look at
+22:2622 minutes, 26 secondswhat transform response does yeah but
+22:3422 minutes, 34 secondsthat's the response data mmm that's true if we use I know because I've used interceptors before in the past then mmm
+22:4122 minutes, 41 secondsI never got this issue so I mean yeah why would the mode the intercept to be correct well technically look look here it says
+22:5022 minutes, 50 secondsum right right a guard I went back it says here that in the response data is given by xmlhttprequest yeah it's
+22:5922 minutes, 59 secondslike one layer that lines the string yeah so I think the solution is remove this
+23:0623 minutes, 6 secondswell actually keep this grab this describe this whole function get rid of this go ask y'all to me how to interceptors in line on it you can't
+23:1523 minutes, 15 secondscause this per URL right if you have a different URL you want a different disaster now I mean like can i specify it in the just create know you can this default
+23:2323 minutes, 23 secondsstart intercept them there's like a default intercept oh you mean like in here oh no no I think it's like the default you have to do no what I mean is
+23:3223 minutes, 32 secondslike you have to do this yeah yeah yeah can't like in behind it yeah no yeah
+23:3923 minutes, 39 secondsokay there we go so dot response see this makes sense because now we're actually using response as opposed to okay yeah maybe
+Chapter 4: Map of Response
+23:4923 minutes, 49 secondsthat's correct in and then if we do like res data don't make it up map then this will hopefully this will yeah this will
+23:5723 minutes, 57 secondsmost likely to work let of undefined all
+24:0724 minutes, 7 secondsright yes right yep because we are we yeah we mapped it out now I'd also
+24:1724 minutes, 17 secondschange this back now I'll write it yeah
+24:2424 minutes, 24 secondswe have we still a bunch problem here I think the interception should just double check that the config dot URL is
+24:3224 minutes, 32 secondsjust the root because if we ever hit another end point it will try and do this conversion on every single URL
+24:3924 minutes, 39 secondswhat do you mean like if we cause this intercept is on the ACS instance right oh yeah yeah yeah so I think there's a
+24:4724 minutes, 47 secondsconfig right in yeah red stockholm thing goes on Chris oh yes
+25:0225 minutes, 2 secondsthis is the schema config yeah I like response doc config dot URL yeah it
+25:1025 minutes, 10 secondsshould be I don't know this URL B's something in the config yeah and we just we just ripped it up oh cool I see what you mean so like just in case it transform
+25:1925 minutes, 19 secondssomething else yeah just in case we hit you we use the same endpoint but like a
+25:2325 minutes, 23 secondsdifferent recipe okay like that yep hmm
+25:3925 minutes, 39 secondsyeah now I'm now I think that we should probably turn red we shouldn't like
+25:4625 minutes, 46 secondsstrip out the rest of the Reds because now your thingy starts returning different like kind of like a typing is messed up right lady's returning to
+25:5525 minutes, 55 secondsdifferent things sometimes returns response and it's not right so maybe yeah we should just probably do that so just res dot theta dot manga
+26:0326 minutes, 3 secondsequals to rest updated Omega dot map and then just return Reds after that so like new Tate reds and every time now yes a change restaurant dot all right yeah
+26:1126 minutes, 11 secondsyeah but here's the thing is like can I just do that directly yeah you guys know data equals yeah yeah you can yeah it's
+26:2026 minutes, 20 secondsa mutation but it doesn't matter right
+26:2926 minutes, 29 secondsin that case yeah you can do that do that right yep
+26:3726 minutes, 37 secondsand your console loads will have to be updated
+26:4126 minutes, 41 secondsyou're correct oh yeah oh yeah all right
+26:5226 minutes, 52 secondsso so yeah so this is how you would probably do it like realistically in production but we still have a problem
+27:0027 minutesthe problem is um is very inefficient because when we do a daily loop through the manga right we don't want to map
+27:0827 minutes, 8 secondseverything we only want to map the things that are updated hmm
+27:1727 minutes, 17 secondsI feel a point yeah yeah yeah so so we're not gonna do this now because there's no point since there's only like
+27:2427 minutes, 24 secondsoh whatever like a five second run right but what you probably want to do is you want to filter out first the mangas data
+27:3227 minutes, 32 secondsthat require updated and then do your mapping so then what you probably do is like you see like I think the problem with that is when you start doing that
+27:4027 minutes, 40 secondsthen this whole Axios thing becomes irrelevant or like it becomes very difficult to implement like this specifically so like the way I see it is
+27:4727 minutes, 47 secondslike you probably have to have like obviously you have like a last updated time right which is weird because I can't I can't see mm-hmm where is that I
+27:5527 minutes, 55 secondssay LD I go anyway so we'll get back to
+28:0328 minutes, 3 secondsthat but my point is like you know when you have like because obviously we're using like a last updated time mmm which is in our MongoDB so then the way we
+28:1028 minutes, 10 secondsprobably want to do it is we want to fetch everything from our MongoDB and then when we then and then like we fetch everything from long ago we fetch
+28:1828 minutes, 18 secondseverything from this API and then we compare like the last updated and then if there is a difference then we take those that are new and then we then we
+28:2628 minutes, 26 secondstransform on those right it's like that's your point hmm yeah I see what you mean yeah but then when you do that you can't really like realistically put it inside of your
+28:3528 minutes, 35 secondsIPS anymore yeah it depends if cuz this is the Interceptor on the thing right there's also the Interceptor you can do
+28:4128 minutes, 41 secondsin line so depends which one runs first because unis at the interceptor to filter out all the things before you run
+28:4928 minutes, 49 secondsthe before intercept them so it depends which are you know like you can keep something like this but then it just seems to me like there's really no point like if you're doing this you might as
+28:5728 minutes, 57 secondswell just have a function chord like transform manga Eden into you know internal or like whatever monuments for manga Eden data right like as opposed to
+29:0529 minutes, 5 secondshaving it built into a kiosk so that way you don't have a problem with a kiosk transforming your data yeah anyway well I think I think the mistake we're doing
+29:1429 minutes, 14 secondsis the transformer needs to be separate the instance do needs to be there but the transfer woman it does it can't be
+29:2229 minutes, 22 secondslike in mind like right now yeah yeah yeah you need to do a request right because this is really we're doing a basically a switch statement basically
+29:3029 minutes, 30 secondsyeah yeah so then you can compose your interceptors depending on what you need I think for the sake of time what I would suggest now is like if we what we
+Chapter 5: Solution
+29:3929 minutes, 39 secondscan do is so far this is okay right like this is fine well we're trying to just get it into the database specifically two problems number one we don't have a last updated
+29:4829 minutes, 48 secondsinside of our mangas right we need that right so uh why don't we have that yeah
+29:5529 minutes, 55 secondsI think it's because it's on the chapters like it's not actually on the manga itself really didn't we see LD mr.
+30:0230 minutes, 2 secondsoh no no no the young wait let's just check the API real quick because I'm it's not here right but like LD is if
+Chapter 6: Checking the API
+30:0930 minutes, 9 secondsyou have a look at a specific manga so for example if I if I open up let's just let's use this one here so this is the
+30:1830 minutes, 18 secondsoriginal URL mm path thing there and then if I take this and I replace it with that OH then we get chapters are
+30:2830 minutes, 28 secondscreated last chapter days novel that's not very helpful oh no I made this
+30:3530 minutes, 35 secondsmonkey what are you all knowing about once
+30:4430 minutes, 44 secondswe're dealing it definitely was an LD right like I'm 100% certain that was an
+30:5130 minutes, 51 secondsLD yeah you know is it because oh maybe it's because um I I did page I don't
+30:5730 minutes, 57 secondsknow we tried this oh no no it's the same I don't know what I'll do you I'm 100% certain we had one like that though
+31:0531 minutes, 5 secondsbut yeah let me see let me see LD yeah see even it says LD here yeah in the mingle list last chapter date they
+31:1431 minutes, 14 secondsjust got rid of it randomly if they really mmm unfortunate that kind of screws us up
+31:2131 minutes, 21 secondsmaybe oh maybe some of them have an LD LD LD here yeah I'll do that maybe it's
+31:2831 minutes, 28 secondsnot not all of them have an LD maybe some of them have an LD so can you maybe check hot really oh yeah yes he saw oh okay we're still good
+31:3631 minutes, 36 secondsbecause maybe they why do some of them don't have why do some of them not have LD maybe they have no chapters right
+31:4331 minutes, 43 secondsthere maybe they have no chapters no chapters it's not possible well this one has no chapters like it's just a title
+31:5131 minutes, 51 secondsyeah so hence there's no let me play search this one up online let me see what it's like I mean it doesn't it
+31:5831 minutes, 58 secondsdoesn't mean they have it right now what if it's like it might be like just literally one chapter right then in that case it's like it does have chapters
+32:0632 minutes, 6 secondsyeah but they might not have it scan okay yeah right yeah that's fine that's fine that's right we probably shouldn't
+32:1532 minutes, 15 secondseven care about um like mangoes with no chapters because it's not gonna do it all right you kind of yeah absolutely
+32:2332 minutes, 23 secondswe can just use so like for now like this is what we were talking about with like different manga api's right it's like if one of them doesn't have it for
+32:3032 minutes, 30 secondssome reason then we can look at using other ones mmm but then like for now we can just look at the ones that have LD in though yeah yeah cuz we won't be able
+32:3732 minutes, 37 secondsto show them anything besides like a cover image we just can't use literally
+32:4332 minutes, 43 secondsnothing in that case step one go into the DB into vector here and we need to include last updated right
+32:5332 minutes, 53 secondsyep as a number like so and then what we can do here is we can do LG last updated
+32:5932 minutes, 59 secondsand actually this kind of leads us to a different problem which is like like in terms of this I think we might might be better off like so we have our Axios
+33:0833 minutes, 8 secondshere mmm spy or anybody that and then we have like transform lingo Eden and then
+33:1633 minutes, 16 secondswe have like I don't know retaken like manga and then we return like manga map but then I also like filter and then map as well right
+33:2433 minutes, 24 secondsyeah so yeah let's do that um so we can if you like we then we don't even want this right like yeah we
+33:3233 minutes, 32 secondsdon't want this we want to add we just put the put intercepted like on the actual requests so we can do like manga
+33:3833 minutes, 38 secondsdot filter like manga manga LD yeah so while you type that out the there's a
+33:4533 minutes, 45 secondsproblem with this though all right no maybe there's no problem with this
+33:5333 minutes, 53 secondsthen Oh were you talking about transform manga Eden and then they and
+33:5833 minutes, 58 secondsthen we can do like yeah there is a problem of this so the problem with this
+34:0634 minutes, 6 secondsis this is now a 2n operation because now you need to look through right once and then you need to map the result so
+34:1534 minutes, 15 secondsthe worst case scenario is an O 2 n so like cause we in the back end like if you want to do it properly we won't do
+34:2434 minutes, 24 secondsit now you want to use a transducer like so you can like low - has it - so you
+34:3034 minutes, 30 secondscan basically like filter and now I combine filter map yeah individually and it kind of understands that if filter returns nothing you weren't bothered
+34:3934 minutes, 39 secondsdoing mapping stuff like that so it becomes more like a one in if you want to write that out anyways it's really not that hard like literally just
+34:4534 minutes, 45 secondsbarbecue no no it's not that easy man yeah it's not that easy you can look it
+34:5234 minutes, 52 secondsup transducer is it literally not just correct me if I'm wrong mmm but isn't it literally just like last updated then we
+35:0235 minutes, 2 secondsdo like yeah yeah you know you can do that you can do that but it's like this is not the elegant way to do it like you still want
+35:1035 minutes, 10 secondsthe filter and the map function separately how about let's just let's just get all of this into the database like now yeah let's just sorry and let's
+Chapter 7: Inserting Manga
+35:1935 minutes, 19 secondsjust call it a video so I'll do is I'll remove the one that we had before cuz we're I mean we're getting anyways but this one doesn't have the M it doesn't have things so we don't want that so
+35:2835 minutes, 28 secondswe've got our seed and our mangoes here and then the way that we add it in how do we do it last time okay so that's what we did last time and
+35:3635 minutes, 36 secondswhat we need to do now is just import this in this file here like that
+35:4435 minutes, 44 secondsand then down here okay I don't know if there's a better way to do this but yeah
+35:5435 minutes, 54 secondsit's probably no it's easy as we I mean you can do it yeah you can before or for
+35:5935 minutes, 59 secondseach up to you you have to do for right
+36:0636 minutes, 6 secondsbecause you want to await it like when you're saving mmm all right all the way all right let's check the Mongoose API because I have no idea how
+36:1436 minutes, 14 secondsto do it so I wonder if we can match update as well in Postgres I don't think you can there has to be there has to be a way you can bash insert because like
+36:2236 minutes, 22 secondslet's just focus on insert for this video yeah okay yeah the folks like insert oh wait whoops now as a loop and in order to
+36:2936 minutes, 29 secondsinsert this one okay so new save batch
+36:4136 minutes, 41 secondsthere's very bad for any means that yeah maybe you got instant what is insert one I just saw insert one you could type T
+36:4936 minutes, 49 secondsnot even I should just look line here so I saw an insert one really yeah so it
+36:5636 minutes, 56 secondsmust be an insert - yeah they're in so
+37:0437 minutes, 4 secondsmany okay oh that's that's so easy you
+37:1237 minutes, 12 secondswhat the heck dude that's so easy yeah okay then all you have to do I doesn't support a sink away oh it does
+37:2037 minutes, 20 secondsit does a promise okay so then we can literally just do go you go in here we can literally used to like this is so cool we can do I'll wait
+37:2837 minutes, 28 secondsmanga dot insert many mangoes yes that's
+37:3537 minutes, 35 secondstrue I think yeah we might have like we obviously right now we're are fading and the other quads we're like we're after any things that don't need updating but
+37:4337 minutes, 43 secondsit's fine it's fine fine if I just added it yeah I don't know what performance impact you'll have it might not be even be that bad no one cares this is my
+37:5137 minutes, 51 secondscomputer is your computer probably trying to hide for like a project yeah
+38:0038 minutesthis is it like this is the great thing is like this is the kind of content that I even personally like to like to have like myself yeah I learned about I
+38:0838 minutes, 8 secondslearned about rounder today yeah like something yeah like yeah like you're gonna do tonight properly and not just at surface level yeah I feel like yeah
+38:1538 minutes, 15 secondsyeah yeah oh that's fine yeah she works
+38:2238 minutes, 22 secondsfine one too yeah right you say it's done
+38:2938 minutes, 29 secondsoh you wait what is he done why does it say done alright
+38:3738 minutes, 37 secondszero oh are you sure you a runny you sure we'll look I wanna shut way I know
+38:4638 minutes, 46 secondsI got rid of cron one should never okay you just wanna you see directly yeah yeah maybe no 6000 main goes right takes a long
+38:5338 minutes, 53 secondstime so now Bates batch so I should I don't know what final okay let's just let's assume that it's just it's quitting earlier than it should even
+39:0239 minutes, 2 secondsthough I don't understand why that would be the case I want to include my corn job so doesn't stop yeah and see what happens yeah
+39:1239 minutes, 12 secondsyes I mean maybe maybe what happens is my dog feels who got rid of all of them
+39:2239 minutes, 22 secondswell maybe maybe maybe maybe we should do some console logs can you just log
+39:3139 minutes, 31 secondsthe first one or something yeah see that
+39:4539 minutes, 45 secondsdon't tell me we get all right put my
+39:5339 minutes, 53 secondsunder plain guy dot filter don't reduce well you know what I mean oh geez you know it Rob's my value cuz
+40:0040 minutesyeah yeah yeah yeah okay okay good
+40:0740 minutes, 7 secondsthat's most of them actually that's pretty good I'm guessing it's just like releases that uh you know they just have a title
+40:1740 minutes, 17 secondsmaybe it's not really sleep maybe just like it's out of date they're like yeah yeah all day and this is English or maybe there's no English translation so
+40:2540 minutes, 25 secondsthey have a title but no oh that's true I don't know it doesn't mean a matter thank you ad can well ice take a long time I mean technically we're only doing
+40:3340 minutes, 33 secondsthis once a day so in seriously it doesn't matter cuz like our business no
+40:3840 minutes, 38 secondsit's not even working man really can you um is there any way to tell ya can you
+40:4640 minutes, 46 secondsdo a nod or take ten or something and then just insert ten the first also that should I'll take ten alone just yeah
+40:5340 minutes, 53 secondssplice out ten or something what do you mean I'll take Kevin's literally just this yeah slice here all right okay let's try that
+41:0641 minutes, 6 secondsI mean what sighs you have no idea if it's even working yeah because you got
+41:1341 minutes, 13 secondsrid of the console.log me why it made it so that means now out in sent many
+41:2041 minutes, 20 secondsfunction is wrong yeah this seems like there's no other
+41:2741 minutes, 27 secondspossible reason hey you know you said
+41:3441 minutes, 34 secondsmany oh all right fine let's just put in a call back and see if the call back works yeah yeah yeah just call back
+41:4241 minutes, 42 secondscheck the error that surely there's an error I mean bit needy become so logging in
+41:5141 minutes, 51 secondsKaren she becomes an error on an error now I'm joking yeah I mean yeah yeah I'd
+42:0242 minutes, 2 secondsnow copy that from the docks I'm already ready for something red maybe it's just it's nothing that it can't be that
+42:1042 minutes, 10 secondsslowly into technical oh wait wait wait wait wait wait wait I know why we don't have this line oh my gosh
+42:1842 minutes, 18 secondsthis is always like that's always something so ridiculously stupid okay
+42:2542 minutes, 25 secondsthere we go okay that's it right that has to be it
+42:3242 minutes, 32 secondsyeah how's the way I'm gonna go back well that would that was sure you stop it you don't even know yeah like either way
+42:3942 minutes, 39 secondsI'm gonna get an arrow or like yeah yeah I'm set yep all right let's try again but it should air out like what does
+42:4742 minutes, 47 secondsthat give me an error waiting for a connection all right currents ever okay that's fine there we go no hey yeah
+42:5742 minutes, 57 secondsdoesn't take very long Hey yes there we go okay and we have the correct object ID as well and the image that's it okay
+43:0543 minutes, 5 secondswell yeah that's it yeah like the interesting thing about this is um the this is not that many records right six
+43:1443 minutes, 14 secondsand a half thousand takes a table seconds so that's that look like the actually in soul than like a half a second yeah so I would actually like really challenged
+43:2243 minutes, 22 secondssome people doing pre optimizations like if they have a small service and realistically they're only looking at
+43:3043 minutes, 30 secondsmaybe 10 or 20,000 entries and it's like a batch job overnight like you got to really help much maintenance are you
+43:3843 minutes, 38 secondsadding to try and optimize certain pipelines and things like when it doesn't really matter right just just take the extra 20 second run time yeah I
+43:4843 minutes, 48 secondsthink you're right like it is this is this is kind of something I I learned the hard way because I always took like like to me it was like really cathartic
+43:5543 minutes, 55 secondsalmost to like learn about how I put this like to do to like performance optimizations ahead of time like it felt good you know it feels like I was doing
+44:0444 minutes, 4 secondssomething right yeah but the truth is like you might spend like four hours and you might save like literally half a second a day yeah sometimes it might even take longer like you you might like
+44:1244 minutes, 12 secondsokay I'm gonna do this function this way to like memorize it but then in memorizing you actually slow it down every time I agree optimization so bad
+44:1944 minutes, 19 secondsyeah and you can apply this to more like business as well like sometimes people are hired in a field like crazily complex architecture you know services
+44:2744 minutes, 27 secondsand things that are completely unnecessary like psycho pain basically of engineering and basically like the entire salary goes into maintaining
+44:3444 minutes, 34 secondsthese over into new patterns but I could have just picked the simpler solution and yeah it would have been fine for like even an enterprise business really
+44:4344 minutes, 43 secondsyeah whatever especially because we're in Australia we don't have like millions and millions of customer base yeah a
+44:5044 minutes, 50 secondspopulation is not that big and even in those cases it's like if you have a simple architecture to begin with like let the challenges come and then you architect your will evolve yeah exactly
+44:5944 minutes, 59 secondsyou want to build in a way that you understand how to move it from your simple architecture to the more complicated one you're on a bottleneck trade off but you don't want to like
+45:0845 minutes, 8 secondsredo the entire stack same as like a load balancing and stuff right like you might you want to have an instance that can be load balanced but realistically
+45:1645 minutes, 16 secondsyou can just up the instance and you probably be a fine in Australia yeah yeah and like that's the thing is like if you really want to do load balancing chances are however you do it now it's
+45:2545 minutes, 25 secondsnot going to be the optimal solution whereas like when you actually need to do it then whatever works becomes the optimal over yeah
+45:3345 minutes, 33 secondsthis doesn't make any sense yeah cool we didn't do too much today but yeah we did something we have a real database not just this is this is real payer this is
+45:4145 minutes, 41 secondstelling this is from this is from manga Eden into our face before it was just hard code that's it yeah that's progress
+45:4745 minutes, 47 secondsprogress do this once a day this is AP food yeah play some games sleep a bit that's true that's it that's a day
+45:5545 minutes, 55 secondswhenever I need a chain in the games man pretty bad okay all right well I hope you guys have enjoyed this video this has been Lucas and Patrick from Betty
+46:0446 minutes, 4 secondsCody Academy and see you guys later next part see
+

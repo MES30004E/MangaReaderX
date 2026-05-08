@@ -1,0 +1,558 @@
+0:00ten nine eight seven six five four while your way of really listening
+0:088 secondsyeah why you're like city to office no Eric ten nine your internet slow it's not in the end I'm at the end as well
+0:1818 secondsdid it be it's gobbing room in DNS server hey guys this is Lucas from betta coding
+0:2525 secondsAcademy we're back with the manga reader finally a lot of fun finally what's been busy life's been hard but we are back because we promise you this content and
+0:3434 secondswe will not stop until we have to make a readability and patrick has his mega reader all done so he can use it yeah
+0:4242 secondsmight be why no I'm starved of minger I know thanks to you so what's your solution just animate
+0:5050 secondsyeah crunchyroll it's being it's been crap right now it's just all this like you said kind of garbage cannot relate
+1:001 minutewhatever I don't know yeah alright okay so we had something which like you can do this and then you can press that and
+1:081 minute, 8 secondsthen it gives us that URL button that your else doesn't do anything why is
+1:141 minute, 14 secondsthere a colon so semicolon that we're here in the name this is that part of
+1:221 minute, 22 secondsthe name thanks Kate Oh 1 billion percent it is yeah see oh I
+1:321 minute, 32 secondsdid not know that's how that it's not like it's not a formatting issue okay alright so so let's uh let's make
+1:411 minute, 41 secondssome ground so I can use this damn thing okay good good so what are we doing reader artists that render the pages so
+1:501 minute, 50 secondsit's basically like very close to usable now right I wouldn't say that yeah famous last words
+1:591 minute, 59 secondsalways doing is pretty father yeah yeah all right so we need do we have the page right that's a Stein get 0 just rendered
+2:062 minutes, 6 secondsin nothing yeah yeah so I think the link is fine we have the ID there which is good we have the name which is good this
+2:142 minutes, 14 secondsis broken not that we care about SEO because these eh-2-zed we have a zero and the zero is breaking it so in order
+2:212 minutes, 21 secondsto fix that let's first have a look and see okay so we're replacing everything that's not ages of zero tonight with
+2:282 minutes, 28 secondshyphens so we can do that to fix it yeah which means we should now be able to go yep cool so now we have the page
+2:352 minutes, 35 secondsoh cool so we probably wanna list out the
+2:422 minutes, 42 secondssummary show an image I kind of like web taste I have that yeah and list out the
+2:522 minutes, 52 secondschapters in reverse order okay let's pick one that is uh okay blue Chandler is safe so click that yeah this
+3:023 minutes, 2 secondswas good like we don't need too much you know yeah we're power user at man we expect people to know what they're looking at okay affair so I think in terms of the
+3:113 minutes, 11 secondsdata we have right now we've got mangas at the moment so for example if we have
+3:203 minutes, 20 secondsthem set for name I don't know how this works whatever um so for example for this we don't have the description I think oh we
+3:283 minutes, 28 secondsall because we haven't fetched it okay the the API manga it in the API
+3:373 minutes, 37 secondsso do we fetch on the spot or do we like fetch ahead of time mmm you can we can
+3:463 minutes, 46 secondsdo a bit of both I don't know if we want to complicate it this much we can fetch on the fly but serve the one on the spot
+3:543 minutes, 54 secondskind of thing so we can we can like it's the same as what we do with our same is
+4:044 minutes, 4 secondswhat we do with our current and stuff right like we fetch it and we catch it and serve the one yep in the BB so we
+4:124 minutes, 12 secondscan fetch it actually no we have to fish
+4:204 minutes, 20 secondson the fly why because we're technically
+4:254 minutes, 25 secondsnot missing any just two minutes yeah it's not a single it's not a single
+4:334 minutes, 33 secondsrequest so we can't just like did Ossining eden yeah and if we fetch on
+4:414 minutes, 41 secondsthe fly and serve the previous version kind of like no point okay fair enough
+4:474 minutes, 47 secondsyeah so oh okay no because there's a last chapter update
+4:564 minutes, 56 secondsso oh okay see the last you have to update yeah so what we can do is every
+5:055 minutes, 5 secondssingle day we compare the values and we fetch the ones that are updated so that
+5:115 minutes, 11 secondswill limit the scope not really because if you don't fetch it how do you know
+5:195 minutes, 19 secondsbecause the last chapter has been updated oh you mean from the other one
+5:245 minutes, 24 secondsfrom the Elm this one yeah yeah yep so
+5:315 minutes, 31 secondswe can do like two filters we can do the ones maybe you like all right the ones that have a rank or past a certain
+5:395 minutes, 39 secondsamount or something like top 500 okay and plus the ones that are updated which would mean maybe we'll only do like the
+5:475 minutes, 47 secondshunter request or something - man gaiden and then the rest we can just switch on the fly cause who the hell reads like other crap
+5:545 minutes, 54 secondsso we basically use LD yeah I mean do we
+6:026 minutes, 2 secondswant to complicate it maybe let's just do it on the fly first and then we will implement that one yeah I think I want
+6:096 minutes, 9 secondsmy stuff we've already skies like what like 40 episodes no not 40 feels like 40
+6:156 minutes, 15 seconds10 10 10 episodes yeah whatever I mean yeah just go in the fly let's just have
+6:226 minutes, 22 secondsto software engineering you talk about the scope and you realize the scopes creep and then you go now you see the
+6:316 minutes, 31 secondsgreat thing is that we get to choose the scope the problem is that when a client chooses the scope you have no choice but to creep with the client nice of you
+6:406 minutes, 40 secondscharging them because amount be their eyes maybe like ten thousand dollars then do another two weeks that's why you always charge them like at least double
+6:506 minutes, 50 secondswhat you expect you always start with double think about what they want yeah yep and you actually you actually never end up
+6:576 minutes, 57 secondsif you if you do double because it always ends up working out just perfectly fine anyways so this is how I
+7:057 minutes, 5 secondsdo ID and then we can probably implement something like chapters - I don't know -
+7:127 minutes, 12 secondschapter ID or whatever right let's have a look so the prologue well yeah we have
+7:227 minutes, 22 secondsthis already all right oh well we chopped us no we don't need this at all because we're not clearing our thingy
+7:287 minutes, 28 secondsright we're not clearing out graph this information comes from oh okay now we
+7:377 minutes, 37 secondscan proxy yeah which is the back you all right yeah that's clear yeah yeah just broke see you okay so this should be
+7:467 minutes, 46 secondssafe for work right it's okay yeah that's cool if it's yeah there's no spin
+7:537 minutes, 53 secondsoff a loss let's grab this one okay so
+8:018 minutes, 1 secondokay so that gives you the images cool mmm gives you the pages of the chapter and then how do we use this thing again
+8:098 minutes, 9 secondsnice as dimensions we do this one okay
+8:168 minutes, 16 secondsso we don't need to actually like download the image we just load it straight onto there that computer yeah
+8:228 minutes, 22 secondsokay that should give us cool okay yep
+8:288 minutes, 28 secondsyep yep okay hmm this is so funny man like what's the
+8:398 minutes, 39 seconds40 what's this and what's that page number page not - did I mention this is the dimensions of the image right yeah
+8:478 minutes, 47 secondsalso annoying about that no it's like why don't you just put it in an object like why would you use okay yeah it is it's an array where the index is the key
+8:568 minutes, 56 secondsit's the first I ran over Batman this is this is the kind of stuff you see in corporate dude come on
+9:029 minutes, 2 secondstrue true true true teacher okay so what
+9:099 minutes, 9 secondsdoes I mean I'll just happen together and you let me know if you you need to UM if you want to suggest any changes so
+9:169 minutes, 16 secondswe've got oh boy wait what wait what am
+9:239 minutes, 23 secondsi think you chuck did when did we do this no we definitely did this so a
+9:309 minutes, 30 secondsMingo is correct Oh also we use I don't know why we did this but I think it's because
+9:379 minutes, 37 secondsoh because this data needs to come from you the server so we actually said this like a couple episodes ago is that this
+9:469 minutes, 46 secondsdata we have like locally and then info we fetched from the server which is this yeah so I think that's why yeah yeah
+9:549 minutes, 54 secondsyeah so info absolutely and then ID and then chapters
+10:0210 minutes, 2 secondsokay so chapters doesn't have anything else inside at the moment so probably do like chapter image or something or just
+10:1110 minutes, 11 secondsimages as an array up the image because I think we don't even do even need a
+10:1910 minutes, 19 secondstype like we just literally at a write of strings right what do you think no we need two dimensions nothing really
+10:2510 minutes, 25 secondsokay yeah we need with definitely your dimensions and the index index so you
+10:3310 minutes, 33 secondsknow yeah so we yep I mean if it's an
+10:4210 minutes, 42 secondsarray with any be index for yeah yes we may be in this I don't think we need it no no if we're not doing all
+10:5110 minutes, 51 secondsright and then just URL URL URI which one do you like to use I don't okay your
+11:0111 minutes, 1 secondletters W uvw string and then images
+11:1111 minutes, 11 secondslike that yeah yep cool looks good can the like see this is where alphabetical
+11:1911 minutes, 19 secondsor what it makes no sense a height should be next to the width the URL should be first like why would you separate hi Emily just because of
+11:2811 minutes, 28 secondsalphabetical order but it doesn't make sense they do eyes did not like let's just be honest with nothing makes sense
+11:3611 minutes, 36 secondsdata wise like you hate be honest with yourself just makes no sense you write the code today and it makes
+11:4311 minutes, 43 secondssense to you today and then you come back 30 days from now you look at the same order and it looks wrong no man
+11:5311 minutes, 53 secondsheights men to me next to that with man like that just make sense to me but whatever you know whatever I'm writing
+11:5911 minutes, 59 secondsbe code okay okay yeah it's fine right we have info okay so we haven't built info all we have what the heck dude
+12:0912 minutes, 9 secondswe've done so much work that I've forgotten about this is praising goodness me okay so so we already have the chapters okay that makes it easy
+12:1612 minutes, 16 secondsthen oh we are nice we've done everything so all we need to do is dude we're like well we're so good like we're
+12:2512 minutes, 25 secondsso our memory is so bad and we take so long that we've forgotten the work we do so then what do we have chapter name by
+12:3212 minutes, 32 secondsany means yeah we know I think we do so name or what title oh yeah see see
+12:4212 minutes, 42 secondsnot bad you know this just render big break okay so we've got chatter and then
+12:4812 minutes, 48 secondswe put chapter in here a resolver oops
+12:5512 minutes, 55 secondsand then we've got chatter and chapter renders what renders images that's the
+13:0113 minutes, 1 secondone we need to do so images acing
+13:0813 minutes, 8 secondschapter obj auditor okay so then we just use the ID his ID
+13:1913 minutes, 19 secondswell how do we get the ID huh euro maybe
+13:2613 minutes, 26 secondsoh okay maybe no okay so maybe it was already on the manga so like when we
+13:3413 minutes, 34 secondsgrabbed their kid so this is the manga
+13:3613 minutes, 36 secondsand what oh maybe we did it here oh okay
+13:4813 minutes, 48 secondsyeah see that's what we did is we we had a transform chapters you know honestly I don't remember any of this
+13:5513 minutes, 55 secondsI genuinely have no clue but that's what we appear to do so we took the arrays because this one here yes is an array
+14:0314 minutes, 3 secondsand then we shuffled it you know we do this so now we have the ID which means we can use the ID to do this so yeah
+14:1314 minutes, 13 secondswhat's the correct move here we put it into here fetch chapter images I mean
+14:2414 minutes, 24 secondswe've got to put it inside maybe you don't write yeah I guess yeah I'm thinking about like more the design
+14:3314 minutes, 33 secondsright now like but yeah continue what do
+14:3914 minutes, 39 secondsyou mean no just like the kind of the UX like how do we want to display the damn
+14:4614 minutes, 46 secondsthing so I know this don't new we don't have a problem getting the information
+14:5314 minutes, 53 secondslike it's just a matter of figuring it out right here the fact that archive insert but I'm not convinced we want
+15:0115 minutes, 1 secondthat intermediate sorry page like you know the this stack the second paper
+15:0915 minutes, 9 secondsyeah I'm not I'm not that convinced we need this page it just seems like an extra click to me why do I like this
+15:1615 minutes, 16 secondspage yeah you're probably right honestly there's no point right if you just yeah if you if you know what you're looking
+15:2415 minutes, 24 secondsfor and that's the assumption then yeah you go in your say you get automatically put to to chapter one or whatever right
+15:3215 minutes, 32 secondsand you're like oh wait a second I'm on chapter 37 then you just you just go to it like it should just be easy for you to change it on the fly
+15:3915 minutes, 39 secondsyeah yeah yeah yeah we can do book you know some bookmark latest feature later but it's like because I first played you so empty can we just list the chapters
+15:4815 minutes, 48 secondsunder the search bar once you click on the damn thing oh you mean you mean like so we do like say science and then right where to go
+15:5715 minutes, 57 secondsI'm building this ever but once it comes up then then you just like you click on it and then after you click on it it like something pops out and yeah just
+16:0616 minutes, 6 secondssomething small renders underneath okay or you could even render it like ahead of time and you can just click straight on it right oh yeah I guess but you'll
+16:1616 minutes, 16 secondsbe making a lot of fetches yeah cuz just everything in the list okay well that's fair I think this parts all the same though so yes this must be the
+16:2416 minutes, 24 secondssame which is one not something about it yeah so this is okay so we do chapter slash chapter ID which before slash at
+16:3316 minutes, 33 secondsthe end dot then res okay and then we do oh that's not bad about chapters equals
+16:4216 minutes, 42 secondsa white Dodge images people transform images right those are images turns red
+16:5016 minutes, 50 secondsand then we grab transform images and we writes it out so images images not map
+16:5916 minutes, 59 secondsand then the first one is number in there okay index URL with the hype and
+17:0917 minutes, 9 secondswe don't really need the index here do we oh no just pretend anyway so just URL
+17:1517 minutes, 15 secondswith time okay height index URL with no I'm sorry no no [ __ ] that it's so you know not man
+17:2617 minutes, 26 secondsit's not that bad index URL you can't
+17:3317 minutes, 33 secondseven decide that's fine we for the other two you like it's just yeah
+17:3917 minutes, 39 secondswhy is he next in the middle I just like to think that even though
+17:4617 minutes, 46 secondsyou might not agree with my rules that I'm more consistent with my rules and my coding style that's all I'm gonna say okay and I think that consistency pays
+17:5517 minutes, 55 secondsoff it does I think it does I genuinely do well alphabetical order doesn't even whatever no whatever
+18:0418 minutes, 4 secondsyeah okay whatever just it on this guy D next time so can hear the top that's actually that's actually what people would do
+18:1218 minutes, 12 secondslike seriously maybe like if you enforce alphabetical props and like you can do this in like yes Lynn Wright is if you enforce it and people don't like it
+18:2018 minutes, 20 secondsthey'll start putting random characters at the start I say it's in corporate they'll do like underscore zero to put something at the sign so just to do that
+18:2718 minutes, 27 secondsintroduces ears Lynn just stop on this cool constant constant battle and then
+18:3518 minutes, 35 secondswe do chapter ID right so there's so many phones caps are everyday to ID and then we return res got data got images
+18:4518 minutes, 45 secondsright yep okay yeah it looks right to me no we give it a try it oh thanks for running and it is
+18:5318 minutes, 53 secondssorry then we go here and we do run okay and then we do a refresh real quick
+19:0019 minutesimages and what was it URL hi hi weeds
+19:0719 minutes, 7 secondsthat there for you there you go that's okay okay so we get all the images all for
+19:1619 minutes, 16 secondsthe URL um we should prepend the thing right yeah yeah yeah yeah we should oh yeah we should do it so we just we
+19:2619 minutes, 26 secondshave that somewhere yeah er L oh no this one's slightly different it's pretty
+19:3419 minutes, 34 secondsit's pretty in a constant anyway somewhere I like just where the top
+19:4219 minutes, 42 secondslike is the fine yeah that's fine
+19:5319 minutes, 53 seconds[Applause]
+19:5419 minutes, 54 secondssweets that should be good and then we should be able to go here do this again
+20:0020 minutesand we get that and we're gonna grab glass and we do that and it's cool cool
+20:1020 minutes, 10 secondsboy is it cool oh that's the mad scientist guy right and who's that it's
+20:1720 minutes, 17 secondsthe other character that's Misaki wait what no creature it's QVC Misaki yes
+20:2420 minutes, 24 secondsit's the redhead girl anyway but she's one that's on its windy day right stop smiling spoiling any female this thing's
+20:3320 minutes, 33 secondsbeen out since last warning since I was warning you you never know man people might want to watch it now or either now inclusive Oh No okay fair enough fair
+20:4120 minutes, 41 secondsenough but I don't know anything about other than like she has red hair which is pretty obvious anyways okay so now
+20:5020 minutes, 50 secondswhat okay now yeah now let's put the thing at the bottom so when you click on
+20:5620 minutes, 56 secondsit let's just render all that do is render something I agree that meant design that's harder than you think man
+21:0321 minutes, 3 secondsit's actually harder than you think because of freaking end design man we shouldn't have done it we killed ourselves would have taken
+21:1121 minutes, 11 secondslike the same amount of time seriously no using less everything is in global
+21:1821 minutes, 18 secondsnot less this is so bad we have a comment section called hat it's a design
+21:2421 minutes, 24 secondslanguage I'm sure all we need is a list
+21:3321 minutes, 33 secondsI don't even know them right the issue no I think it's the main issues that like when you when you search right and
+21:4021 minutes, 40 secondsyou have these options what actually happens is when you click on it it automatically redirects I think that's the main issue see I'm changed right
+21:4821 minutes, 48 secondswhich trig was wait wait what wait this is not it all right we have another thing which is
+21:5821 minutes, 58 secondsa link it's your link all right oh oh there it is okay okay yeah okay let's find it I go it's fine
+22:0622 minutes, 6 secondscool ant design how do you sit in your
+22:1522 minutes, 15 secondschair do you like head forward or do you do like there are two types of bad posture right there's like your butt comes out
+22:2322 minutes, 23 secondsand sit like this well like go ahead and you sit like that yeah yeah but comes out I think is more common for me yeah did that hurt my back some energy I've
+22:3222 minutes, 32 secondsbeen trying to do more like like literally do more hunching cuz every time I do the other one like it just hurts my back really yeah because like
+22:4022 minutes, 40 secondsif you do a place three flowers a day you're gonna do yeah you won't die [ __ ]
+22:4522 minutes, 45 secondsI don't mean you you want to die before I die you're already than me you're like oh that's it why doesn't mom look at it
+22:5422 minutes, 54 secondsin that oh you he's so young he looks so young 4:15 I don't know you Patrick I'm not 50 man tell everyone you're 50 that
+23:0323 minutes, 3 secondsway you can say you look young it was like wow you look so young pH you know that's I do I tell everyone I'm 50 and I do you look so young
+23:1223 minutes, 12 secondsanyways yeah please waitlist or like I'm
+23:2023 minutes, 20 secondsthinking like buttons across like circles or something right because I
+23:2923 minutes, 29 secondsimagine see I click on this and you have like little circles like this mistake or something and they just say like the number 1 2 3 4 5 so do we see that how
+23:3823 minutes, 38 secondsdo we see the chapter name oh oh you on the name is all fair enough okay
+23:4723 minutes, 47 secondslisto yeah it's good that I've actually seen
+23:5523 minutes, 55 secondsthis happen before so sad yes yeah we can you click on it I'm
+24:0724 minutes, 7 secondspretty sure you can oh yeah we just need to put we just need to put the image somewhere what the heck what isn't
+24:1624 minutes, 16 secondsthat's the yeah sorry what's wrong I
+24:2324 minutes, 23 secondsjust oh yeah well I guess it's fine but we need um we need a think where to put
+24:3024 minutes, 30 secondsthe image of manga like we don't care about the title to be honest I mean we didn't care about the individual chap
+24:3824 minutes, 38 secondschop the images just we need like the actual manga cover someone let me see if
+24:4824 minutes, 48 secondsthis works we can go from there okay also just okay not too bad cuz then we
+24:5824 minutes, 58 secondstake you go down right and like it's the same thing okay 1 2 3 4 5 6 7 8 down yeah what do we do
+25:0725 minutes, 7 secondsabout the image for the thing just put us in there I know man just put it somewhere well
+25:1325 minutes, 13 secondshow did images are we working like that well we only care about the we only have
+25:2125 minutes, 21 secondsa small image right like how big is a mega image yeah oh this is bad how can
+25:2625 minutes, 26 secondswe do that yeah yeah fix it manga even
+25:3325 minutes, 33 secondsthe chairs there it is oh we can't really fix that
+25:4225 minutes, 42 secondsanymore why because it's already in the database just receive the DD okay okay
+25:5425 minutes, 54 secondsso how do I play this right click remove all documents yes refresh cool and then
+26:0526 minutes, 5 secondsturkey ctrl C go there not that one this one here it's called
+26:1126 minutes, 11 secondsour New Zealand Parliament jeez yato NPM
+26:2126 minutes, 21 secondsprefering p.m. with 3 years young done so we did oh we got more than last time
+26:2926 minutes, 29 secondsI'm pretty sure last time we didn't have that Mason yeah make sense make sense ok
+26:3526 minutes, 35 secondsso we should be able to do this again cool let's see what we're working with
+26:4326 minutes, 43 secondswell we know this is the site day one okay I mean that's pretty big we can
+26:5026 minutes, 50 secondsactually do something we should show you the big one like it's too small for a thumbnail in the list why is too big for Thunder at least see
+26:5826 minutes, 58 secondsthat what we do we need some inspiration man where's a designer there's no one to
+27:0827 minutes, 8 secondsask what if we describe what you have a UX design can we look look at her look
+27:1527 minutes, 15 secondsat our page okay honestly though it's not that bad and just put it something like if we look if we have safe example
+27:2227 minutes, 22 secondsoh I'm trying to demonstrate so we have this link okay and this one could be
+27:3127 minutes, 31 secondsrepeated by quite a few times right so with a link like this and then it becomes something like that you could
+27:4027 minutes, 40 secondsjust have the image like from here to there no no I disagree okay I don't think it should be in the list I think you should be after you click on
+27:4827 minutes, 48 secondsit cuz like you're gonna make people down these massive images oh no I mean like
+27:5627 minutes, 56 secondswhen you click on it better expense right cuz not a lot of my job I I don't know I just I don't know where else you
+28:0428 minutes, 4 secondscould put it yeah okay yeah if you want to expand in line sure but I don't really think we should expand it in line
+28:1328 minutes, 13 secondsI think we should click on it the autocomplete should collapse and then what your selected it should be on an
+28:2028 minutes, 20 secondsactual page oh okay that yeah that's pretty good yeah so yeah and then after like researching them to find me manga so
+28:2828 minutes, 28 secondsthen the way it would work is you have say with this look so we do this right I quit that stays the same yeah I picked back down and then
+28:3628 minutes, 36 secondssomething pops up well the thing no the thing closes the list will collapse so
+28:4428 minutes, 44 secondsyou click on it and then it classes the village okay yeah you know it will be somewhere on the page yeah and then and then like it might say signs whatever
+28:5128 minutes, 51 secondshere it just says that there and then we have just appear down here yeah yeah like hell like what would it be an individual
+29:0029 minutespage I guess be there yeah the reason why I don't want to make the list any longer because like you don't want you don't want too much stuff in your list
+29:0829 minutes, 8 secondsyeah otherwise I have to scroll further to reach what they want that is fair so
+29:1829 minutes, 18 secondswe get rid of this right yeah we don't need that what's for now I suppose they need it like you might want to save the link something because we still need it
+29:2629 minutes, 26 secondsit's just in a different spot now like we still need most of these code yeah
+29:4329 minutes, 43 secondstest oh nice and then we have okay so then if I click on it yeah click that one it does that
+29:5229 minutes, 52 secondsand then something appears have you okay yep okay so alright that's yeah hmm
+30:0430 minutes, 4 secondsright so we can go into here so that
+30:1030 minutes, 10 secondswhen you click on it something like that
+30:1930 minutes, 19 secondsand then not the ID just the full manga I think because you need you need the manga too because the images are in the
+30:2730 minutes, 27 secondsmanga as well we just put the whole
+30:2930 minutes, 29 secondsMenger in the state yes mas I have some
+30:4230 minutes, 42 secondsmechanical keyboard going crap really yeah it doesn't work well for Matt cause
+30:4930 minutes, 49 secondsthe lair like the X in the hole so your Mac layouts the command in the X is kind of line but on though isn't it kind of
+30:5630 minutes, 56 secondsthese windows so it just doesn't really work and then also the slight shift in the lair means you have to when you
+31:0431 minutes, 4 secondsswitch between the laptop in the keyboard you have to like type differently I think yeah which is not
+31:1231 minutes, 12 secondsgood yeah so I think people just should just stick to the magic keyboard yeah probably should touch the image as well
+31:2131 minutes, 21 secondsthen if doing that yeah and then we can do like
+31:3231 minutes, 32 secondsokay yes something like that and just listing out the chapters on yeah yeah
+31:4031 minutes, 40 secondsprobably want to cap the dimensions somehow it's actually only that big like
+31:4531 minutes, 45 secondsthe way cuz I do pretty big man yeah yeah absolutely I'm just so make the
+31:5631 minutes, 56 secondsimage of its smaller put on the left and then have chapters on the right and the description yes yeah so so let's make I
+32:0332 minutes, 3 secondsthink let's make like a hey like that component that encapsulate that thing
+32:1132 minutes, 11 secondswhat do you mean okay like like similar to a social component we should have a component a encapsulate oh yeah that's
+32:2032 minutes, 20 secondswhere oils in there then you should take your manga and manga I mainly want the
+32:2732 minutes, 27 secondsdescription as well yeah probably okay just grab a chocolate there yeah
+32:3532 minutes, 35 secondsjust we need manga and maybe info you as
+32:3832 minutes, 38 secondsa probe fetch manga info info chapters
+32:5032 minutes, 50 secondsdescription and then inside a mega info
+32:5732 minutes, 57 secondsthey do description is a string and then we should be able to go ta and drew in
+33:0533 minutes, 5 secondsfire and then description come on there we go awesome
+33:0933 minutes, 9 secondsgreat so we create a component where
+33:1933 minutes, 19 secondswell probably now we should probably probably you turn home into like a
+33:2833 minutes, 28 secondsfolder on the inside you have um home index okay yep yeah say for example this
+33:3733 minutes, 37 secondscomponent do you like to call it home da JSX or index or JSX no home yeah me too
+33:4533 minutes, 45 secondssomething will do index men are so annoying because you have like 50 index
+33:5033 minutes, 50 secondsfiles yep pretty much
+33:5533 minutes, 55 secondsum yeah and then we won Hey oh you might
+34:0334 minutes, 3 secondshave to clear your fossil cage you know hopes that if he gets a bit confused between if things home is home /index oh
+34:1234 minutes, 12 secondsno things is cached homers home Jay s but now it's home slash index so the case is confused make sense did possible
+34:2134 minutes, 21 secondshas its own set of issues man I'm here does why you know buddy Pete see he kind of is sitting a web pack yeah it is you
+34:2834 minutes, 28 secondscan't use Babel doc config Dutch is use it solution just don't just don't do
+34:3434 minutes, 34 secondsanything you have to use Babel I see doesn't support caching
+34:4734 minutes, 47 secondswow-whee computer slow and this is my
+34:5434 minutes, 54 secondsvalentine's day bro and you're spending with me those are nice not nice
+35:0535 minutes, 5 secondswell this is the life of a program mmm
+35:1535 minutes, 15 secondsPatrick's already 50 and he's still coding I'm not 50 bro oh my god stop I'm gonna sue you too
+35:2735 minutes, 27 secondswell then why do you possible actually really slow yeah I don't know why Oh cuz up I don't know the cash it's
+35:3535 minutes, 35 secondsprobably empty Andy's like huge probably way anyways not just true okay yeah
+35:4335 minutes, 43 secondsseems fine I probably speak anyone man
+35:5035 minutes, 50 secondsif I just click anyone okay fine cool so some of their images seem to be broken but that is okay we are going to do a
+35:5835 minutes, 58 secondscomponent in here call it Mangala details or something yeah anybody else
+36:0536 minutes, 5 secondsmake sense to me oh we probably don't need to yeah make a folder yeah I am I'm
+36:1336 minutes, 13 secondsgonna guess it's just like one file so you just pull it straight next to it
+36:1836 minutes, 18 secondsyeah yeah see this is what we were
+36:3136 minutes, 31 secondstalking about right it's like if you've got mega details don't split up the props and pass them individually just pass the whole mango yeah exactly it
+36:3936 minutes, 39 secondslike it makes sense to me man like yeah like well it's kind of how the Select thing yeah like it's like like so might
+36:4836 minutes, 48 secondsbe but don't do this basically because that's that and and then you're just like kind of causing pointless confusion yeah yeah yeah exactly
+36:5736 minutes, 57 secondsto the point yeah just you know work with your highest working for your mental model you know there's like when
+37:0637 minutes, 6 secondsyou architect things right you think about your classes objects and how they move around in your back end to the
+37:1337 minutes, 13 secondsfront end etc you don't think about ah you know get the image from here and you move it you don't want to meet up it's all about object houses and objects
+37:2137 minutes, 21 secondseverything full objects yeah so I think react you should find a similar approach mentally do we put the
+37:2937 minutes, 29 secondsCSS in here again unless if it's a specific UI generic component then it needs to be decoupled manga details
+37:4637 minutes, 46 secondsminute details wrap on thumbnail cool
+37:5937 minutes, 59 secondshey just fine whatever yeah it's fine
+38:0738 minutes, 7 secondsmax width is going to be do use um do we
+38:1438 minutes, 14 secondsuse pixels and what do we use breath max height is going to be 10 I don't know or
+38:2138 minutes, 21 secondswhat does it how does it yeah we're just it like I think they're all different
+38:2938 minutes, 29 secondsheights likes different ratio are just max ice so yeah we might not need a max
+38:3538 minutes, 35 secondsheight I mean that's good enough I think
+38:4338 minutes, 43 secondswe should probably object fit it because I doesn't look slightly no it's fine
+38:5138 minutes, 51 secondsyeah yeah yes yeah we should give it something yeah yeah right that's fine
+39:0039 minutestoo yeah probably want description somewhere
+39:0839 minutes, 8 secondslight on the right hand side probably want the title no we don't need the title is really happy in the search bar
+39:1339 minutes, 13 secondsyep hi forget the door I did forget to
+39:2339 minutes, 23 secondsdo it
+39:3739 minutes, 37 secondsClaude you broke everything man why how
+39:4439 minutes, 44 secondsoh it's just ridiculously slow down Oh cuz just Oh clear cause you're fetching
+39:5339 minutes, 53 secondsthe description of like while it's listed that's why you want to guys
+39:5839 minutes, 58 secondsactually cuz it's fine huh no it's not
+40:0640 minutes, 6 secondsoh it's pretty good yeah that's probably good slogan just like it literally just like died or something so I think the
+40:1540 minutes, 15 secondssolution yeah see this is Phoebe yeah so we get rid of this and we put another
+40:2140 minutes, 21 secondsquery here right because it's how I'll get ugly yeah yeah you can't you can't
+40:2940 minutes, 29 secondsfetch it together in one good because that's the entire point of splitting it up then in that case you don't even you touch this here right like literally
+40:3640 minutes, 36 secondsjust that's it and then we go here no
+40:4940 minutes, 49 secondsyou still need it yeah Idid I see see I
+41:0841 minutes, 8 secondsdon't really like that but yeah like what the image should be long with the first query oh you mean just just that's
+41:1741 minutes, 17 secondswhat you need on the second one yeah so the first one you're specifically fetching a mango the second one you're
+41:2541 minutes, 25 secondsspecifically fetching manga info so like right now it's like what the hell is this right this is like mango which may
+41:3241 minutes, 32 secondsbe info but only partially because what I'm thinking breaking up the mob yeah yeah because the way I see it is like
+41:3841 minutes, 38 secondsthen we change mega details to accept only an ID or is that bad no that's fine
+41:4741 minutes, 47 secondsoh no no that's probably bad why do you want to research now we're not refreshing it's just we're not using
+41:5541 minutes, 55 secondsthe image here right because we're not making use of the image in this one so we're using image here and also because
+42:0342 minutes, 3 secondswe're not using status nor title but the image is passed through the prompt yeah yeah yeah I mean like you can do
+42:1142 minutes, 11 secondsthat but then it's like while do we pass it through instead just pass the pass an ID cuz then we need to fetch it anyways
+42:1842 minutes, 18 secondsyou don't you only fetching manga info okay alright well either way I'm fine
+42:2642 minutes, 26 secondseither method so that this one still shows image and this one we wait you evening you're typing even like you just think about your typing if you type
+42:3342 minutes, 33 secondsthese things gonna be weird because then image is gonna be optional like so then you're passing a manga object without an image which kind of breaks the typing
+42:4142 minutes, 41 secondsunless if we put optional yeah yeah what I would have done is do manga ID here
+42:4942 minutes, 49 secondsand then just set what I need before this component that's what I would have done I guess the main the other image to
+42:5742 minutes, 57 secondsobject yeah I think the other thing is like because sometimes you work with the reactor browser and in the in the URL
+43:0643 minutes, 6 secondsyou can only ever have an ID you can't pass the whole object in router is different because you can refresh so your memory is cleared yeah yeah which
+43:1443 minutes, 14 secondsmeans that only you have to pass three identifies well we're not in this case honest if you wanna make that happen
+43:2243 minutes, 22 secondsyeah I think it's fine I think your method is just fine so what do we do is
+43:2943 minutes, 29 secondsput loading we bother to design a public I'm sure there's a little bit earlier oh
+43:3643 minutes, 36 secondsyeah we just do that hey loader spin off spinning progress spin been this cool do
+43:4743 minutes, 47 secondsthat spin very nice see same just at least happy now just today what it one episode I would
+43:5543 minutes, 55 secondshave just written loading a like world that's not cool
+44:0344 minutes, 3 secondsalright so we do data dot mango info description because officially
+44:1144 minutes, 11 secondscondemned okay so now we do stain zero
+44:1744 minutes, 17 secondsokay yeah we should probably not sure that you meet until the loading screen okay yeah that's like it's not staggered
+44:2544 minutes, 25 secondsokay yeah okay
+44:4344 minutes, 43 secondscan we use like yeah can we use like ant design contact code or something like they gotta have a generic contact hard
+44:5044 minutes, 50 secondsno you know Todd yeah good like
+44:5944 minutes, 59 secondssomething more horizontal yeah yeah hmm
+45:0845 minutes, 8 secondsthey have everything except what you need what's like a badges I mean you know
+45:2045 minutes, 20 secondslike some of the badge yeah avatar badge kind of stuff oh okay that's pretty cool actually but
+45:2945 minutes, 29 secondswe won't need it now yeah we don't really need yeah I'll just just build it
+45:4145 minutes, 41 secondsman no it's not gonna look the same the
+45:5445 minutes, 54 secondswhole thing is wrong actually the court hacks all of our CSS is in one file and
+46:0146 minutes, 1 secondwe're using less because it's because you're hacking the the Sun the font size we have to have some more sighs if you
+46:0846 minutes, 8 secondsdon't mind this is this is look at hockey this is we have no way of
+46:1746 minutes, 17 secondscustomizing the size so he took large and we made it extra large now now largest extra-large but equal no that's that's fine parameter change oh
+46:2646 minutes, 26 secondsmy gosh how you meant to change this very bad no that's how I know but yeah
+46:3546 minutes, 35 secondsokay screw it I'm building it still taking out two seconds to build man it's not gonna look pretty man now whatever I
+46:4346 minutes, 43 secondsam I am a designer I do that one the red one side for them now let's go are you
+46:5246 minutes, 52 secondsgonna refresh all what the heck
+47:0247 minutes, 2 secondsokay yeah seems fine what if the text is
+47:0747 minutes, 7 secondsvery long we shall find out rips in the
+47:1347 minutes, 13 secondsduct on grab a couple paragraphs of this
+47:2747 minutes, 27 secondsthere you go okay yeah that's not what
+47:4047 minutes, 40 secondswe want how do we get the heights I don't
+47:4847 minutes, 48 seconds[Applause]
+47:5847 minutes, 58 secondslet's see if that works hmm I shouldn't go out that far she got it all but hmm
+48:0748 minutes, 7 secondsthat is weird yeah that's sweet hmm the
+48:1748 minutes, 17 secondsrapper category search-wrapper has a max with okay so what about this one
+48:2448 minutes, 24 secondsthe main search container has nothing oh okay yeah see I thought it was similarly
+48:3148 minutes, 31 secondsstyling yeah no but I just like put it on grab that and paste that here fix the
+48:3948 minutes, 39 secondsother one is wrong which other umm where you had max with originally should be a
+48:4748 minutes, 47 secondshundred percent all right was it nice
+48:4948 minutes, 49 secondsdisbander outer container no it's fine I
+49:0649 minutes, 6 secondsthink you should probably honestly like truncate past a certain point with multi-line concave not the easiest
+49:1449 minutes, 14 secondswell screw it it's fine it's fine it's not did you want to get this thing by
+49:1949 minutes, 19 secondsChristmas or not okay wait what info are
+49:2949 minutes, 29 secondshere okay so chapters and then inside of chapters as we do ID and title right yep
+49:3749 minutes, 37 secondssounds good to me so then we do chapters are the title and
+49:4449 minutes, 44 secondsthen we go here and we do and design this design listen in freaking out
+49:5449 minutes, 54 secondsdesign man I don't even know what to say
+50:0550 minutes, 5 secondsokay grab that and then we use list here okay and then the size is small no head on therefore so I bought it is fine
+50:1350 minutes, 13 secondsrendered item data and started on main driver in photo chapters and then this is chapter reverse you need a reverse
+50:2550 minutes, 25 secondswait that's all good it's fine okay
+50:3450 minutes, 34 secondschaps are okay okay let's go come on
+50:4650 minutes, 46 secondsokay no not right not right I think this list should be underneath
+50:5450 minutes, 54 secondsha the description polite he should span the width of the container because when your description longer it's just gonna
+51:0251 minutes, 2 secondslook what are you talking about like do you want to use most real estate like [ __ ] expand a bit should I spend like
+51:1151 minutes, 11 secondsshould be under the image I should have be on the right I'll say I'm just
+51:1951 minutes, 19 secondsthinking maybe we have a little bit more room to like play with like maybe we can have book my icons or something on the right hand side it's fine but when I -
+51:2851 minutes, 28 secondssighs that's for sure you should drop the bunt sighs it's so small this is this is your fault man Jackie yeah because they're using
+51:3751 minutes, 37 secondsfreaking ant design oh my god and design
+51:4151 minutes, 41 secondsis mine okay why is the font size so
+51:5151 minutes, 51 secondsmuch like this a little bit bigger toy with different size oil orange okay and this thing font size
+52:0052 minuteswhat is it - mmm 21 pixels goodness me
+52:0752 minutes, 7 secondsokay yeah I see what you've done no
+52:1452 minutes, 14 secondswhat's the class I'm here at this - no this is your fault
+52:2552 minutes, 25 secondsno give me a better solution go on please at least a variable at the
+52:3152 minutes, 31 secondstop how's that gonna help it's gonna help so scaled at least I
+52:3852 minutes, 38 secondsseen Harold you know it might not inherit the point 9 yeah whatever this
+52:5052 minutes, 50 secondsis my run because there are parent elements on top of it that define the constant right yeah yeah can we put the
+52:5852 minutes, 58 secondschapter number at the front as well so I hashtag index yeah and can we like um
+53:0653 minutes, 6 secondspad the index with something what do you mean like you don't want one right you
+53:1353 minutes, 13 secondswant this is everyone yeah but when there's more than 10 it's gonna look ugly oh all you want to do that
+53:2353 minutes, 23 secondswell you either padded or you just make sure it aligns like the name should align all right time for some big brain
+53:3153 minutes, 31 secondspadding logic yeah they rate you need to so doc had start I start at the end
+53:4153 minutes, 41 secondswhich one is the first first one in length okay so the length is going to be da da da Wanga employed of chapters dot
+53:5053 minutes, 50 secondsLen not two strings on then and then we've had zero yeah all right yeah yeah
+54:0154 minutes, 1 secondor you can write so this one's gonna be ping all right yeah oh you can technically just I think divide it by
+54:0954 minutes, 9 secondssomething oh boy whatever yeah yeah what the heck wait is this
+54:2054 minutes, 20 secondssound of order do it is this for real yeah dude we what how wait is it ah why
+54:3254 minutes, 32 secondsis there none by la orilla it must meet it already comes in Reverse so we should not read double reverse oh you want the
+54:4054 minutes, 40 secondslatest on the top right yeah laters yeah yes so then all right this makes a heart
+54:4554 minutes, 45 secondsup then we can't use this right okay
+55:0955 minutes, 9 secondsthat's fine great bow must mean you
+55:1755 minutes, 17 secondsdivide by zero oh really I read our length minus index let's do
+55:2855 minutes, 28 secondsthe index plus 1 right what's wrong with that oh I thought it was a dot map so I was trying to access the array it's not a
+55:3755 minutes, 37 secondsdot map okay it's a customer this is my aunt design sucks man my name
+55:4455 minutes, 44 secondsconvenience is make life hard
+55:5255 minutes, 52 secondsoh one piece come on okay oh the image
+56:0056 minutesis broken man it looks like [ __ ] king of the Pirates a house yeah yeah yeah
+56:0956 minutes, 9 secondswhatever you should try and came in so don't mom whatever waits havoc found one piece yet
+56:1556 minutes, 15 secondsno obviously not cool can we put a hyphen between the number
+56:2356 minutes, 23 secondsand the manga Oh No yeah why how come
+56:2856 minutes, 28 secondsthat's me yep so what we're gonna do
+56:3656 minutes, 36 secondsabout the missing image I mean it's just
+56:4656 minutes, 46 secondslike loaded with a placeholder as I'm crying yeah access denied man what the hell
+56:5756 minutes, 57 secondslinking to the resource okay wait wait
+57:0457 minutes, 4 secondsah what we do I don't know what do we do
+57:1157 minutes, 11 secondswhy is it why is it broken it doesn't let us fetch hot directly so what's the
+57:2057 minutes, 20 secondssolution but the other one did so right
+57:3557 minutes, 35 secondssee if we can okay how to bypass falling
+57:4157 minutes, 41 secondsprotection anything couch where oh the
+57:4957 minutes, 49 secondsreferral manually 2.0 it's a domain hmm
+57:5857 minutes, 58 secondsoh I don't know do whatever doesn't matter dig I fixed the space issue there needs
+58:0658 minutes, 6 secondsto be a space after the height that's the safe was amazing was it it wasn't on
+58:1458 minutes, 14 secondsthe on your browser I don't want touchpad
+58:2358 minutes, 23 secondsI don't oh they'll broken man okay over here is closed yeah it's because you've you done gates once already so occasion
+58:3258 minutes, 32 secondsare you browser Oh big brain I wonder if
+58:4258 minutes, 42 secondsthere's a way to fetch these the point of an API man you 400 chickens see you fence the image moved out the referral I
+58:5158 minutes, 51 secondswonder if it's way to do that see
+59:0259 minutes, 2 secondsnice this'll probably work right I don't know man
+59:1159 minutes, 11 secondsI don't know there is very head it would not be same it'll work you might have faith
+59:1859 minutes, 18 secondshey yeah as a big brain big brain man oh crap yeah it's pretty
+59:2559 minutes, 25 secondssmart um wait is that really stress to you yes he is Vinita that's what I was thinking in steins gate was like
+59:3259 minutes, 32 secondsstretched as well so you need to do object fit and make sure it's like
+59:3659 minutes, 36 secondscontains objects it contain oh no he's
+59:5559 minutes, 55 secondsescaped
+59:5859 minutes, 58 secondsyeah no but yeah no no it'll work that's
+1:00:121 hour, 12 secondsnot how it was right yes oh it's the courts then excuse me
+1:00:251 hour, 25 secondssee but it's the it's the codes and the spacing it's not HTML right okay fine
+1:00:321 hour, 32 secondsfive your eyes oh wait can you actually you actually do that using that I think sorry
+1:00:451 hour, 45 secondswell I think you're wrong maybe it's something else how to do some JavaScript
+1:00:541 hour, 54 secondsclick the first link go to stop cloud now it says jQuery man so by putting
+1:01:021 hour, 1 minute, 2 secondsthis no no I say that's not a bad bear
+1:01:101 hour, 1 minute, 10 secondsan escape function oh oh well it didn't
+1:01:341 hour, 1 minute, 34 secondswork no this is it because your quote is wrong there's no way that I'm sure there
+1:01:411 hour, 1 minute, 41 secondsis no way that's wrong it's it's yes oh no because it's escaping it as URL
+1:01:491 hour, 1 minute, 49 secondscharacters not as HTML entities look that there is a way I know there is a
+1:01:551 hour, 1 minute, 55 secondsway it's caught on yo hto hdhp what just
+1:02:031 hour, 2 minutes, 3 secondsgive me a second give me a second decoded HTML do I know this way okay HTM ICD code check this out
+1:02:131 hour, 2 minutes, 13 secondssorry I think no ah this one okay okay
+1:02:221 hour, 2 minutes, 22 secondsgreat so here's the function and all you have to do is install this package okay
+1:02:301 hour, 2 minutes, 30 secondsit's actually that that's actually good and then you just like it's alright let's do that yeah yeah okay yeah let's
+1:02:381 hour, 2 minutes, 38 secondsdo them I don't want people injecting script tags in develop a security 101
+1:02:511 hour, 2 minutes, 51 secondsI mean you're not wrong I'll give you that
+1:02:571 hour, 2 minutes, 57 secondsthank you thank you I'm not wrong
+1:03:021 hour, 3 minutes, 2 secondsthey're fun right yeah cool
+1:03:111 hour, 3 minutes, 11 secondsdon't you need the other function or the it is the MPM enough is the npm does it
+1:03:181 hour, 3 minutes, 18 secondsis the NPM enough always the other function what other youngest 100 so this
+1:03:251 hour, 3 minutes, 25 secondsis the no HDFC's is the one that goes because the only name I remembered was H no entities from what I used to do here is P but there's one that goes the other
+1:03:321 hour, 3 minutes, 32 secondsway which is this one so that's the Inc oh yeah okay cool man if he's so dodgy
+1:03:391 hour, 3 minutes, 39 secondsdude like it has like a thousand global functions I'm not even kidding and there's no consumer fee you saw there like HDFC's right is written like
+1:03:481 hour, 3 minutes, 48 secondsthis like no spaces no cats nothing like nothing right but then HTML underscore
+1:03:531 hour, 3 minutes, 53 secondsentity under Scooby code I think the thing of HP's it's not actually that bad
+1:04:021 hour, 4 minutes, 2 secondsa language but the in she works but the issue is that if you use PHP and you're bad it makes it really easy for you to
+1:04:091 hour, 4 minutes, 9 secondswrite bad code like you know so easily I don't think that's PHP and Jenny yeah like it's just it lets you be bad if I
+1:04:181 hour, 4 minutes, 18 secondsthink is that cool anyway now we watch me that's an hour and I still can't read my mind you're so close though we're so close
+1:04:261 hour, 4 minutes, 26 secondsfor images can you just make the page you just just just link it through the page and then to render the images man okay thank you
+1:04:331 hour, 4 minutes, 33 secondsand then so I can at least start using the damn thing so we grab satellite cycle it's working we need to celebrate
+1:04:461 hour, 4 minutes, 46 secondsI'm not celebrating anything man Valentine's Day I'll celebrate my loneliness
+1:04:571 hour, 4 minutes, 57 secondsI mean you can celebrate with your computer you can celebrate Apple just walking it's not looking at max that's
+1:05:061 hour, 5 minutes, 6 secondsgood oh that's actually really cool I'm not gonna lie I like that ah it's refer a policy with the capital P makes sense yeah we'll get some friggin we act
+1:05:161 hour, 5 minutes, 16 secondsand then Oh what I'll tell you that a lot lingo whoops I meant to use the manga the title yeah and can be like
+1:05:251 hour, 5 minutes, 25 secondsdeconstruct maybe some of this stuff it's so so long is it yeah
+1:05:321 hour, 5 minutes, 32 secondswhat do you mean deconstruct oh so I'm
+1:05:471 hour, 5 minutes, 47 secondsgetting a dog see I tell you that oh nice
+1:05:531 hour, 5 minutes, 53 secondsokay yeah we have the links and they take us is the one punch man page okay
+1:06:011 hour, 6 minutes, 1 secondwell what do you wanna do now do you wanna show the actual images or call it a day
+1:06:081 hour, 6 minutes, 8 secondsyeah just render the images okay cuz then I can actually use it right because we have this and when you click it it
+1:06:151 hour, 6 minutes, 15 secondstakes us to this page but we can make it go to the other page yeah how you just rent out the images you know list these
+1:06:221 hour, 6 minutes, 22 secondsI can use it we can do with the infinite scrolling stuff next time man we make so
+1:06:291 hour, 6 minutes, 29 secondsmuch progress today I feel so so proud yeah yeah well it's 10 10 episodes of
+1:06:351 hour, 6 minutes, 35 secondsbrown one episode on actually zombie yeah
+1:06:421 hour, 6 minutes, 42 secondsmake a chop saw that and then you need the index
+1:07:021 hour, 7 minutes, 2 secondswaitwhat no should be indexed or just ID I see
+1:07:131 hour, 7 minutes, 13 secondsthe idea that's the idea man
+1:07:231 hour, 7 minutes, 23 secondshi Dean
+1:07:331 hour, 7 minutes, 33 secondsokay that gets us live on one but we can do isn't here change this to be like
+1:07:401 hour, 7 minutes, 40 secondsthat okay cool hey isn't the thing like this is 24 so
+1:07:511 hour, 7 minutes, 51 secondswe do the same thing you'll grab that and we paste that here us and this is capped IV and then we take the chaps IV
+1:08:021 hour, 8 minutes, 2 secondsfrom params and then we go to here grab
+1:08:111 hour, 8 minutes, 11 secondsthe query put that there grab this go here paste that we drew
+1:08:161 hour, 8 minutes, 16 secondsmanga chapter chapter IV and then we
+1:08:221 hour, 8 minutes, 22 secondsgrab the ID and what else the images hi you are with please grab that paste that
+1:08:301 hour, 8 minutes, 30 secondsthere do this do that we have manga chapter we haven't built an English chapter yet so we have to go into services and we have to go to query
+1:08:381 hour, 8 minutes, 38 secondsand we have to copy manga and do then you guys pops up and we do index and it
+1:08:461 hour, 8 minutes, 46 secondsis fun to make a chapter and we do thank God chapter resolver and then what do we
+1:08:541 hour, 8 minutes, 54 secondsdo now we grab the chapter from the the thing so we grabbed it from fetch chapter info Oh
+1:09:021 hour, 9 minutes, 2 secondsfetch chapter images oh wait a second that's not good
+1:09:111 hour, 9 minutes, 11 secondsis it hmm oh I think these are so going out is just to return this inside me
+1:09:181 hour, 9 minutes, 18 secondsjust return that but then for the actual chapter inside we can fetch the images so we don't know this we have the ID the ID can use here you can fetch the
+1:09:271 hour, 9 minutes, 27 secondschapter ID so we should be able to go into here add that in so then go chapter
+1:09:381 hour, 9 minutes, 38 secondslike so and we have all we have this stuff as well ah I can't be bothered to fetch that right now wait wait a second can't fetch
+1:09:471 hour, 9 minutes, 47 secondsit oh is it just chapter of course that's
+1:09:521 hour, 9 minutes, 52 secondsit like that okay chapter cup sit there
+1:09:591 hour, 9 minutes, 59 secondsdo that and then we got this year has images how look at mango sauce we have
+1:10:061 hour, 10 minutes, 6 secondsfetch mango info oh well we got let's
+1:10:151 hour, 10 minutes, 15 secondshave the images own way first chapter images the issue is that okay so for a
+1:10:261 hour, 10 minutes, 26 secondschapter the only thing we have is the images so we don't actually have the shopsite information anyway whatever this should work
+1:10:321 hour, 10 minutes, 32 secondsum yeah you don't need refresh do that
+1:10:381 hour, 10 minutes, 38 secondsgrab this one grab that chapter IV got that any should work images ID URL
+1:10:471 hour, 10 minutes, 47 secondsstreet fine come on yeah okay cool so now what we do is on this page here mango details sorry
+1:10:571 hour, 10 minutes, 57 secondschapter when you do is not soon chapter IV images okay cool and then we do
+1:11:031 hour, 11 minutes, 3 secondschapter ID here on start are loading equals use query query looks very and
+1:11:111 hour, 11 minutes, 11 secondsthen variables and then taps ID pasta in man I am on fire today and then if learning
+1:11:201 hour, 11 minutes, 20 secondsFinn can you sing to this no no no man I
+1:11:281 hour, 11 minutes, 28 secondswant to go have lunch dude okay yeah yeah I only do not carry the ball yeah no I think I'm here is Lori enough
+1:11:371 hour, 11 minutes, 37 secondsof you know grab people thing up anyway so I think in this section we probably don't want to repeat like this is quite
+1:11:431 hour, 11 minutes, 43 secondsreview yes just think of it as payback for next video I basically got is probably image that's up there
+1:11:521 hour, 11 minutes, 52 secondsthere's so much to do no basically done for today yeah come on man today as soon as it yeah we're done for today yes yes
+1:12:001 hour, 12 minutesa lot it works please as soon as we sent to the spinner
+1:12:071 hour, 12 minutes, 7 secondsno list of priorities is so messed up you use a D and like global less and
+1:12:161 hour, 12 minutes, 16 secondsAkiko it's not part of the code attack you man all of it
+1:12:241 hour, 12 minutes, 24 secondswell part of the code is happy yes yes grab this do that okay come on come on
+1:12:311 hour, 12 minutes, 31 secondscome on sure yeah hey backwards order
+1:12:381 hour, 12 minutes, 38 secondsyeah they are wait actually are they out yeah always stays in at the top just
+1:12:451 hour, 12 minutes, 45 secondsread this oh okay yeah they're alright well can we like center black dark black
+1:12:551 hour, 12 minutes, 55 secondsdark grey background and then Saturday all right I can do that yeah
+1:13:051 hour, 13 minutes, 5 secondshey guys dr. ed not black yeah that's that how dark - yeah just
+1:13:161 hour, 13 minutes, 16 secondsthe darkest coke renders in an iPhone okay come on come on come on iYou says
+1:13:251 hour, 13 minutes, 25 secondswell you spelled it wrong I did it's both our own brain and Center they meet in this place it was nothing music sees
+1:13:361 hour, 13 minutes, 36 secondslove Peter not so nice in Sao Paulo me
+1:13:501 hour, 13 minutes, 50 secondsthank you
+1:14:011 hour, 14 minutes, 1 secondcome on come on come on come on where are you it's not good okay oh no
+1:14:111 hour, 14 minutes, 11 secondsthis one is a double yes oh yeah you did economy should be right right no it is
+1:14:181 hour, 14 minutes, 18 secondshollow all I haven't use in my bed wait what oh wait no no no anyway that's fine
+1:14:281 hour, 14 minutes, 28 secondsoh sure is : it's column man it goes in a column of flows in a column but the
+1:14:351 hour, 14 minutes, 35 secondsFlex the Flex direction should be so it is the one killing in percent column now yeah flex Lloyd's basically Direction
+1:14:441 hour, 14 minutes, 44 secondsplus wrap yeah well something is wrong dude something is wrong dude I don't wanna
+1:14:531 hour, 14 minutes, 53 secondsread my mail like this you can play too much man oh yeah
+1:15:021 hour, 15 minutes, 2 secondsdidn't say or something disappointing it
+1:15:091 hour, 15 minutes, 9 secondslike disappointing okay okay nice yes sir why is the background not black
+1:15:161 hour, 15 minutes, 16 secondsbecause something does the image size oh no man it looks like we need to fix
+1:15:231 hour, 15 minutes, 23 secondsmax max width of the image to p90 VW or something yeah the gray background
+1:15:341 hour, 15 minutes, 34 secondsstopped way too early and stop like here oh yeah yeah cuz your images are flowing
+1:15:421 hour, 15 minutes, 42 secondsout I think yeah height:auto
+1:15:501 hour, 15 minutes, 50 secondsNo
+1:15:531 hour, 15 minutes, 53 secondswell I am why does this happen back here
+1:16:041 hour, 16 minutes, 4 secondsis this way too strong anything but there yeah yeah why is there a horizontal scroll yeah it's fine we'll
+1:16:121 hour, 16 minutes, 12 secondsfix it later so why is there horizontal scroll all because one of the images that we do Thank You Man TV 90 we want
+1:16:191 hour, 16 minutes, 19 secondsto see some blackboard thank you cool
+1:16:301 hour, 16 minutes, 30 secondsthanks I can read my manga now sort of I'll actually use this legit I try to and then if it's not as good as just going
+1:16:381 hour, 16 minutes, 38 secondsto mangai then we need to fix it oh no
+1:16:441 hour, 16 minutes, 44 secondsmy your scroll by yeah okay my computer's Monday it's not it's not the
+1:16:531 hour, 16 minutes, 53 secondswebpage they can actually I know perfect this is undoing because every day but I don't know why am I like things stopping
+1:17:011 hour, 17 minutes, 1 secondthere it's fine I'll push it and fix it wait what oh it's on a par with under
+1:17:101 hour, 17 minutes, 10 seconds1000 because it was there yeah was just with order come on Khan growling man what are you
+1:17:201 hour, 17 minutes, 20 secondseating I don't know anymore I just grabbed something for the fridge probably yeah
+1:17:281 hour, 17 minutes, 28 secondswell I'm gonna say it moments is expensive wasn't sure if it sucks that's it it's all worth it yeah okay it looks good you know besides the computer
+1:17:361 hour, 17 minutes, 36 secondslagging on my screen but Milan might not so it's fine good okay yeah yeah yeah
+1:17:441 hour, 17 minutes, 44 secondsI'll send to the spinner for you goodness oh thank you so much okay I was like an hour 20 minutes but guys thank you so much for following along I hope you enjoyed it
+1:17:521 hour, 17 minutes, 52 secondsI'm tired man yeah we got something you know we made like yeah honestly I think we made more progress in this video than
+1:18:001 hour, 18 minuteswe did in last combined like in terms of code but yeah well it's closing is guys the last 10 minutes it's just like we're not doing
+1:18:091 hour, 18 minutes, 9 secondsthe video it is Cody that's it that's good that's good yeah guys thank you so much for following it along this has been Lucas and Patrick from better
+1:18:181 hour, 18 minutes, 18 secondscoding Academy and yes I mean what I did alright well see you guys later later bye bye yeah my boy

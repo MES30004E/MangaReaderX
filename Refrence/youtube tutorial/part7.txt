@@ -1,0 +1,378 @@
+0:044 secondsdude it's like it's actually what I love therapy does though it's like he just he takes something like like a phone with like a 40 yeah dead battery or something
+0:1313 secondsand it's like guys imagine if you were on a siberian railway like an important businessman and yeah no access to
+0:2020 secondselectricity for the next foreseeable future all kind of fine would you want to be carrying what do you think about that wheel what do you know that we'd have to say
+0:2929 secondsyeah I will it's like pretty yes you see you stole this what time
+0:3737 secondshey stuff hey guys this is Lucas from the decoding Academy we are back on the mango reader huh nice little hobby requested that use that live so we are
+0:4646 secondscoming back straight Ian I have no idea what's going on but we're gonna jump into it hello I remember we had a PWA
+0:5656 secondsyes already did so we have the manga reader UWA right here you're in this thing
+1:021 minute, 2 secondsyeah okay so it literally just says working this was a menace of work I said
+1:121 minute, 12 secondsI don't denounce it or anything this is something yes solid solid yep stop okay so today what we let's do some hardcore
+1:191 minute, 19 secondsfor a name forget about the actual PWA
+1:281 minute, 28 secondsyep forget about it
+1:311 minute, 31 seconds[Music]
+1:331 minute, 33 secondsjust work any about it alright so let's
+1:391 minute, 39 secondsstart by installing what we know we need so we need craft Apolo client graph QL
+1:471 minute, 47 secondswhatever you need yes wait we did react we need react Dom we probably need low -
+1:581 minute, 58 secondsAranda one of them is ran down low - up - um good whispers the news Randa I
+2:062 minutes, 6 secondsthink around is better in react yeah okay but you can also use low - FP which is almost the same thing I wanna try radicals I've never a
+2:132 minutes, 13 secondsimproperly trying it's hard to it's hard to get into proper use cases over and over if your API is designed well
+2:202 minutes, 20 secondsdefining doesn't need to do too much
+2:412 minutes, 41 secondshey be honest when you're setting up and like a new project or something like right okay how much women do you
+2:502 minutes, 50 secondsactually copy/paste um depends what it is for your footnote for no it actually almost nothing
+2:572 minutes, 57 secondsyeah cuz I don't know the node is I just remember or for some reason for react almost I sure there's nothing as well
+3:063 minutes, 6 secondscuz it's like my general setup is just uh alright now I do copy the saga middleware ah yeah yeah and the apply
+3:153 minutes, 15 secondsmiddleware and useless enhancers yeah combined you just yeah yeah it's just the this yeah and I mean unpopular
+3:233 minutes, 23 secondsmethod but I tend to skip actions a lot I just think actions the vanilla are so stupid
+3:303 minutes, 30 secondsyeah so I just never use them I have no
+3:523 minutes, 52 secondsidea man I knew that 3000 ah there's 4,000 3,000 that's the API oh
+4:004 minutesyeah this must yeah yeah to be 3,000 I
+4:044 minutes, 4 secondsthink it is so cute 200 blank page for
+4:284 minutes, 28 secondsthis projects I want to see what directory structure you tend to do so you're like okay now we're going to put in a component what do you do what you
+4:344 minutes, 34 secondscall it yeah so firstly do you have alias package yeah selling out one so
+4:444 minutes, 44 secondsthis part is also read/write underscore it's just a tease yeah so I like to put
+4:514 minutes, 51 secondssomething to this source like at root or something every just do that's SRC easier to like it's one
+5:005 minutescharacter this more yeah yeah any it's
+5:045 minutes, 4 secondsmore obvious what it is like the
+5:135 minutes, 13 secondsconvention is an yeah yeah that's the yes - okay that's actually why I don't
+5:205 minutes, 20 secondslike use you have is because what like what if you have a directory quote like say you want to do one quote I agree I
+5:295 minutes, 29 secondsagree yeah okay - I always actually I always like to just put slash sauce way
+5:345 minutes, 34 secondsobviously it doesn't work so we have a
+5:525 minutes, 52 secondsAPI folder icon folder okay yes I
+6:006 minutesactually don't like to pre folder things like I just make them as I need them otherwise sometimes I feel like it's
+6:096 minutes, 9 secondsdifficult to move stuff back out or you know it's about equal effort to move stuff in the move stuff out so we wanna
+6:156 minutes, 15 secondsapp probably I like to be super lazy and just start the app in the index file and if it's not bigger than like ten lines
+6:246 minutes, 24 secondsI'm not gonna even live it up no I just like literally just start doing the app inside index file obviously here yeah yeah because you
+6:326 minutes, 32 secondsdon't know how big is gonna be but it was like five lines and what's the point is yeah so what do we actually want do
+6:406 minutes, 40 secondswe have a design no preference let's have my web happens yeah I need to do
+6:516 minutes, 51 secondssome speech therapy man like I purposely speak like an idiot but I don't have to
+6:566 minutes, 56 secondsreally I think so no no it's like it's a bit on purpose so when I'm talking
+7:057 minutes, 5 secondscasually I'm just saying you know yeah just do this I have like that lame accent really yeah I mean amazing I don't do that cuz
+7:147 minutes, 14 secondsI'm like for me it's like I subconsciously switch between my professional voice which is yeah yeah and live my mold bogan voice yeah that
+7:227 minutes, 22 secondsvoice came from noise broken without twisting Sydney University okay so like you got a lot of you know Lebanese people oh yeah oh yeah it's like it's
+7:317 minutes, 31 secondspart of yeah yeah it's just how it's and also going to I know you I know what you like you just like me you wrap up and you're also a what's up you know like
+7:397 minutes, 39 secondsvery very casual lots of like yep yep yep okay so we okay so I know we want a
+7:487 minutes, 48 secondslist I know we want a list of some sort can we find a pretty list because this is like a grid yeah we can't do this we
+7:577 minutes, 57 secondscan't do that yeah maybe yeah we can actually we can we can do this we can do this do we do we want to be we want to
+8:058 minutes, 5 secondsbe um what you might call it ambitious and do this because we have the last updated date so we can actually do this
+8:148 minutes, 14 secondswe could try it now my main concern is the picture we have a picture we have a
+8:218 minutes, 21 secondssmall picture oh we do yeah we do this
+8:318 minutes, 31 secondskind of grid or just like mmm let's how long this is great go for you just calm down Oh Danny's a lot longer than I want it
+8:408 minutes, 40 secondsto be yeah yeah we're just gonna we're
+8:508 minutes, 50 secondsjust gonna be a last updated actually you know what this is not what we want to do we don't want to quit we want to
+8:578 minutes, 57 secondssearch yeah I think that's more important than like yeah this is looser so let's find them do we want to find a
+9:059 minutes, 5 secondsUI cute though we like just because I would because we won't like we want that
+9:149 minutes, 14 secondssearch bar with a legal icon we don't want to go here we go to me no yeah we don't want to look like a googly
+9:239 minutes, 23 secondsthere's really heavy ones like ant design or the FBI yeah but it's really
+9:319 minutes, 31 secondsheavy but it's caught like everything you possibly need and it's also very it's also very it's very compact I give you use it you if yeah it's shiny so it's
+9:409 minutes, 40 secondsvery compact yeah you you feel like you fit so much in the screen if you use this oh because like you go to like the
+9:509 minutes, 50 secondsChinese website like dr. Bell and she completely like a summation here on this page is like it was like five times the
+9:589 minutes, 58 secondsamount like the whole be right well yes PayPal okay yeah yeah yeah it's just it's just really really dense yeah
+10:0610 minutes, 6 secondsmake sense like white people thought like lunch Chinese because the text looks like just looks like tiny with him robbing her yet yeah yeah yeah we could
+10:1610 minutes, 16 secondsgo and design this is we don't use our bomb we react or they have that this
+10:2610 minutes, 26 secondsbomb man I use both my CSS just pure before that looks unofficial dude yeah
+10:3310 minutes, 33 secondsso so one month old two months old Wow time flies can we check the search
+10:4010 minutes, 40 secondsbox you need maybe it honeydew XD ah ok
+11:0711 minutes, 7 secondsyeah that's that's that's exactly come on no surely they have a storybook right
+11:1711 minutes, 17 secondsDevine story ooh this guy said Chinese
+11:2411 minutes, 24 secondsnon-official oh my do we want to whatever let's just go
+11:3211 minutes, 32 secondsyeah that's good yeah it's good like that that is exactly what we want though that search box oh yeah yeah lease
+11:4011 minutes, 40 secondsyou're not gonna get a better search box yeah yeah yeah yeah we want to load the
+11:5111 minutes, 51 secondsriches all right so if I go here
+11:5511 minutes, 55 seconds[Music]
+12:0412 minutes, 4 secondsdisclaimer I don't think either of us has actually used and be properly oh because you know none of us know where
+12:1112 minutes, 11 secondswe work would pick this as a library you know so yeah we'll see how it goes you should be fine
+12:1912 minutes, 19 secondsthe thing I like about and think I hate a bit and Lee is is so damn ridiculously big it's like a megabyte really yeah if
+12:2612 minutes, 26 secondsyou don't like shim it I don't know well we'll see man makes me making false
+12:3412 minutes, 34 secondsclaims it's probably gonna come oh it's gonna be like a hundred kilobytes
+12:4012 minutes, 40 secondsgzipped yeah hundred is big yeah okay it isn't megabyte it averages a mega pad is
+12:5012 minutes, 50 secondsmassive yeah it's stupidly huge but it's
+12:5612 minutes, 56 secondsfine because we're cached so now what do
+13:0913 minutes, 9 secondsyou do if you've run an app over here and it's just fun three months of code how you extend this into a full application now well we do we want to
+13:1813 minutes, 18 secondsyou start components should be because
+13:2913 minutes, 29 secondson you shouldn't create a UI framework that needs style components yeah they just
+13:3713 minutes, 37 secondsuse I'm pretty sure yeah okay it's just the missus use less nonsense yes
+13:4513 minutes, 45 secondsyeah sassy so yeah sassy so slow all these don't want to use songs anyways up
+13:5313 minutes, 53 secondsto you I'm happier blessed to be honest haha it will be quicker and we're not really we don't need to be that like
+14:0014 minutesextendable yeah I also don't know that
+14:0814 minutes, 8 secondsmuch about this to be honest I think it's like a lot quicker incest it's the
+14:1714 minutes, 17 secondssame yeah so just become CSS yep yeah but for some reason sass is compiled you so slow
+14:2414 minutes, 24 secondsyeah it's so slow yeah we create a
+14:2914 minutes, 29 secondsglobal s global dot less in source just
+14:3614 minutes, 36 secondscreate a file cook yeah and then we import it yeah let's make the beer
+14:4314 minutes, 43 secondsbackground yeah something nice oh not black men the contrast is not good for our eyeballs or it should be like yeah
+14:5214 minutes, 52 secondsit's not good it should be a guys should be like two to two or something
+14:5914 minutes, 59 secondsone-on-one just like no not actual black oh yeah that's actually true like I think it's like you don't want to use
+15:0815 minutes, 8 secondsactual yep yep exactly you just looks bad I guess you have to
+15:1715 minutes, 17 secondscut out these installing moments out you
+15:2715 minutes, 27 secondsdo right now your text needs to be white
+15:3415 minutes, 34 secondsokay so now that we thought this was nicer color white or color eight eight
+15:4215 minutes, 42 secondseight eight eight eight or II EBE two piles that pretty sure yeah it
+15:5115 minutes, 51 secondsjust looks like white so I think if you've got to go for like beyond to to to the alternate Palestine probably do something like this
+15:5915 minutes, 59 secondsoh come on yeah that looks a lot better immediately with immediate yeah it immediately looks higher quality so now
+16:0716 minutes, 7 secondswe want to just shove the search bar in
+16:1216 minutes, 12 secondsI think cuz this 2020 dark moon is
+16:2016 minutes, 20 secondspeople
+16:2416 minutes, 24 secondsoh you're right we'll try looking in
+16:3916 minutes, 39 secondstheir own spot now this is like print this is design principles we don't care
+16:4816 minutes, 48 secondsabout the design principles then we have to look I'm pretty sure you have to go
+16:5416 minutes, 54 secondsto yourself not a display entry is right
+17:0217 minutes, 2 secondswe really want to feel that ourselves it is cold autocomplete right oh yeah trial
+17:1217 minutes, 12 secondsyeah no your child a complete order compiled or monthly yep there's a yeah
+17:2117 minutes, 21 secondsthere's one at the is that input here yep oh no the other one we don't want to
+17:2917 minutes, 29 secondsjust take this yeah okay okay easy all right so now we want to copy yeah
+17:4017 minutes, 40 secondsbecause there's mocks and stuff and there's also CSS okay now we need a fire oh man not a man
+17:5017 minutes, 50 secondsbecause it's like we don't know how big the app is gonna be loose we don't man so now we we want to
+17:5717 minutes, 57 secondscreate something called honestly create
+18:0018 minutesa folder called Andy no what no yeah we
+18:1218 minutes, 12 secondscould create a photo clip and deep in the sauce and then on put a search off
+18:2218 minutes, 22 secondsdaughter JSX yeah yeah and then trying yeah and then
+18:2918 minutes, 29 secondstry and make this damn thing work but I
+18:5018 minutes, 50 secondswould still keep the app sorry I can yeah yeah and then put the searching me
+18:5518 minutes, 55 secondsup yep I think this much yep I agree
+19:2219 minutes, 22 secondslike this is right yeah you're gonna this is crap you all which means a quit anyway but this is specifically tied to you know JSX
+19:2819 minutes, 28 secondsyeah yeah yeah I agree okay so that's 13 work it's building why does he need to
+19:3819 minutes, 38 secondsokay can we like soft import and search like aunty slash search it's like you
+19:4519 minutes, 45 secondsmight be light on like an we are tree shape the rest of em do I just like do
+19:5219 minutes, 52 secondsthe deep import oh yeah we cannot care
+20:0020 minutesabout it for now but yeah I mean if we remember to do this and we
+20:1020 minutes, 10 secondswill do it for now I think yeah yeah we're just thinking all right so happy
+20:1720 minutes, 17 secondsyo man it's five Meg I mean if I want two kilobytes of package it's alright it just needs to be cash once I've seen I
+20:2720 minutes, 27 secondsknow you remember the UM the time we did that like for another validation thing Oh like the good literally literally
+20:3620 minutes, 36 secondsAustralians are like 0 for 8 numbers we included like uh also one megabyte google live clear the hieroglyphs oh my
+20:4520 minutes, 45 secondsgosh it actually has higher voices crazy
+20:4820 minutes, 48 secondsyeah it's yeah my stupid life hey at
+21:0321 minutes, 3 secondsleast they gave you the e plus statement I really hate it when the docs don't give you the oh yeah it's like where does this come from
+21:0921 minutes, 9 secondsyeah hey that is not too bad alright
+21:1821 minutes, 18 secondslet's put it back to laughing back to I don't want to do it to every element man
+21:3521 minutes, 35 secondsyeah I'll put that in oh yeah yeah again
+21:4521 minutes, 45 secondscan you take it out of global and just put it in like such inside and II know
+21:5721 minutes, 57 secondsI'm my screen of computer so like you
+22:0622 minutes, 6 secondsjust started you should start a patreon or donation yeah just someone get your computer very funny I surprised
+22:1422 minutes, 14 secondsI'm a poor kid who needs a computer I
+22:1722 minutes, 17 secondshave why doesn't this work is it because
+22:2822 minutes, 28 secondswe did in creating classes this is a class name right here sir so in category except forever right but all here is
+22:3722 minutes, 37 secondslike what wait where is it there's no setting category so fretful and why sit
+22:4622 minutes, 46 secondsoutside all like what it's just even
+22:5322 minutes, 53 secondsdoing anything no confused let's see this oh it didn't
+23:0423 minutes, 4 secondsyeah that should be up today yeah is
+23:1423 minutes, 14 secondsthat a service because always actually it might be hey yeah it's carried of it
+23:2123 minutes, 21 secondsjust coming to them because I've seen cages yeah sure
+23:2923 minutes, 29 secondshow I removed that is all I got here is unregister Oh
+23:3723 minutes, 37 secondsmaybe Venus already yeah this file
+23:4523 minutes, 45 secondsstupid are taking it is okay maybe it's just working my people oh yeah okay
+23:5523 minutes, 55 secondscan you move this oh I'm bad I'm bad I'm really bad I totally forgot something um so in the getting started you mix you
+24:0424 minutes, 4 secondsalso include I'll provide oh no oh yeah
+24:1224 minutes, 12 secondswhatever just put it good
+24:1424 minutes, 14 secondsI think I saw that Barry
+24:2724 minutes, 27 secondsthis is the default size by the way so I'm like okay dude this looks nice yeah
+24:3424 minutes, 34 secondsit's not bad alright obviously have similar work these days they linked it to Google yeah
+24:4324 minutes, 43 secondsit's than just making error yeah I need to divide do funny okay good good good
+24:5324 minutes, 53 secondsstuff um so I think we want to think about our padding now like we don't want this to be like that so it can we put
+25:0125 minutes, 1 secondsome padding on the HTML before you um question yep what is that a lot like slash
+25:0925 minutes, 9 secondslanding page to be woven like because I'm thinking like almost if we keep it like super bare minimum right like just
+25:1725 minutes, 17 secondsenter yeah it's like it's just like this is that right yeah just in let's do that let's do does anything you haven't let's
+25:2325 minutes, 23 secondsdo that up here yes I checked it out I want to file it
+25:3425 minutes, 34 secondswrap it with fab wrap it with a div okay first of all can we move there and stuff out of global dot less and just put it
+25:4325 minutes, 43 secondsin like and be less or something yeah
+25:4725 minutes, 47 secondsyes I how different does it actually was
+25:5825 minutes, 58 secondsmy question okay that's nice you know II was starting this pot inside here oh yeah
+26:0726 minutes, 7 secondsokay and then wrap yeah wrap this with a container like I do and just call it
+26:1426 minutes, 14 secondslike main container or app container no
+26:2326 minutes, 23 secondsoh no just be lazy
+26:3526 minutes, 35 secondsit's fine tell me we should call it yeah Oh optimatus fine yeah as long as it's not
+26:4426 minutes, 44 secondsjust container yeah all right here we go
+26:5126 minutes, 51 secondsthe most difficult part about coding CSS so we definitely won I think we still
+26:5726 minutes, 57 secondswant some padding that's not correct
+27:0427 minutes, 4 secondsright should be vhv pretty much Oh
+27:2227 minutes, 22 secondsand during that year I keep seeing bad CSS so I can't do anything about it different thing yeah a razor bug and it
+27:3027 minutes, 30 secondsnever comes back yeah some of the CSS is
+27:3327 minutes, 33 secondsactually like really bad yeah can we put
+27:5327 minutes, 53 secondsit above a little bit look we don't want it to be absolutely so yeah you're right
+28:0228 minutes, 2 secondsyeah we will do a logo eventually if you
+28:0928 minutes, 9 secondswant a slightly Center it's not like we can do like left right sent over then
+28:1528 minutes, 15 secondsit's like we can do like yeah like 20 be a chisholm what's the wood if you're on
+28:2228 minutes, 22 secondsmobile like a shrink it we should be silent anyways no just do for your thought just do BH you'd be do like 20
+28:3128 minutes, 31 secondsVH it's just always going to be 20% of your viewport which is fine right like
+28:3828 minutes, 38 secondsyou don't care about this i yeah yeah it's not bad yeah yeah that's a bit high
+28:4928 minutes, 49 secondsyou composed you like 35 I think that's
+28:5228 minutes, 52 secondsa bit high yeah okay yes yeah well and
+29:1329 minutes, 13 secondsdesign is actually really crazy to be honest like they have the most ridiculous components right that you just like yeah like crazy stuff
+29:2029 minutes, 20 secondsdimensions do this is this has to be like a Chinese whether that's like translated over oh actually no no I'm
+29:2929 minutes, 29 secondstelling you this is crazy the ant design is crazy like most little what sort of you I kick you to that like
+29:3729 minutes, 37 secondsby default it's just half a megabyte but like you know you can see why I really
+29:4629 minutes, 46 secondslike this even though because I use it those tiny security systems if you sign
+29:5629 minutes, 56 secondsit unlike if you create a new account using WeChat you have to create a bio mobile you can't do it on the way and
+30:0530 minutes, 5 secondsthey'll send you a text to another but not believe that an athlete I pity you have to send them a text I did this like
+30:1330 minutes, 13 secondsa couple days but a few years is a moment I'm like no give you an Australian phone number and you have like Z X Y early to that number it just
+30:2230 minutes, 22 secondsseems so unnecessary and then like after I sent it I'm like I've sent it and then they give me an arrow say you've tried too many times I tried that once and
+30:3030 minutes, 30 secondsthen it just wouldn't let me in from that from there onwards I don't know what you try to add to but mine was
+30:3630 minutes, 36 secondspretty yeah but I really I really like
+30:4430 minutes, 44 secondssome of them security light instead of a CAPTCHA they have such a better capture all you have honor they do the drag the puzzle yeah
+30:5230 minutes, 52 secondslike just like the actual couches this is so odd yeah I know it captures actually is
+31:0031 minutesbecause they this is because the image recognition is also a top yeah no but the cool thing is you know how like our CAPTCHAs you're so freaking stupid tick
+31:0831 minutes, 8 secondsbite you press it and he's like I'll Congrats you're not a robot the puzzle is like so the idea is that you slide the you slider slider and
+31:1631 minutes, 16 secondsthere's like a slot for the puzzle and it gives you stats on how well you did so it's like a game you just make some
+31:2431 minutes, 24 secondsmore interesting well no it's a bit accuracy so it's like you're more
+31:3231 minutes, 32 secondsaccurate that night yeah it's back here see yeah yeah so you you know it's like every single time you log in it's like it's just like something to do instead
+31:3931 minutes, 39 secondsof just clicking a sliver button to prove you're not a robot yeah well it's just it's just like a
+31:5231 minutes, 52 secondsgood use of that page you know on it prove you're not a robot but it's also like interactive for the user yeah cuz
+32:0132 minutes, 1 secondit's it's obviously a really annoying to like keep clicking on a button that is like prove you're not a robot MFP ten times is the same browser I'd
+32:1032 minutes, 10 secondshave to keep clicking on this check box I think that is like too difficult like
+32:1732 minutes, 17 secondsit's cognitively difficult you have to read you have to tie you know so it's
+32:2432 minutes, 24 secondslike a minigame is it's very keyboard
+32:5432 minutes, 54 secondsokay so no I know what we do unless there's a less space style sheet so you
+33:0133 minutes, 1 secondneed to modify the variables customize theme yes all right
+33:1033 minutes, 10 secondsdo you know what's gonna happen is without ya video is just gonna be a video and then we're gonna have a text
+33:1733 minutes, 17 secondsyeah well you can even the other have
+33:2733 minutes, 27 secondsdark theme beta all we have to do this oh we can't do like theme bro if you do
+33:3633 minutes, 36 secondslike being down dude yeah yeah alright stretch code it should be easier is
+33:4433 minutes, 44 secondsinstall isn't and just to modify oh no
+33:4833 minutes, 48 secondsless like oh my god we don't have right
+34:1134 minutes, 11 secondsoh wait what oh it's oh it's just literally like this but we want to find
+34:1934 minutes, 19 secondsthe science which is one thing yeah that's what I want to do yeah heard the thing is the problem is we need the size
+34:2734 minutes, 27 secondsthere's no like the face size you guys
+34:5134 minutes, 51 secondstry so hard I've I never I never looked into sources I'm just looking at docker
+34:5934 minutes, 59 secondsthis is distributed so you don't seem so index I don't know what it might be
+35:1035 minutes, 10 secondsholding back from that it's just I didn't like to troll through this code
+35:1635 minutes, 16 secondsthat is true dude have you finally a true typescript definitions no don't
+35:2335 minutes, 23 secondswant to oh I just I think he just sort
+35:2735 minutes, 27 secondsof sorriest or less okay it should be
+35:5035 minutes, 50 secondsbase right doesn't know there's a mix it could sighs yeah yeah it's not only to
+36:0136 minutes, 1 secondmix is per component it's all here
+36:1236 minutes, 12 secondsso I actually straight to style but I just I completely skipped over this yeah
+36:1636 minutes, 16 secondssee so we have to go - yeah it has like
+36:2736 minutes, 27 secondsall sizes in there wait the width is 100 percent yeah so we
+36:3436 minutes, 34 secondsjust need to put in a deep that's big enough yeah just put in a beef that's big
+36:4136 minutes, 41 secondsenough so you mean you need this dude
+36:5236 minutes, 52 secondsyeah just put it in it yeah just make the wispy go I want to be
+36:5936 minutes, 59 secondslike chunky yeah I know what you mean then you just do the fun yeah thing you
+37:0537 minutes, 5 secondsbe maybe it's fun go back here and
+37:1137 minutes, 11 secondsinside instead of doing all this we do like just be important and we click you
+37:1937 minutes, 19 secondscall it this out we do bitter soul argument I can't see what
+37:2937 minutes, 29 secondshappened but yes yeah but I can't see the like the foul is that when you're flipping flowers I just see like blocks
+37:3737 minutes, 37 secondsof code or we change it once anyway to
+37:4137 minutes, 41 secondstry yeah so try try making me that
+37:5437 minutes, 54 secondsdoesn't do it so the actual input itself
+37:5937 minutes, 59 secondshas I mean mean height is under percent
+38:0738 minutes, 7 secondsit's not like hey it must be in the less someone and tiny color the less I
+38:1438 minutes, 14 secondsforgive me I'm very confused
+38:5238 minutes, 52 secondsyeah can we just look at the documentation actually I can just look
+39:0339 minutes, 3 secondsat implementation so thank you mutation hack
+39:1139 minutes, 11 secondswell look documentation right base font
+39:1839 minutes, 18 secondssize like oh hold on go back go back go
+39:2439 minutes, 24 secondsback to your thing - Andy yeah right no just aunty website scroll to the top and
+39:3439 minutes, 34 secondsjust type in size in the search bar that's yeah and just click on the first
+39:4239 minutes, 42 secondsone yeah yeah and then just try to do that trying to feed us about thanks guys so like you know just just go from
+39:5139 minutes, 51 secondsdocumentation yeah this is what I don't like to look at this because you don't know what you're doing yep just just just do this any want is
+40:0140 minutes, 1 secondreally want to increase the size that's what we want to do so I read it on my
+40:0940 minutes, 9 secondsscreen ketosis is laggy we have update and design baseman from original 12 to 14 to ensure best user inefficiency it
+40:2140 minutes, 21 secondsdoesn't say but it's not telling you how
+40:4040 minutes, 40 secondsthere is a face one size there's a fun fun at font size base there is a no
+40:4940 minutes, 49 secondsthere is a go to customize theme typing customized theme yep yep scroll down
+40:5840 minutes, 58 secondsscroll down yep there it is fun sized base and then yeah you can and then you
+41:0941 minutes, 9 secondscan modify so we don't want the less
+41:1441 minutes, 14 secondslawyer right we just want to import yeah
+41:2241 minutes, 22 secondswe just want to import you're alive anything you need anything you can get rid of it you need it but you just need
+41:3041 minutes, 30 secondsto override it because it's repaired and
+41:4941 minutes, 49 secondsthe problem we're solving is not on well grown so let's use to be honest I'm going to do more videos about less
+41:5741 minutes, 57 secondscoding and about like the bits around coding so like going from so having like
+42:0542 minutes, 5 secondsa successful application or process development cycle it's not about how well your coders code or like it is but
+42:1342 minutes, 13 secondsit's not like a big part of it it's about how well with a story is defying grown and set up for success in the
+42:2142 minutes, 21 secondsfirst place like all the background work so the reason why we're so you know fishing right now is because we haven't spiked anything like we don't have any
+42:2942 minutes, 29 secondsprototype so we just come in blind and just start picking stuff in doing it randomly and we also never really architected things properly like we'd
+42:3842 minutes, 38 secondsonly true three boxes on a piece of paper and this is architecture right so yeah these are like background work that we're skipping and in the same way even
+42:4742 minutes, 47 secondslike features and requirements like we spend a lot of time thinking about where does the box go you know how the box should behave in
+42:5442 minutes, 54 secondsinteract and why we do it we're gonna find edge cases because we haven't properly like piayed the story properly
+43:0643 minutes, 6 secondswell we're doing we're doing everything parallel like the good a good cycle we
+43:1543 minutes, 15 secondsshould be like by the time is getting engineered think about it more as a car like car development sorry plane development etc you don't want to start
+43:2443 minutes, 24 secondsbuilding a car and be like oh crap you know the back doors are not gonna fit right yeah so it's the same way right
+43:3143 minutes, 31 secondsjust because software you can just delete code and it's cheap to kind of reinvent the wheel or relatively cheap then you can push the line back a bit
+43:4043 minutes, 40 secondsbut you don't have to be as thorough if you design but you should still have some design so by the time we are in this phase where we're coding right now
+43:4743 minutes, 47 secondswe should know exactly what we want to do and have like a lot of edge cases already thought out which is why I work
+43:5643 minutes, 56 secondsdefinitely way more productive like I know exactly what I need to do and I know who to contact and it's all given to you lands you like okay I'm gonna do
+44:0344 minutes, 3 secondsthis that's it and it's not like it's there's no like there's very little doubt in your mind I
+44:1144 minutes, 11 secondssaid like we should yeah yeah yeah and there's like there will be people responsible for answering your questions if that's not yourself already yeah yeah
+44:2144 minutes, 21 secondswell well increase the size of this our text box is still white does it work it
+44:3144 minutes, 31 secondswas a fun size yeah it does and this is
+44:3744 minutes, 37 secondsbigger so the of the input that's not bad
+44:4444 minutes, 44 secondswe got we've got some all of the
+44:5644 minutes, 56 secondsvariables that they have please differentiate the existing Lisa variables is not enough for you mmm are
+45:0545 minutes, 5 secondsyou serious to trigger my hey Siri I hear ya colors okay there has to be
+45:1345 minutes, 13 secondssomething here that says 32 pixels so there is my place also in flat base for me can we just get
+45:2045 minutes, 20 secondsall of the 32 pixels and yeah can we just get all of them and I'm just like
+45:2845 minutes, 28 secondsno this is about the best you can get yeah it's fine that's fine so yeah we
+45:4145 minutes, 41 secondsactually want to like properly schedule it I think I can we know can we do all of them at the same time the button is well cuz 100% gonna have a button just
+45:4945 minutes, 49 secondslike search for 32 pixels yeah yeah that stuff and then we scale it
+45:5745 minutes, 57 secondsproportionally these these are just twos we just find
+46:0046 minutesan input yeah okay oh it was always 4045
+46:1246 minutes, 12 secondsequal size 14 and 40 yeah I think so if we change this much less basically increase by like what 50% too much 25%
+46:2646 minutes, 26 secondsyeah let's just see how yeah I wonder if you can do the actual math like import
+46:3346 minutes, 33 secondsthe original font size space and just x 1.25 this this surely is the way yeah
+46:4346 minutes, 43 secondswell it's not complaining it takes
+46:4946 minutes, 49 secondsforever to build I'd be my computer but
+46:5746 minutes, 57 secondsit looks like my screen looks like kids building this is building 2.2 faith that
+47:0747 minutes, 7 secondsseems okay actually I still like to do
+47:1447 minutes, 14 secondsthis thing okay well that's definitely bigger that's not too bad so you mean
+47:2247 minutes, 22 secondslike if we do like that it's not too bad yeah yeah I mean you can do if you want
+47:2847 minutes, 28 secondsyeah yeah just do that oh I think yeah there has to be something which is like
+47:3647 minutes, 36 secondsthat face day is the base that's it this
+47:4047 minutes, 40 secondsis it it's fine is we need to work
+47:5147 minutes, 51 secondspeople oh of course my your posture was just
+47:5547 minutes, 55 secondslike like yeah that won't work I can try
+48:0448 minutes, 4 secondsbut I think your work
+48:1448 minutes, 14 secondssame just hydro it like this work before
+48:2348 minutes, 23 secondsI don't think I think your parcel was just late it was late why does Sean hate
+48:3048 minutes, 30 secondsall of that just wish we had it you had
+48:3248 minutes, 32 secondsa hard coded yeah so get rid of the
+48:4348 minutes, 43 secondsunderscore all right yeah so I'm gonna
+49:0349 minutes, 3 secondsspread it a bit wider and then on and then let's hook up the autocomplete list
+49:0949 minutes, 9 secondsand we'll call it a day because it's not
+49:2249 minutes, 22 secondswide in terms of height your liking
+49:2849 minutes, 28 secondsagain no I mean there looks like 20
+49:3549 minutes, 35 secondspixels yeah right oh yeah your liking influence
+49:4549 minutes, 45 secondsyou know plus the computer yeah well get
+49:5649 minutes, 56 secondsa faster computer I'm sorry this is why
+50:0450 minutes, 4 secondsyou need a 16 inch MacBook Pro with 32
+50:0750 minutes, 7 secondsgigs around right yes I see you
+50:2150 minutes, 21 secondsmy CPUs Ronnie had 90 97 degrees right now but we're definitely cutting this pot up sorry how's your diet hungry
+50:3150 minutes, 31 secondshungry why'd you wake up 11:30
+50:3550 minutes, 35 secondsyeah how do you wake up in type of work
+50:4450 minutes, 44 seconds7:30 how you just right yeah yeah that's
+50:5350 minutes, 53 secondsactually yeah you didn't used to it you just get used
+50:5750 minutes, 57 secondsto waking up and go into work way to be
+51:1251 minutes, 12 secondsyeah I don't like that too tight just
+51:1751 minutes, 17 secondsmake it the same as Google do you want
+51:3451 minutes, 34 secondslike do this yeah which is not so different from the original yeah that's
+51:4551 minutes, 45 secondsbetter come on please work
+52:0052 minutesactually what all set so we got let's um let's put this back into such sorry get
+52:0552 minutes, 5 secondsrid of this do that thanks for what for when you're back in your search we're
+52:1452 minutes, 14 secondsgonna do that anyways right yeah yeah
+52:1952 minutes, 19 secondsokay now let's let nice alright let's
+52:2852 minutes, 28 secondsstretch it wide it's it's like so it's like tiny is it with hard-coded on the
+52:3452 minutes, 34 secondsyeah what if your screen is on a mobile
+52:3952 minutes, 39 secondsso it should be min with 500 but the
+52:4552 minutes, 45 secondswidth should be like something no yes no
+52:5652 minutes, 56 secondsit should be min with 500 so then on desktop it's this way and on my boy is at least 500 but you want that you want
+53:0653 minutes, 6 secondsto with to be sperms no yeah well max with yeah you want yeah all right you
+53:1453 minutes, 14 secondswant a max with yeah and then you wanna with that it's like 75% okay so let's just say that we wanted to style this now and we didn't want to do in life
+53:2353 minutes, 23 secondswhat would what would you do just make a and dot less in the nd just do style is
+53:2953 minutes, 29 secondsnot less in Andy yeah yeah yeah oh you can do socialist we're gonna have much anyway that's fine and then just
+53:3853 minutes, 38 secondsimported and just work it in yep no let
+53:5153 minutes, 51 secondsme just keep that class yeah like it's not he's not already used all right yeah
+53:5753 minutes, 57 secondsyeah 70 75 or 80 V W percent it should
+54:0954 minutes, 9 secondsbe feet of evening yeah it was the same thing your container needs to be the W because you don't know how wide the
+54:1754 minutes, 17 secondsdevice is gonna be yeah that's fine yeah
+54:2954 minutes, 29 secondswhy jump okay cool let's walk up our
+54:3554 minutes, 35 secondsgraph so we get results know what our
+54:4854 minutes, 48 secondsyeah okay okay do you like my room is like getting polluted by computer fumes okay it's
+54:5654 minutes, 56 secondsjust like rebelling yeah no we can we can just cut
+55:0755 minutes, 7 secondsthis video really short like 20 minutes and then I can just feel my bit right now it's like and then you can cut this
+55:1455 minutes, 14 secondsbe at the front which is like hey thank you yeah I only got 20 minutes today so let's just do something really quickly and then put gap it at the front and
+55:2355 minutes, 23 secondsthen yeah and then we just make a short video so he don't look like any of you but like in actual fact I think we would
+55:3055 minutes, 30 secondshave taken roughly at the same time to do the same thing if we didn't go the library like we have to find a freaking icon we have to Center it properly we
+55:3955 minutes, 39 secondshave to do the auto feel you know so it's still like a win you talk about to get less working but it still win yeah I
+55:4755 minutes, 47 secondsthink it's doing with okay quota cool productive dollar thank you so much for tuning in thank you so much for
+55:5655 minutes, 56 secondslistening yeah next time we'll happy done for sure
+56:0656 minutes, 6 secondsyeah we tried all right guys thank you so much for listening this is Ben Lucas and Patrick with data coding Academy and see you guys later
+56:1456 minutes, 14 secondssee you next time
+
